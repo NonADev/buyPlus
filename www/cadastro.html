@@ -17,7 +17,7 @@
 			<input type="text" id="2" name="senha" placeholder="senha" data-wrapper-class="ui-custom">
 			<input type="text" id="3" name="confirmar Senha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
 			<input type="text" id="4" name="telefone" placeholder="telefone" data-wrapper-class="ui-custom">
-			<input type="submit" value="Cadastrar" onclick="validarEnvio()" data-wrapper-class="ui-custom">
+			<input type="submit" value="Cadastrar" onclick="criarBanco()" data-wrapper-class="ui-custom">
 			<!--</form>-->
 		</div>
 		
@@ -26,17 +26,17 @@
 		
 		
 		<script>
-		function validarEnvio() {
-			for(var i=0;i<5;i++){
-				if(document.getElementById(i).value==""){
-					alert(document.getElementById(i).getAttribute("name").concat(" Esta Vazio"));
-				}
-			}
-			/*
-			if($("#nome").val()==null) {
-				alert("error");
-			}*/
-			
+		var myDB = window.sqlitePlugin.openDatabase({name: "mySQLite.db", location: 'default'});
+		function criarBanco(){
+			myDB.transaction(function(transaction) {
+				transaction.executeSql('CREATE TABLE IF NOT EXISTS codesundar (id integer primary key, title text, desc text)', [],
+				function(tx, result) {
+				alert("Table created successfully");
+				},
+				function(error) {
+				alert("Error occurred while creating the table.");
+				});
+			});
 		}
 		</script>
     </body>
