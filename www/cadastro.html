@@ -17,7 +17,7 @@
 			<input type="text" id="2" name="senha" placeholder="senha" data-wrapper-class="ui-custom">
 			<input type="text" id="3" name="confirmar Senha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
 			<input type="text" id="4" name="telefone" placeholder="telefone" data-wrapper-class="ui-custom">
-			<input type="submit" value="Cadastrar" onclick="criarBanco()" data-wrapper-class="ui-custom">
+			<input type="submit" id="createTable" value="Cadastrar" data-wrapper-class="ui-custom">
 			<!--</form>-->
 		</div>
 		
@@ -25,19 +25,37 @@
 		
 		
 		
-		<script>
-		var myDB = window.sqlitePlugin.openDatabase({name: "mySQLite.db", location: 'default'});
-		function criarBanco(){
-			myDB.transaction(function(transaction) {
-				transaction.executeSql('CREATE TABLE IF NOT EXISTS codesundar (id integer primary key, title text, desc text)', [],
-				function(tx, result) {
-				alert("Table created successfully");
-				},
-				function(error) {
-				alert("Error occurred while creating the table.");
-				});
-			});
-		}
+		<script type="text/javascript">
+        console.log("1");
+		$(document).ready( function(){
+            console.log("2");
+            function QuerySuccessCB(Tx, results) {            	
+        		console.log("3");
+                for(var i=0;i<results.rows.length;i++){
+                	alert(".id = " + results.rows.item(i).id + " .data = "+results.rows.item(i).data);
+            	}
+            }
+            function populateDB(tx) {
+        		console.log("4");
+                //tx.executeSql('DROP TABLE IF EXISTS DEMO');
+                tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id , data)');
+                tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+                //tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+                tx.executeSql('INSERT INTO DEMO (id, data) VALUES (3, "Third one")');
+                tx.executeSql('SELECT * FROM DEMO', [], QuerySuccessCB);
+            }
+            function TxErrorCB() {
+        		console.log("5");
+                console.log("Error processing SQL!");
+            }
+            document.getElementById("createTable").addEventListener("click", function () {
+            	console.log("6");
+                var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
+                // var db = window.sqlitePlugin.openDatabase("test", "1.0", "Test DB", 1000000);
+                db.transaction(populateDB, TxErrorCB);
+            }, false);            
+        	console.log("7");
+		});
 		</script>
     </body>
 </html>

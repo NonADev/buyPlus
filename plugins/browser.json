@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.app.buyplus"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.app.buyplus"
     }
   },
   "dependent_plugins": {}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <title>Registro</title>
+        <link rel="stylesheet" href="./js/jquerymobile/jquery.mobile-1.4.5.min.css">
+        <script src="./js/jquery-2.2.4.min.js"></script>
+        <script src="./js/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+    </head>
+    <body>
+		<div>
+            <img src="./img/logo.png" class="logo">
+			<!--<form onsubmit="validarEnvio()">-->
+			<input type="text" id="0" name="nome" placeholder="nome" data-wrapper-class="ui-custom">
+			<input type="text" id="1" name="email" placeholder="e-mail" data-wrapper-class="ui-custom">
+			<input type="text" id="2" name="senha" placeholder="senha" data-wrapper-class="ui-custom">
+			<input type="text" id="3" name="confirmar Senha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
+			<input type="text" id="4" name="telefone" placeholder="telefone" data-wrapper-class="ui-custom">
+			<input type="submit" id="createTable" value="Cadastrar" onclick="" data-wrapper-class="ui-custom">
+			<!--</form>-->
+		</div>
+		
+		
+		
+		
+		
+		<script type="text/javascript">
+        console.log("1");
+		$(document).ready( function(){
+            console.log("2");
+            function QuerySuccessCB(Tx, results) {            	
+        		console.log("3");
+                console.log("Results: " + results.rows.length);
+                console.log("resultSet[0].data: " + results.rows.resultSet[0].data);
+            }
+            function populateDB(tx) {
+        		console.log("4");
+                tx.executeSql('DROP TABLE IF EXISTS DEMO');
+                tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+                tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+                tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+                tx.executeSql('INSERT INTO DEMO (id, data) VALUES (3, "Third one")');
+                tx.executeSql('SELECT * FROM DEMO WHERE data LIKE "%row"', [], QuerySuccessCB);
+            }
+            function TxErrorCB() {
+        		console.log("5");
+                console.log("Error processing SQL!");
+            }
+            $("#createTable").click(function () {
+            	console.log("6");
+                var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
+                db.transaction(populateDB, TxErrorCB);
+            }, false);            
+        	console.log("aiaiai");
+		});
+		</script>
+    </body>
+</html>
