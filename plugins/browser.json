@@ -8,10 +8,7 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.app.buyplus"
-    },
-    "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "com.app.buyplus"
+      "PACKAGE_NAME": "com.etec.buyplus"
     }
   },
   "dependent_plugins": {}

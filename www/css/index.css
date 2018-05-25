@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+} /*-- RETIRA A MARGIN PADRAO --*/
+
+::placeholder{
+    color: #9400D3;
+    text-shadow: none;
+    font-weight: bold;
+} /*-- RETIRA OS EFEITOS DO PLACEHOLDER --*/
+
+.ui-page-theme-a, input[type="text"]{
+    background-color: #FFA500    !important;
+}
+
+.ui-input-text.ui-custom {
+    margin-left: 6.5vh;
+    text-shadow: none;
+    vertical-align: middle;
+    width: 75vw;
+    border: none;
+    border-radius: unset;
+    box-shadow: none;
+    border-bottom: 2px solid #9400D3;
+}
+.logo{
+    position: static;
+    margin-top: 3vh;
+    margin-left: 40vw;
+    width: 15vw;
+    height: 15vw;
+}
+.ui-input-btn.ui-custom {
+    background-color: #9400D3;
+    color: white;
+    text-shadow: none;
+    border: none;
+    border-radius: unset;
+    width: 60vw;
+    margin-left: 15vw;
+}

@@ -8,25 +8,12 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.app.buyplus"
-    },
-    "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "com.app.buyplus"
+      "PACKAGE_NAME": "com.etec.buyplus"
     }
   },
   "dependent_plugins": {},
-  "modules": [
-    {
-      "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
-      "id": "cordova-sqlite-storage.SQLitePlugin",
-      "pluginId": "cordova-sqlite-storage",
-      "clobbers": [
-        "SQLitePlugin"
-      ]
-    }
-  ],
+  "modules": [],
   "plugin_metadata": {
-    "cordova-plugin-whitelist": "1.3.3",
-    "cordova-sqlite-storage": "2.3.1"
+    "cordova-plugin-whitelist": "1.3.3"
   }
 }

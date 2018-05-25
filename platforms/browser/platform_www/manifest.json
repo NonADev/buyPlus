@@ -1,6 +1,6 @@
 {
-  "name": "Buy+",
-  "short_name": "Buy+",
+  "name": "HelloCordova",
+  "short_name": "HelloCordova",
   "description": "Description of your app from template",
   "start_url": "index.html",
   "scope": "index.html",
