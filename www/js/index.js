@@ -10,6 +10,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        this.changePage();
     },
 
     // Update DOM on a Received Event
@@ -24,6 +25,11 @@ var app = {
 
         console.log('Received Event: ' + id);
         */
+    },
+    changePage: function() {
+        $("#changePageButton").click(function() {
+            $.mobile.changePage("#pageRegister");
+        });
     }
 };
 
