@@ -39,10 +39,10 @@ var app = {
         });
     },
     changeToPageMap: function() {
-        var div = document.getElementById("pageMap");
-        var map = plugin.google.maps.Map.getMap(div);
-        $("#gotoMap").click(function() {
-            $.mobile.changePage("#pageMap");
+        var map;
+        map = new google.maps.Map(document.getElementById('pageMap'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
         });
     }
 };
