@@ -9,12 +9,6 @@
   "installed_plugins": {
     "cordova-plugin-contacts": {
       "PACKAGE_NAME": "com.etec.buyplus"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.etec.buyplus"
-    },
-    "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "com.etec.buyplus"
     }
   },
   "dependent_plugins": {}

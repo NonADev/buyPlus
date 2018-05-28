@@ -3,12 +3,6 @@
     margin: 0;
 } /*-- RETIRA A MARGIN PADRAO --*/
 
-.map{
-    width: 100vw;
-    height: 100vh;
-    background-color: #9400D3;
-}
-
 div[id="pageRegister"] .ui-input-text.ui-custom ::placeholder{
     color: #9400D3;
     text-shadow: none;
@@ -60,6 +54,11 @@ div[id="pageLogin"] hr{
     width: 75vw;
     border: none;
     border-bottom: 2px solid #FFA500;
+}
+
+div[id="pageMap"]{
+	width: 100vw;
+	height: 100vh;
 }
 
 .logo{

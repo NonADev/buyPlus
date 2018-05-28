@@ -10,6 +10,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+		this.loadMap();
         this.changeToPageRegister();
         this.changeToPageLogin();
         this.changeToPageMap();
@@ -17,16 +18,7 @@ var app = {
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        /*
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-        */
+        		
     },
     changeToPageRegister: function() {
         $("#gotoRegister").click(function() {
@@ -39,11 +31,13 @@ var app = {
         });
     },
     changeToPageMap: function() {
-        var map;
-        map = new google.maps.Map(document.getElementById('pageMap'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+        $("#gotoMap").click(function() {
+            $.mobile.changePage("#pageMap");
         });
+    },
+    loadMap: function() {
+		var div = document.getElementById("pageMap");
+		var map = plugin.google.maps.Map.getMap(div);
     }
 };
 

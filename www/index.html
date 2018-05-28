@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
+	<!-- key=AIzaSyDS_JJ83_sVpFt44vvdm2aUPRKrA6N65Uo -->
     <head>
-    	<!-- METAS -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> 
-        <meta name="format-detection" content="telephone=no">
+    	<!-- METAS -->  
+        <meta http-equiv="Content-Security-Policy" content="font-src data: *; img-src * data:; script-src *; default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src * 'unsafe-inline'; media-src *"><meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">        
     	<!-- METAS -->  
@@ -13,18 +13,13 @@
         <script src="./js/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
     	<!-- JQUERY -->  
     	<!-- OTHERS -->
-        <title>Hello World</title>
+        <title>Hello World</title> 
     	<!-- OTHERS -->	
     	<!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/index.css">
     	<!-- CSS -->
     </head>
     <body>
-		<div class="map" id="pageMap" data-role="page">
-
-
-
-		</div>
         <div id="pageLogin" data-role="page">
             <center><img src="./img/logo.png" class="logo"></center>
             <input type="text" id="txtLogin" name="nome" placeholder="nome" data-wrapper-class="ui-custom">
@@ -42,15 +37,19 @@
 			<input type="text" id="txtSenha" name="senha" placeholder="senha" data-wrapper-class="ui-custom">
 			<input type="text" id="txtConfirmarSenha" name="confirmar Senha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
             <input type="button" value="registrar" data-wrapper-class="ui-custom">
-            <input id="gotoLogin" type="button" value="logar" data-wrapper-class="ui-custom">
+            <input id="gotoLogin" type="button" value="já possui conta? logar" data-wrapper-class="ui-custom">
+            <input id="gotoMap" type="button" value="Map" data-wrapper-class="ui-custom">
 			<!--</form>-->
+		</div>
+		<div id="pageMap" data-role="page">
+		
 		</div>
 
 
     	<!-- JS -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN1Lyjp2w7ewJUFRpWBCD2kJz9h5kI3bo&callback=initMap" async defer></script>
+       
     	<!-- JS -->
     </body>
 </html>
