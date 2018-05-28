@@ -10,7 +10,9 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-        this.changePage();
+        this.changeToPageRegister();
+        this.changeToPageLogin();
+        this.changeToPageMap();
     },
 
     // Update DOM on a Received Event
@@ -26,9 +28,21 @@ var app = {
         console.log('Received Event: ' + id);
         */
     },
-    changePage: function() {
-        $("#changePageButton").click(function() {
+    changeToPageRegister: function() {
+        $("#gotoRegister").click(function() {
             $.mobile.changePage("#pageRegister");
+        });
+    },
+    changeToPageLogin: function() {
+        $("#gotoLogin").click(function() {
+            $.mobile.changePage("#pageLogin");
+        });
+    },
+    changeToPageMap: function() {
+        var div = document.getElementById("pageMap");
+        var map = plugin.google.maps.Map.getMap(div);
+        $("#gotoMap").click(function() {
+            $.mobile.changePage("#pageMap");
         });
     }
 };

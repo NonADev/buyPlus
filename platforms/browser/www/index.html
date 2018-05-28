@@ -20,13 +20,18 @@
     	<!-- CSS -->
     </head>
     <body>
+		<div class="map" id="pageMap" data-role="page">
+
+
+
+		</div>
         <div id="pageLogin" data-role="page">
             <center><img src="./img/logo.png" class="logo"></center>
             <input type="text" id="txtLogin" name="nome" placeholder="nome" data-wrapper-class="ui-custom">
             <input type="text" id="txtPass" name="senha" placeholder="senha" data-wrapper-class="ui-custom">
-            <input type="button" value="Login" data-wrapper-class="ui-custom">
+            <input id="gotoMap" type="button" value="Login" data-wrapper-class="ui-custom">
             <hr>
-            <input id="changePageButton" type="button" value="registrar" data-wrapper-class="ui-custom">
+            <input id="gotoRegister" type="button" value="registrar" data-wrapper-class="ui-custom">
         </div>
 		<div id="pageRegister" data-role="page">
             <center><img src="./img/logo.png" class="logo"></center>
@@ -37,12 +42,9 @@
 			<input type="text" id="txtSenha" name="senha" placeholder="senha" data-wrapper-class="ui-custom">
 			<input type="text" id="txtConfirmarSenha" name="confirmar Senha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
             <input type="button" value="registrar" data-wrapper-class="ui-custom">
+            <input id="gotoLogin" type="button" value="logar" data-wrapper-class="ui-custom">
 			<!--</form>-->
 		</div>
-
-
-
-
 
 
     	<!-- JS -->

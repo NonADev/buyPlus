@@ -3,6 +3,11 @@
     margin: 0;
 } /*-- RETIRA A MARGIN PADRAO --*/
 
+.map{
+    width: 100vw;
+    height: 100vh;
+}
+
 div[id="pageRegister"] .ui-input-text.ui-custom ::placeholder{
     color: #9400D3;
     text-shadow: none;

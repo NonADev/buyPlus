@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon May 28 13:13:01 BRT 2018
+#Mon May 28 14:50:30 BRT 2018
 20.base=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_
 143.base=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 493.base=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\assets\\debug
