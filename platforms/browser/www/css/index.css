@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-} /*-- RETIRA A MARGIN PADRAO --*/
+} /*-- RETIRA A MARGEN PADRAO --*/
 
 div[id="pageRegister"] .ui-input-text.ui-custom ::placeholder{
     color: #9400D3;
@@ -25,7 +25,6 @@ div[id="pageLogin"] input[type="text"], div[id="pageLogin"]{
 }
 
 div[id="pageRegister"] .ui-input-text.ui-custom {
-    margin-left: 6.5vh;
     text-shadow: none;
     vertical-align: middle;
     width: 75vw;
@@ -37,7 +36,6 @@ div[id="pageRegister"] .ui-input-text.ui-custom {
 }
 
 div[id="pageLogin"] .ui-input-text.ui-custom {
-     margin-left: 6.5vh;
      text-shadow: none;
      vertical-align: middle;
      width: 75vw;
@@ -50,7 +48,6 @@ div[id="pageLogin"] .ui-input-text.ui-custom {
 
 div[id="pageLogin"] hr{
     margin-top: 10vh;
-    margin-left: 6.5vh;
     width: 75vw;
     border: none;
     border-bottom: 2px solid #FFA500;
@@ -61,12 +58,21 @@ div[id="pageMap"]{
 	height: 100vh;
 }
 
+
+div[id="map"]{
+    margin-top: 2vh;
+    background-color: blue;
+    width: 94vw;
+    height: 77vh;
+}
+
 .logo{
     position: static;
     margin-top: 3vh;
     width: 15vw;
     height: 15vw;
 }
+
 
 .ui-input-btn.ui-custom {
     background-color: #9400D3;
@@ -75,7 +81,21 @@ div[id="pageMap"]{
     border: none;
     border-radius: unset;
     width: 60vw;
-    margin-left: 15vw;
-    margin-top: 11vh;
+    margin-top: 13vh;    
     box-shadow: none;
+}
+
+.ui-input-btn.ui-custom-margin {
+    background-color: #9400D3;
+    color: white;
+    text-shadow: none;
+    border: none;
+    border-radius: unset;
+    width: 60vw;
+    margin-top: 5vh;    
+    box-shadow: none;
+}
+
+div[id="pageMap"]{
+    background-color: orange;
 }
