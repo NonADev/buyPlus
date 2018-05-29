@@ -51,7 +51,7 @@ div[id="pageLogin"] hr{
     width: 75vw;
     border: none;
     border-bottom: 2px solid #FFA500;
-}
+}map
 
 div[id="pageMap"]{
 	width: 100vw;
@@ -61,7 +61,6 @@ div[id="pageMap"]{
 
 div[id="map"]{
     margin-top: 2vh;
-    background-color: blue;
     width: 94vw;
     height: 77vh;
 }

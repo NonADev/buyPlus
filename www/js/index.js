@@ -42,7 +42,7 @@ var app = {
         myOptions = {
             zoom: 8
         };
-		div = document.getElementById("map");
+		div = document.getElementById("pageMap");
 		map = plugin.google.maps.Map.getMap(div);
     }
 };

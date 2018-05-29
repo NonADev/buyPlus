@@ -14,6 +14,21 @@
                     }
                 }
             ]
+        },
+        {
+            "outputFile": "C:\\Users\\Aluno\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Aluno\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\c23d2f222d400d826a6e749b1cf3530b\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
         }
     ]
 }

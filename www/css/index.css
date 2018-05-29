@@ -53,19 +53,6 @@ div[id="pageLogin"] hr{
     border-bottom: 2px solid #FFA500;
 }
 
-div[id="pageMap"]{
-	width: 100vw;
-	height: 100vh;
-}
-
-
-div[id="map"]{
-    margin-top: 2vh;
-    background-color: blue;
-    width: 94vw;
-    height: 77vh;
-}
-
 .logo{
     position: static;
     margin-top: 3vh;
@@ -92,10 +79,19 @@ div[id="map"]{
     border: none;
     border-radius: unset;
     width: 60vw;
-    margin-top: 5vh;    
+    margin-top: 80vh; 
+	position: static;
     box-shadow: none;
 }
+
+/* MAPA */
 
 div[id="pageMap"]{
     background-color: orange;
 }
+/*
+div[id="map"]{
+    margin-top: 2vh;
+    width: 94vw;
+    height: 77vh;
+}*/
