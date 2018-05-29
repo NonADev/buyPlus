@@ -38,6 +38,10 @@ var app = {
     loadMap: function() {
         var map;
         var div;
+        var myOptions;
+        myOptions = {
+            zoom: 8
+        };
 		div = document.getElementById("pageMap");
 		map = plugin.google.maps.Map.getMap(div);
     }

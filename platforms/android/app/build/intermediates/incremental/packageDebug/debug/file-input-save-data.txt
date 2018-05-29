@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue May 29 09:39:38 BRT 2018
+#Tue May 29 12:11:44 BRT 2018
 100.set=ASSET
 57.file=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0\\lib\\x86\\libtbxml.so
 145.file=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\js\\jquerymobile\\demos\\transitions\\page-transitions-dialog.html
