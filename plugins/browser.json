@@ -15,6 +15,9 @@
     },
     "cordova-plugin-contacts": {
       "PACKAGE_NAME": "com.etec.buyplus"
+    },
+    "cordova-plugin-googlemaps": {
+      "PACKAGE_NAME": "com.etec.buyplus"
     }
   },
   "dependent_plugins": {}

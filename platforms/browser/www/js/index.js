@@ -9,7 +9,7 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        this.receivedEvent('deviceready');
+        this.receivedEvent();
 		this.loadMap();
         this.changeToPageRegister();
         this.changeToPageLogin();
@@ -17,8 +17,8 @@ var app = {
     },
 
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        		
+    receivedEvent: function() {
+        //iniciar o banco create parafernalhas aqui
     },
     changeToPageRegister: function() {
         $("#gotoRegister").click(function() {
@@ -36,8 +36,14 @@ var app = {
         });
     },
     loadMap: function() {
-		var div = document.getElementById("pageMap");
-		var map = plugin.google.maps.Map.getMap(div);
+        var map;
+        var div;
+        var myOptions;
+        myOptions = {
+            zoom: 8
+        };
+		div = document.getElementById("pageMap");
+		map = plugin.google.maps.Map.getMap(div);
     }
 };
 

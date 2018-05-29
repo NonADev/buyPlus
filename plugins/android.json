@@ -9,6 +9,12 @@
   "installed_plugins": {
     "cordova-plugin-contacts": {
       "PACKAGE_NAME": "com.etec.buyplus"
+    },
+    "cordova-plugin-googlemaps": {
+      "API_KEY_FOR_ANDROID": "AIzaSyDS_JJ83_sVpFt44vvdm2aUPRKrA6N65Uo",
+      "PLAY_SERVICES_VERSION": "15.0.1",
+      "ANDROID_SUPPORT_V4_VERSION": "26.1.0",
+      "PACKAGE_NAME": "com.etec.buyplus"
     }
   },
   "dependent_plugins": {}

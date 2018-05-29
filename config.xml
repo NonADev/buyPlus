@@ -28,5 +28,11 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <plugin name="cordova-plugin-googlemaps" spec="^2.3.4">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDS_JJ83_sVpFt44vvdm2aUPRKrA6N65Uo" />
+        <variable name="API_KEY_FOR_IOS" value="AIzaSyCCr2q8zZ1qju7QDZ9m6S1YmLXBc2Ld6Fw" />
+        <variable name="PLAY_SERVICES_VERSION" value="15.0.1" />
+        <variable name="ANDROID_SUPPORT_V4_VERSION" value="26.1.0" />
+    </plugin>
     <engine name="browser" spec="^5.0.3" />
 </widget>
