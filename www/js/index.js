@@ -10,10 +10,14 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent();
-		this.loadMap();
         this.changeToPageRegister();
         this.changeToPageLogin();
         this.changeToPageMap();
+		try{
+			this.loadMap();
+		}catch(err){
+			console.log(err)
+		}
     },
 
     // Update DOM on a Received Event
