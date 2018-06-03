@@ -23,41 +23,47 @@
     </head>
     <body>
         <div id="pageMap" data-role="page">
-            <center>
-                <div id="map">                
-                </div>
-                <input id="gotoLogin" type="button" name="generateList" value="gerar lista" data-wrapper-class="ui-custom-margin">
-            </center>
+            <div class="navbar">
+                <a>Perfil</a>
+                <a>Mapa</a>
+                <a>Lista</a>
+                <a>Evento</a>
+            </div>
         </div>
         <div id="pageLogin" data-role="page">
             <center>
                 <img src="./img/logo.png" class="logo">
-                <input type="text" id="txtLogin" name="nome" placeholder="nome" data-wrapper-class="ui-custom">
-                <input type="text" id="txtPass" name="senha" placeholder="senha" data-wrapper-class="ui-custom">
-                <input id="gotoMap" type="button" value="Login" data-wrapper-class="ui-custom">
+                <input type="email" id="txtLogin" placeholder="email" data-wrapper-class="ui-custom">
+                <input type="password" id="txtPass" placeholder="senha" data-wrapper-class="ui-custom">
+                <input type="button" value="Login" data-wrapper-class="ui-custom">
                 <hr>
-                <input id="gotoRegister" type="button" value="registrar" data-wrapper-class="ui-custom">
+                <input type="button" value="registrar" data-wrapper-class="ui-custom">
             </center>
         </div>
 		<div id="pageRegister" data-role="page">
             <center>
                 <img src="./img/logo.png" class="logo">
-    			<!--<form onsubmit="validarEnvio()">-->
-    			<input type="text" id="txtNome" name="nome" placeholder="nome" data-wrapper-class="ui-custom">
-    			<input type="text" id="txtEmail" name="email" placeholder="e-mail" data-wrapper-class="ui-custom">
-                <input type="text" id="txtTelefone" name="telefone" placeholder="telefone" data-wrapper-class="ui-custom">
-    			<input type="text" id="txtSenha" name="senha" placeholder="senha" data-wrapper-class="ui-custom">
-    			<input type="text" id="txtConfirmarSenha" name="confirmar Senha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
-                <input type="button" value="registrar" data-wrapper-class="ui-custom">
-                <input id="gotoLogin" type="button" value="já possui conta? logar" data-wrapper-class="ui-custom-margin">
-    			<!--</form>-->
+    			<form autocomplete="off">
+					<input type="text" id="txtNome" placeholder="nome" data-wrapper-class="ui-custom">
+					<input type="email" id="txtEmail" placeholder="e-mail" data-wrapper-class="ui-custom">
+					<input type="text" id="txtTelefone" placeholder="telefone" data-wrapper-class="ui-custom">
+					<input type="password" id="txtSenha" placeholder="senha" data-wrapper-class="ui-custom">
+					<input type="text" id="txtConfirmarSenha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
+					<input type="button" value="registrar" data-wrapper-class="ui-custom">
+    			</form>
             </center>
 		</div>
-
+        <div id="pagePerfil" data-role="page">
+            <!--<img>-->
+            <input type="text" id="txtPerfilNome" placeholder="nome" data-wrapper-class="ui-custom">
+            <input type="email" id="txtPerfilEmail" placeholder="e-mail" data-wrapper-class="ui-custom">
+            <input type="text" id="txtPerfilTelefone" placeholder="telefone" data-wrapper-class="ui-custom">
+            <input type="password" id="txtPerfilSenha" placeholder="senha" data-wrapper-class="ui-custom">
+        </div>
 
     	<!-- JS -->
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>       
+        <script type="text/javascript" src="js/index.js"></script>
     	<!-- JS -->
     </body>
 </html>

@@ -9,35 +9,22 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        this.receivedEvent();
-        this.changeToPageRegister();
-        this.changeToPageLogin();
-        this.changeToPageMap();
+        //this.buyPlusDatabase();
+
 		try{
 			this.loadMap();
 		}catch(err){
-			console.log(err)
+			console.log(err);
 		}
     },
 
     // Update DOM on a Received Event
-    receivedEvent: function() {
-        //iniciar o banco create parafernalhas aqui
-    },
-    changeToPageRegister: function() {
-        $("#gotoRegister").click(function() {
-            $.mobile.changePage("#pageRegister");
-        });
-    },
-    changeToPageLogin: function() {
-        $("#gotoLogin").click(function() {
-            $.mobile.changePage("#pageLogin");
-        });
-    },
-    changeToPageMap: function() {
-        $("#gotoMap").click(function() {
-            $.mobile.changePage("#pageMap");
-        });
+    buyPlusDatabase: function() {
+        try {
+            var db = window.openDatabase("mydb", "1.0", "Test DB", 1000000);
+        }catch (e) {
+            alert(e);
+        }
     },
     loadMap: function() {
         var map;
@@ -46,8 +33,8 @@ var app = {
         myOptions = {
             zoom: 8
         };
-		div = document.getElementById("pageMap");
-		map = plugin.google.maps.Map.getMap(div);
+        div = document.getElementById("pageMap");
+        map = plugin.google.maps.Map.getMap(div);
     }
 };
 

@@ -16,11 +16,11 @@ div[id="pageLogin"] .ui-input-text.ui-custom ::placeholder{
 }
 /*-- RETIRA OS EFEITOS DO PLACEHOLDER --*/
 
-div[id="pageRegister"] input[type="text"], div[id="pageRegister"]{
+div[id="pageRegister"] input[type="text"], div[id="pageRegister"] input[type="password"], div[id="pageRegister"] input[type="email"], div[id="pageRegister"]{
     background-color: #FFA500    !important;
 }
 
-div[id="pageLogin"] input[type="text"], div[id="pageLogin"]{
+div[id="pageLogin"] input[type="text"], div[id="pageLogin"] input[type="password"], div[id="pageLogin"] input[type="email"], div[id="pageLogin"]{
     background-color: #9400D3    !important;
 }
 
@@ -60,28 +60,22 @@ div[id="pageLogin"] hr{
     height: 15vw;
 }
 
-
 .ui-input-btn.ui-custom {
-    background-color: #9400D3;
+	background-color: #9400D3;
     color: white;
     text-shadow: none;
     border: none;
     border-radius: unset;
     width: 60vw;
-    margin-top: 13vh;    
-    box-shadow: none;
+    box-shadow: none;	
 }
 
-.ui-input-btn.ui-custom-margin {
-    background-color: #9400D3;
-    color: white;
-    text-shadow: none;
-    border: none;
-    border-radius: unset;
-    width: 60vw;
-    margin-top: 80vh; 
-	position: static;
-    box-shadow: none;
+div[id="pageLogin"] .ui-input-btn.ui-custom, div[id="pageRegister"] .ui-input-btn.ui-custom {
+    margin-top: 13vh; 
+}
+
+div[id="pageMap"] .ui-input-btn.ui-custom {
+	margin-top: 80vh;
 }
 
 /* MAPA */
@@ -89,9 +83,24 @@ div[id="pageLogin"] hr{
 div[id="pageMap"]{
     background-color: orange;
 }
-/*
-div[id="map"]{
-    margin-top: 2vh;
-    width: 94vw;
-    height: 77vh;
-}*/
+
+/* MAPA */
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-shadow: none;
+    font-size: 17px;
+}

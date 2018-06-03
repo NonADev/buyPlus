@@ -1,25 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
+            "outputFile": "C:\\Users\\wesley\\Desktop\\buyplus2\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
             "map": [
                 {
                     "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\677c6a768fcef4dbf3ee3d18ff94050a\\res\\values-en-rAU\\values-en-rAU.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\Aluno\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Aluno\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\c23d2f222d400d826a6e749b1cf3530b\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

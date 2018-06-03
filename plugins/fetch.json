@@ -7,14 +7,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-sqlite-storage": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-sqlite-storage"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-contacts": {
     "source": {
       "type": "registry",
@@ -33,5 +25,13 @@
       "API_KEY_FOR_ANDROID": "AIzaSyDS_JJ83_sVpFt44vvdm2aUPRKrA6N65Uo",
       "API_KEY_FOR_IOS": "AIzaSyCCr2q8zZ1qju7QDZ9m6S1YmLXBc2Ld6Fw"
     }
+  },
+  "cordova-sqlite-storage": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-sqlite-storage"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

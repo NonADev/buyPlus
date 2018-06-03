@@ -1,14 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
-        "id": "cordova-sqlite-storage.SQLitePlugin",
-        "pluginId": "cordova-sqlite-storage",
-        "clobbers": [
-            "SQLitePlugin"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-contacts/www/contacts.js",
         "id": "cordova-plugin-contacts.contacts",
         "pluginId": "cordova-plugin-contacts",
@@ -296,15 +288,23 @@ module.exports = [
         "id": "cordova-plugin-googlemaps.Overlay",
         "pluginId": "cordova-plugin-googlemaps",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+        "id": "cordova-sqlite-storage.SQLitePlugin",
+        "pluginId": "cordova-sqlite-storage",
+        "clobbers": [
+            "SQLitePlugin"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "cordova-plugin-whitelist": "1.3.3",
-    "cordova-sqlite-storage": "2.3.2",
     "cordova-plugin-contacts": "3.0.1",
-    "cordova-plugin-googlemaps": "2.3.4"
+    "cordova-plugin-googlemaps": "2.3.4",
+    "cordova-sqlite-storage": "2.3.2"
 }
 // BOTTOM OF METADATA
 });
