@@ -75,6 +75,10 @@
             {
               "xml": "<feature name=\"SQLitePlugin\"><param name=\"android-package\" value=\"io.sqlc.SQLitePlugin\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.Geolocation\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -92,6 +96,18 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.location.gps\" />",
               "count": 1
             }
           ],
@@ -171,6 +187,9 @@
       "PACKAGE_NAME": "com.etec.buyplus"
     },
     "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.etec.buyplus"
+    },
+    "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.etec.buyplus"
     }
   },
@@ -472,12 +491,27 @@
       "clobbers": [
         "SQLitePlugin"
       ]
+    },
+    {
+      "id": "cordova-plugin-geolocation.geolocation",
+      "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
+      "pluginId": "cordova-plugin-geolocation",
+      "clobbers": [
+        "navigator.geolocation"
+      ]
+    },
+    {
+      "id": "cordova-plugin-geolocation.PositionError",
+      "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+      "pluginId": "cordova-plugin-geolocation",
+      "runs": true
     }
   ],
   "plugin_metadata": {
     "cordova-plugin-contacts": "3.0.1",
     "cordova-plugin-googlemaps": "2.3.4",
     "cordova-plugin-whitelist": "1.3.3",
-    "cordova-sqlite-storage": "2.3.2"
+    "cordova-sqlite-storage": "2.3.2",
+    "cordova-plugin-geolocation": "4.0.1"
   }
 }

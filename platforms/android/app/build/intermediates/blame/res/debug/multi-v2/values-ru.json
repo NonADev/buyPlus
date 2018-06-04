@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\wesley\\Desktop\\buyplus2\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru\\values-ru.xml",
+            "outputFile": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru\\values-ru.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\wesley\\Desktop\\buyplus2\\platforms\\android\\app\\src\\main\\res\\values-ru\\pgm_strings.xml",
-                    "from": {
-                        "startLines": "3,18,2,5,4,6,7,8,9,10,11,12,13,14,17,15,16",
-                        "startColumns": "2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2",
-                        "startOffsets": "114,2445,55,397,269,591,751,885,1029,1164,1339,1536,1693,1878,2336,2059,2229",
-                        "endColumns": "153,111,57,192,126,158,132,142,133,173,195,155,183,179,107,168,105",
-                        "endOffsets": "265,2554,110,587,393,747,881,1025,1160,1335,1532,1689,1874,2055,2441,2225,2332"
-                    },
-                    "to": {
-                        "startLines": "20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2867,3023,3137,3197,3392,3521,3682,3817,3962,4098,4274,4472,4630,4816,4998,5108,5279",
-                        "endColumns": "155,113,59,194,128,160,134,144,135,175,197,157,185,181,109,170,107",
-                        "endOffsets": "3018,3132,3192,3387,3516,3677,3812,3957,4093,4269,4467,4625,4811,4993,5103,5274,5382"
-                    }
-                },
                 {
                     "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\677c6a768fcef4dbf3ee3d18ff94050a\\res\\values-ru\\values-ru.xml",
                     "from": {
@@ -35,6 +18,23 @@
                         "startOffsets": "5387",
                         "endColumns": "100",
                         "endOffsets": "5483"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\src\\main\\res\\values-ru\\pgm_strings.xml",
+                    "from": {
+                        "startLines": "3,18,2,5,4,6,7,8,9,10,11,12,13,14,17,15,16",
+                        "startColumns": "2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2",
+                        "startOffsets": "114,2445,55,397,269,591,751,885,1029,1164,1339,1536,1693,1878,2336,2059,2229",
+                        "endColumns": "153,111,57,192,126,158,132,142,133,173,195,155,183,179,107,168,105",
+                        "endOffsets": "265,2554,110,587,393,747,881,1025,1160,1335,1532,1689,1874,2055,2441,2225,2332"
+                    },
+                    "to": {
+                        "startLines": "20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2867,3023,3137,3197,3392,3521,3682,3817,3962,4098,4274,4472,4630,4816,4998,5108,5279",
+                        "endColumns": "155,113,59,194,128,160,134,144,135,175,197,157,185,181,109,170,107",
+                        "endOffsets": "3018,3132,3192,3387,3516,3677,3812,3957,4093,4269,4467,4625,4811,4993,5103,5274,5382"
                     }
                 },
                 {

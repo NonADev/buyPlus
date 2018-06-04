@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\wesley\\Desktop\\buyplus2\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
                     "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\5680525fbe3f45b6c809e374abf2eca0\\res\\values-v24\\values-v24.xml",

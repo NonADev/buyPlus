@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\wesley\\Desktop\\buyplus2\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\677c6a768fcef4dbf3ee3d18ff94050a\\res\\values\\values.xml",
@@ -57,7 +57,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\wesley\\Desktop\\buyplus2\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",
@@ -71,6 +71,23 @@
                         "startOffsets": "5978,6042,8417",
                         "endColumns": "63,41,58",
                         "endOffsets": "6037,6079,8471"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\src\\main\\res\\values\\pgm_strings.xml",
+                    "from": {
+                        "startLines": "3,18,2,5,4,6,7,8,9,10,11,12,13,14,17,15,16",
+                        "startColumns": "2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2",
+                        "startOffsets": "112,2474,55,393,268,639,798,937,1106,1238,1415,1620,1768,1960,2379,2139,2286",
+                        "endColumns": "154,91,55,244,123,157,137,167,130,175,203,146,190,177,93,145,91",
+                        "endOffsets": "264,2563,108,635,389,794,933,1102,1234,1411,1616,1764,1956,2135,2470,2282,2375"
+                    },
+                    "to": {
+                        "startLines": "116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "8476,8633,8727,8785,9032,9158,9318,9458,9628,9761,9939,10145,10294,10487,10667,10763,10911",
+                        "endColumns": "156,93,57,246,125,159,139,169,132,177,205,148,192,179,95,147,93",
+                        "endOffsets": "8628,8722,8780,9027,9153,9313,9453,9623,9756,9934,10140,10289,10482,10662,10758,10906,11000"
                     }
                 },
                 {
@@ -88,23 +105,6 @@
                         "startOffsets": "5840,7124",
                         "endColumns": "67,166",
                         "endOffsets": "5903,7286"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\wesley\\Desktop\\buyplus2\\platforms\\android\\app\\src\\main\\res\\values\\pgm_strings.xml",
-                    "from": {
-                        "startLines": "3,18,2,5,4,6,7,8,9,10,11,12,13,14,17,15,16",
-                        "startColumns": "2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2",
-                        "startOffsets": "112,2474,55,393,268,639,798,937,1106,1238,1415,1620,1768,1960,2379,2139,2286",
-                        "endColumns": "154,91,55,244,123,157,137,167,130,175,203,146,190,177,93,145,91",
-                        "endOffsets": "264,2563,108,635,389,794,933,1102,1234,1411,1616,1764,1956,2135,2470,2282,2375"
-                    },
-                    "to": {
-                        "startLines": "116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "8476,8633,8727,8785,9032,9158,9318,9458,9628,9761,9939,10145,10294,10487,10667,10763,10911",
-                        "endColumns": "156,93,57,246,125,159,139,169,132,177,205,148,192,179,95,147,93",
-                        "endOffsets": "8628,8722,8780,9027,9153,9313,9453,9623,9756,9934,10140,10289,10482,10662,10758,10906,11000"
                     }
                 }
             ]

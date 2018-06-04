@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\wesley\\Desktop\\buyplus2\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
+            "outputFile": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
             "map": [
                 {
                     "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\ca4052c81a1df0f07079b02040cd5a12\\res\\values-de\\values.xml",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\wesley\\Desktop\\buyplus2\\platforms\\android\\app\\src\\main\\res\\values-de\\pgm_strings.xml",
+                    "source": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\src\\main\\res\\values-de\\pgm_strings.xml",
                     "from": {
                         "startLines": "3,19,2,5,4,6,7,8,9,10,11,12,14,15,18,16,17",
                         "startColumns": "2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2",

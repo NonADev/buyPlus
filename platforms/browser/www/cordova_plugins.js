@@ -304,7 +304,8 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-contacts": "3.0.1",
     "cordova-plugin-googlemaps": "2.3.4",
-    "cordova-sqlite-storage": "2.3.2"
+    "cordova-sqlite-storage": "2.3.2",
+    "cordova-plugin-geolocation": "4.0.1"
 }
 // BOTTOM OF METADATA
 });
