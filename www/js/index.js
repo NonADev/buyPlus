@@ -11,21 +11,20 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        //this.buyPlusDatabase();
-		try{this.alertLocation();}catch(err){alert(err);}
+        try{this.buyPlusDatabase();}catch(err){alert(err);}
+		//try{this.geolocationLoad();}catch(err){alert(err);}
 		//this.loadMap();
     },
 
     // Update DOM on a Received Event
     buyPlusDatabase:function() {
-        try {
-            var db = window.openDatabase("mydb", "1.0", "Test DB", 1000000);
-        }catch (e) {
-            alert(e);
-        }
+		var db = window.sqlitePlugin.openDatabase({
+		  name: 'my.db',
+		  location: 'default'
+		});
     },		
 	
-	alertLocation:function(position) {
+	geolocationLoad:function(position) {
 		navigator.geolocation.getCurrentPosition(this.onGeolocationCurrentPositionSuccess);
 	},
 	
