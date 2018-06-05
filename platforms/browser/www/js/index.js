@@ -12,8 +12,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {		
 		//this.buyPlusDatabase();
-		//this.geolocationLoad();
-		//this.loadMap();
+		this.geolocationLoad();
     },
 
     // Update DOM on a Received Event
@@ -35,7 +34,9 @@ var app = {
 		var b = this.mbLongitude;
 		a = position.coords.latitude;
 		b = position.coords.longitude;
-		app.loadMap(a, b);
+		try{
+			app.loadMap(a, b);
+		}catch(err){alert(err);}
     },
 	
     loadMap:function(a, b) {
@@ -52,12 +53,12 @@ var app = {
 			zoom: 17,
 			bearing: 140,
 			duration: 5000
-		});	
+		});	/*
 		var marker = map.addMarker({
 			position: {lat: a, lng: b},
 			title:  "Você está aqui",
 			animation: plugin.google.maps.Animation.BOUNCE
-		});		
+		});		*/
     }
 };
 app.initialize();

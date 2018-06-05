@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jun 05 14:06:48 BRT 2018
+#Tue Jun 05 15:48:51 BRT 2018
 100.set=ASSET
 57.file=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\js\\jquerymobile\\demos\\css\\themes\\default\\images\\icons-png\\arrow-d-l-black.png
 145.file=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\js\\jquerymobile\\images\\icons-png\\video-black.png
@@ -219,7 +219,7 @@
 812.base=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 34.file=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\js\\jquerymobile\\images\\icons-svg\\eye-black.svg
 538.base=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\assets\\debug
-436.file=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\mipmap-xxhdpi-v4\\icon.png
+436.file=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png
 270.set=ASSET
 453.base=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 16.set=ASSET
@@ -1567,7 +1567,7 @@ count=816
 813.base=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_
 35.file=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0\\lib\\x86_64\\libsqlc-native-driver.so
 539.base=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_
-437.file=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png
+437.file=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\mipmap-xxhdpi-v4\\icon.png
 280.set=ASSET
 454.base=C\:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 26.set=ASSET
