@@ -75,7 +75,18 @@ div[id="pageLogin"] .ui-input-btn.ui-custom, div[id="pageRegister"] .ui-input-bt
 }
 
 div[id="pageMap"] .ui-input-btn.ui-custom {
-	margin-top: 80vh;
+	margin-top: 60vh;
+	margin-left: 60vw;
+	width: 5vw;
+	height: 2.5vh;
+}
+
+div[id="pageMap"] .ui-input-text.ui-custom input{
+	position: fixed;
+	height: 2.5vh;
+	background-color: white;
+	width: 60vw;
+	margin-top: 60vh;	
 }
 
 /* MAPA */

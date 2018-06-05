@@ -10,36 +10,30 @@ var app = {
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-        //this.buyPlusDatabase();
-		try{this.alertLocation();}catch(err){alert(err);}
-		//this.loadMap();
+    onDeviceReady: function() {		
+		//this.buyPlusDatabase();
+		//this.geolocationLoad();
     },
 
     // Update DOM on a Received Event
-    buyPlusDatabase:function() {
-        try {
-            var db = window.openDatabase("mydb", "1.0", "Test DB", 1000000);
-        }catch (e) {
-            alert(e);
-        }
+    buyPlusDatabase:function() {	
+		//working test
+		/*
+		window.sqlitePlugin.echoTest(function() {
+			alert('ECHO test OK');
+		});*/
+		var db = window.sqlitePlugin.openDatabase({name: 'my.db', location: 'default'});	
     },		
 	
-	alertLocation:function(position) {
-		navigator.geolocation.getCurrentPosition(this.onGeolocationCurrentPositionSuccess);
+	geolocationLoad:function(position) {
+		navigator.geolocation.getCurrentPosition(app.onGeolocationCurrentPositionSuccess);
 	},
 	
     onGeolocationCurrentPositionSuccess:function(position){
-        var a=this.mbLatitude;
-		var b=this.mbLongitude;
-		alert("latitude");
-		alert("old "+a);
+        var a = this.mbLatitude;
+		var b = this.mbLongitude;
 		a = position.coords.latitude;
-		alert("new "+a);
-		alert("longitude");
-		alert("old "+b);
 		b = position.coords.longitude;
-		alert("new "+b);
 		app.loadMap(a, b);
     },
 	
@@ -55,10 +49,14 @@ var app = {
 		map.animateCamera({
 			target: {lat: a, lng: b},
 			zoom: 17,
-			tilt: 60,
 			bearing: 140,
 			duration: 5000
-		});			
+		});	
+		var marker = map.addMarker({
+			position: {lat: a, lng: b},
+			title:  "Você está aqui",
+			animation: plugin.google.maps.Animation.BOUNCE
+		});		
     }
 };
 app.initialize();
