@@ -57,6 +57,9 @@
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
     </feature>
+    <feature name="Toast">
+        <param name="android-package" value="nl.xservices.plugins.Toast" />
+    </feature>
     <name>buy+</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -66,6 +69,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="*" />
     <access origin="https://*" />
     <allow-navigation href="https://maps.googleapis.com/*" />
     <allow-navigation href="https://maps.googleapis.com" />

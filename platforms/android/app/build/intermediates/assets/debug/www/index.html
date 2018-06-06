@@ -22,6 +22,16 @@
     	<!-- CSS -->
     </head>
     <body>
+        <div id="pageLogin" data-role="page">
+            <center>
+                <img src="./img/logo.png" class="logo">
+                <input type="email" id="txtLogin" placeholder="email" data-wrapper-class="ui-custom">
+                <input type="password" id="txtPass" placeholder="senha" data-wrapper-class="ui-custom">
+                <input id="btnLogin" type="button" value="Login" data-wrapper-class="ui-custom">
+                <hr>
+                <input id="btnGoToRegister" type="button" value="registrar" data-wrapper-class="ui-custom">
+            </center>
+        </div>
         <div id="pageMap" data-role="page">
 			<div id="seachGeo">
 				<input id="customGeocoder" type="text" placeholder="Digite o Endereço" data-wrapper-class="ui-custom">
@@ -34,26 +44,16 @@
                 <a>Evento</a>
             </div>
         </div>
-        <div id="pageLogin" data-role="page">
-            <center>
-                <img src="./img/logo.png" class="logo">
-                <input type="email" id="txtLogin" placeholder="email" data-wrapper-class="ui-custom">
-                <input type="password" id="txtPass" placeholder="senha" data-wrapper-class="ui-custom">
-                <input type="button" value="Login" data-wrapper-class="ui-custom">
-                <hr>
-                <input type="button" value="registrar" data-wrapper-class="ui-custom">
-            </center>
-        </div>
 		<div id="pageRegister" data-role="page">
             <center>
                 <img src="./img/logo.png" class="logo">
     			<form autocomplete="off">
-					<input type="text" id="txtNome" placeholder="nome" data-wrapper-class="ui-custom">
-					<input type="email" id="txtEmail" placeholder="e-mail" data-wrapper-class="ui-custom">
-					<input type="text" id="txtTelefone" placeholder="telefone" data-wrapper-class="ui-custom">
-					<input type="password" id="txtSenha" placeholder="senha" data-wrapper-class="ui-custom">
-					<input type="text" id="txtConfirmarSenha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
-					<input type="button" value="registrar" data-wrapper-class="ui-custom">
+					<input type="text" id="registerNome" placeholder="nome" data-wrapper-class="ui-custom">
+					<input type="email" id="registerEmail" placeholder="e-mail" data-wrapper-class="ui-custom">
+					<input type="text" id="registerTelefone" placeholder="telefone" data-wrapper-class="ui-custom">
+					<input type="password" id="registerSenha" placeholder="senha" data-wrapper-class="ui-custom">
+					<input type="text" id="registerConfirmarSenha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
+					<input id="btnRegisterUser" type="button" value="registrar" data-wrapper-class="ui-custom">
     			</form>
             </center>
 		</div>

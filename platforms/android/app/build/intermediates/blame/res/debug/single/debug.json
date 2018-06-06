@@ -44,12 +44,12 @@
         "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\15c9bf86c582cf71c9b3e4b45d68cdac\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
     },
     {
-        "merged": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark.xml.flat",
-        "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\15c9bf86c582cf71c9b3e4b45d68cdac\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_tint.xml.flat",
         "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\15c9bf86c582cf71c9b3e4b45d68cdac\\res\\color\\common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark.xml.flat",
+        "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\15c9bf86c582cf71c9b3e4b45d68cdac\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
@@ -172,12 +172,12 @@
         "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\15c9bf86c582cf71c9b3e4b45d68cdac\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
-        "merged": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
-        "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\5680525fbe3f45b6c809e374abf2eca0\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
         "merged": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_dummy_infowindow.xml.flat",
         "source": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\src\\main\\res\\layout\\dummy_infowindow.xml"
+    },
+    {
+        "merged": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
+        "source": "C:\\Users\\wesley\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\5680525fbe3f45b6c809e374abf2eca0\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "C:\\Users\\wesley\\Desktop\\buyplus\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xxhdpi_screen.png.flat",

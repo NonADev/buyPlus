@@ -11,19 +11,72 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {		
-		//this.buyPlusDatabase();
-		this.geolocationLoad();
+		//this.geolocationLoad();
+		document.getElementById('btnRegisterUser').addEventListener('click', this.dbRegisterUser, false);
+		document.getElementById('btnGoToRegister').addEventListener('click', this.goToRegister, false);
     },
-
-    // Update DOM on a Received Event
-    buyPlusDatabase:function() {	
-		//working test
-		/*
-		window.sqlitePlugin.echoTest(function() {
-			alert('ECHO test OK');
-		});*/
-		var db = window.sqlitePlugin.openDatabase({name: 'my.db', location: 'default'});	
-    },		
+	
+	goToRegister: function(){
+		$.mobile.changePage("#pageRegister");
+	},
+	
+	dbRegisterUser: function(e){	
+		var tttt;
+		var vNome = document.getElementById('registerNome').value;
+		var vEmail = document.getElementById('registerEmail').value;
+		var vTelefone= document.getElementById('registerTelefone').value;
+		var vSenha = document.getElementById('registerSenha').value;
+		if(vNome==""||vEmail==""||vTelefone==""||vSenha==""){ 
+			//window.plugins.toast.show('todos os campos devem estar','long', 'center');
+			alert('todos os campos devem estar preenchidos');
+		}
+		else{
+			$.ajax({
+				type: "POST",
+				url: "http://192.168.0.100/index.php", 
+				data: {
+					acao: 'registrarUsuario',
+					nome: vNome,
+					email: vEmail,
+					telefone: vTelefone,
+					senha: vSenha
+				},     
+				async: false,	//perguntar pq quando tá true o php não retorna valor
+				dataType: "json", 
+				success: function (json) {
+					tttt = json;
+					if(json.result == true){
+						console.log(tttt.err);
+					}
+					else{
+						console.log(tttt.err);
+					}
+				},
+				error: function(){
+					console.log('error');
+				}
+			});
+		}
+	},
+	
+	conPhp: function() {
+		$.ajax({
+            type: "POST",
+            url: "http://192.168.0.100/index.php", 
+            data: {
+                acao: 'login'
+            },            
+            async: true,
+            dataType: "json", 
+            success: function (json) { 
+                if(json[0].usuario != ""){
+                   //redireciona o usuario para pagina
+					alert("logado: "+json[0].usuario); 
+                }
+				
+            }
+        });
+	},
 	
 	geolocationLoad:function(position) {
 		navigator.geolocation.getCurrentPosition(app.onGeolocationCurrentPositionSuccess);

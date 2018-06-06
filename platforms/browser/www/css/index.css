@@ -22,6 +22,7 @@ div[id="pageRegister"] input[type="text"], div[id="pageRegister"] input[type="pa
 
 div[id="pageLogin"] input[type="text"], div[id="pageLogin"] input[type="password"], div[id="pageLogin"] input[type="email"], div[id="pageLogin"]{
     background-color: #9400D3    !important;
+	color: white;	
 }
 
 div[id="pageRegister"] .ui-input-text.ui-custom {
@@ -74,20 +75,32 @@ div[id="pageLogin"] .ui-input-btn.ui-custom, div[id="pageRegister"] .ui-input-bt
     margin-top: 13vh; 
 }
 
-div[id="pageMap"] .ui-input-text.ui-custom {
+div[id="pageMap"] div[id="seachGeo"]{
 	position: static;
-	height: 6vh;
-	margin-left: 15vw;
+	margin-top: 60vh;
+	width: 100vw;
+	display: inline-block;
+}
+
+div[id="pageMap"] div[id="seachGeo"] .ui-input-text.ui-custom {
+	margin-left: 12vw;
+	float: left;
 	background-color: white;
 	border: 2px solid #9400D3;
 	width: 60vw;
-	margin-top: 60vh;	
-	float: left;
+	padding-bottom: 0.5vh;
+	padding-top: 0.5vh;
+	border-radius: 0px;	
 }
 
-div[id="pageMap"] .ui-input-btn.ui-custom{
-	width: 20vw;
-	float: left;
+div[id="pageMap"] div[id="seachGeo"] .ui-input-btn.ui-custom{
+	padding-bottom: 2vh; 
+	padding-top: 2vh; 
+	width: 5vw;
+	border: none;
+	border-radius: 0px;
+	border-left: 2px solid #9400D3;
+	background-color: #9400D3;
 }
 
 /* MAPA */

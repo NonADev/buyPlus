@@ -310,6 +310,14 @@ module.exports = [
     "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
     "pluginId": "cordova-plugin-geolocation",
     "runs": true
+  },
+  {
+    "id": "cordova-plugin-x-toast.Toast",
+    "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
+    "pluginId": "cordova-plugin-x-toast",
+    "clobbers": [
+      "window.plugins.toast"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -319,7 +327,8 @@ module.exports.metadata =
   "cordova-plugin-googlemaps": "2.3.4",
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-sqlite-storage": "2.3.2",
-  "cordova-plugin-geolocation": "4.0.1"
+  "cordova-plugin-geolocation": "4.0.1",
+  "cordova-plugin-x-toast": "2.6.2"
 };
 // BOTTOM OF METADATA
 });
