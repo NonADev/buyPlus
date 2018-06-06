@@ -22,6 +22,7 @@ div[id="pageRegister"] input[type="text"], div[id="pageRegister"] input[type="pa
 
 div[id="pageLogin"] input[type="text"], div[id="pageLogin"] input[type="password"], div[id="pageLogin"] input[type="email"], div[id="pageLogin"]{
     background-color: #9400D3    !important;
+	color: white;	
 }
 
 div[id="pageRegister"] .ui-input-text.ui-custom {

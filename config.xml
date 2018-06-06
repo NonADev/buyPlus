@@ -17,6 +17,7 @@
         <variable name="ANDROID_SUPPORT_V4_VERSION" value="26.1.0" />
     </plugin>
     <access origin="*" />
+    <allow-navigation href="*" />
     <access origin="https://*" />
     <allow-navigation href="https://maps.googleapis.com/*" />
     <allow-navigation href="https://maps.googleapis.com" />
@@ -35,6 +36,7 @@
     </platform>
     <plugin name="cordova-sqlite-storage" spec="^2.3.2" />
     <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
+    <plugin name="cordova-plugin-x-toast" spec="^2.6.2" />
     <engine name="browser" spec="^5.0.3" />
     <engine name="android" spec="^7.0.0" />
 </widget>
