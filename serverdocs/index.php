@@ -84,13 +84,5 @@ switch ($request['acao']) {
 		echo json_encode($arr);		
 	break;
 	/* ----------------------------- */
-	case "logarUsuario":
-		$email = addslashes($_POST['email']);
-		$senha = addslashes($_POST['senha']);	
-		$qryLista = mysqli_query($conn, "select * from usuarios where usuario = '{$usuario}' and senha = '{$senha}'");    
-		if($resultado = mysqli_fetch_assoc($qryLista)){
-			$vetor[] = array_map('utf8_encode', $resultado); 			
-		}		 
-	break;
 }
 ?>

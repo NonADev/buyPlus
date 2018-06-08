@@ -24,7 +24,7 @@ var app = {
     loginTable: function(){
 	    app.db = window.openDatabase('loginMagicTable', 1.0, 'nope', 10000000);
 	    app.db.transaction(function(tx) {
-            tx.executeSql("DROP TABLE IF EXISTS logado");
+            //tx.executeSql("DROP TABLE IF EXISTS logado");
             tx.executeSql("CREATE TABLE IF NOT EXISTS logado (pk_id INTEGER, nome VARCHAR(50), telefone VARCHAR(20), email VARCHAR(50), senha VARCHAR(50))");
         });
     },
@@ -49,7 +49,9 @@ var app = {
                     app.db.transaction(function (tx) {
                         var sql = "INSERT INTO logado (pk_id, nome, email, telefone, senha) VALUES ('"+json.pk_id+"', '"+json.nome+"', '"+json.email+"', '"+json.telefone+"', '"+json.senha+"')";
                         console.log(sql);
-                        tx.executeSql(sql);
+                        if(tx.executeSql(sql)){
+							$.mobile.changePage("#pageMap");
+						}
                     });
                 }
                 else if(json.alert == true){
@@ -59,7 +61,7 @@ var app = {
             error: function(){
                 console.log("##error");
             }
-        });
+        });		
     },
 	
 	dbRegisterUser: function(){
