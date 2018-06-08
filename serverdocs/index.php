@@ -4,6 +4,7 @@ header('Content-Type: application/json');
 $conn = new mysqli('localhost', 'root', '', 'buyPlus');
  
 $request = $_SERVER['REQUEST_METHOD'] == 'GET' ? $_GET : $_POST;
+
  
 switch ($request['acao']) {
 	case "usuarios":
@@ -20,6 +21,33 @@ switch ($request['acao']) {
 		echo json_encode($vetor);
 	break;
 	/* ----------------------------- */
+	case "login":
+		$email = addslashes($_POST['email']);
+		$senha = addslashes($_POST['senha']);
+		$sql = "SELECT pk_id, nome, email, telefone, senha FROM usuario WHERE email = '$email' && senha = '$senha'";
+		$arr = array();	
+		$arr['result'] = false;
+		$arr['err'] = 'vazio';
+		$rr = $conn->query($sql);
+		if(mysqli_num_rows($rr)==1){
+			$arr['result'] = true;
+			$arr['alert'] = false;
+			$arr['err'] = '##logado';
+			$rowz = mysqli_fetch_row($rr);
+			$arr['pk_id'] = $rowz[0];
+			$arr['nome'] = $rowz[1];
+			$arr['email'] = $rowz[2];
+			$arr['telefone'] = $rowz[3];
+			$arr['senha'] = $rowz[4];
+		} 
+		else{
+			$arr['result'] = false;
+			$arr['alert'] = true;
+			$arr['err'] = 'O nome de usuário ou senha está incorreta, ou não existe';			
+		}
+		echo json_encode($arr);		
+	break;
+	/* ----------------------------- */	
 	case "registrarUsuario":
 		$nome = addslashes($_POST['nome']);
 		$email = addslashes($_POST['email']);
@@ -29,12 +57,29 @@ switch ($request['acao']) {
 		$arr = array();
 		$arr['result'] = false;
 		$arr['err'] = 'vazio';
-		if ($conn->query($sql) === TRUE) {			
-			$arr['result'] = true;
-			$arr['err'] = "New record created successfully";
-		} else {
+		$duplicata = $conn->query("SELECT * FROM usuario WHERE email = '$email'");
+		$cc = $duplicata->num_rows;
+		$duplicata2 = $conn->query("SELECT * FROM usuario WHERE telefone = '$telefone'");
+		$cc2 = $duplicata2->num_rows;
+		if($cc>0){
 			$arr['result'] = false;
-			$arr['err'] = "Error: '$sql'";
+			$arr['alert'] = true;
+			$arr['err'] = "Email já cadastrado";
+		}
+		else if($cc2>0){		
+			$arr['result'] = false;
+			$arr['alert'] = true;
+			$arr['err'] = "Telefone já cadastrado";			
+		}
+		else if ($conn->query($sql)) {			
+			$arr['result'] = true;
+			$arr['alert'] = false;
+			$arr['err'] = "##New record created successfully";
+		} 
+		else {
+			$arr['result'] = false;
+			$arr['alert'] = true;
+			$arr['err'] = "##Error: '$sql'";
 		}	
 		echo json_encode($arr);		
 	break;

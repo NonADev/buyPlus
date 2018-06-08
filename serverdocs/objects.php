@@ -33,6 +33,9 @@ class usuario
 {
 	public $id;
 	public $nome;
+	function setNome($n){
+		this.$nome = $n;
+	}
 	public $email;
 	public $telefone;
 	public $senha;

@@ -4,977 +4,13 @@
     <list default="true" id="8e4fdc1f-66b2-495f-adfe-eb80494724ab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/.cordova" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/.jsbeautifyrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/documentations.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/encode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/geocoder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/groundoverlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/htmlInfoWindow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/kmloverlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/locationService.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/marker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/markercluster.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/poly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/polygon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/polyline.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/spherical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/streetview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/tileoverlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/images/touch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/after_plugin_install.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/frameworks/tbxml-android.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/frameworks/tbxml-android.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/AsyncLoadImage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/AsyncLoadImageInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/BitmapCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/CordovaGoogleMaps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/Environment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/IPluginView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/MyPlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/MyPluginInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/MyPluginLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/ObjectCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginAsyncInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginCircle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginGeocoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginGroundOverlay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginKmlOverlay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginLocationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginMarker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginMarkerCluster.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginPolygon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginPolyline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginStreetViewPanorama.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginTileOverlay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginTileProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/drawable/dummy_my_location_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/drawable/dummy_mylocation_button_shadow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/layout/dummy_infowindow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-ar/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-da/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-de/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-fr/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-hi/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-in/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-ja/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-nb/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-nl/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-pl/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-pt-rPT/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-ru/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-uk/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values-vi/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/android/res/values/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/before_plugin_install.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/before_plugin_rm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/CordovaGoogleMaps.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/CordovaGoogleMaps.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/Environment.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/Environment.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/GMSCoordinateBounds+Geometry.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/GMSCoordinateBounds+Geometry.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/IPluginProtocol.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/IPluginView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/MFGoogleMapAdditions/GMSCoordinateBounds+Geometry.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/MFGoogleMapAdditions/GMSCoordinateBounds+Geometry.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/MFGoogleMapAdditions/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/MFGoogleMapAdditions/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/MyPluginLayer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/MyPluginLayer.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/MyPluginScrollView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/MyPluginScrollView.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData+Base64.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData+Base64.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData+Base64.podspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.podspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginCircle.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginCircle.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginGeocoder.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginGeocoder.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginGroundOverlay.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginGroundOverlay.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginKmlOverlay.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginKmlOverlay.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginLocationService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginLocationService.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMap.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMap.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMapViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMapViewController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMarker.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMarker.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMarkerCluster.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMarkerCluster.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginObjects.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginObjects.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginPolygon.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginPolygon.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginPolyline.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginPolyline.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginStreetViewPanorama.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginStreetViewPanorama.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginStreetViewPanoramaController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginStreetViewPanoramaController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginTileOverlay.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginTileOverlay.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginTileProvider.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginTileProvider.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginUtil.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginUtil.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginViewController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/TBXML.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/TBXML.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/UIImageCache.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/GoogleMaps/UIImageCache.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/check_sdk_version.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_ar.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_da.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_de.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_en.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_fr.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_hi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_in.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_ja.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_nb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_nl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_pl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_pt-BR.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_ru.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_uk.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_vi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/BaseArrayClass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/BaseClass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/CameraPosition.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/Circle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/Cluster.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/Common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/CordovaGoogleMaps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/Environment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/Geocoder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/GroundOverlay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/HtmlInfoWindow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/KmlLoader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/KmlOverlay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/LatLng.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/LatLngBounds.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/Location.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/LocationService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/Map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/MapTypeId.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/Marker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/MarkerCluster.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/Overlay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/Polygon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/Polyline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/StreetViewPanorama.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/TileOverlay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/VisibleRegion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/commandQueueExecutor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/encoding.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/event.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/geomodel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/googlemaps-cdv-plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/pluginInit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/poly.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-googlemaps/www/spherical.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/android/nl/xservices/plugins/Toast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/.cproject" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/device/libToast.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/device/public/json_reader.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/device/public/json_value.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/device/public/json_writer.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/device/public/plugin.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/device/public/tokenizer.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/device/src/Logger.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/device/src/toast_js.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/device/src/toast_ndk.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json/autolink.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json/config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json/features.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json/forwards.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json/json.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json/reader.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json/value.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json/writer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json_batchallocator.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json_internalarray.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json_internalmap.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json_reader.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json_value.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json_valueiterator.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/json_writer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/plugin.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/plugin.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/tokenizer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/public/tokenizer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/simulator/libToast.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/simulator/public/json_reader.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/simulator/public/json_value.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/simulator/public/json_writer.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/simulator/public/plugin.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/simulator/public/tokenizer.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/simulator/src/Logger.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/simulator/src/toast_js.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/simulator/src/toast_ndk.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/src/Logger.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/src/Logger.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/src/toast_js.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/src/toast_js.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/src/toast_ndk.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/blackberry10/native/src/toast_ndk.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/ios/Toast+UIView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/ios/Toast+UIView.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/ios/Toast.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/ios/Toast.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/windows/toastProxy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/src/wp8/Toast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-plugin-x-toast/www/Toast.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage-dependencies/README-fix1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage-dependencies/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage-dependencies/a1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage-dependencies/a2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage-dependencies/libs/sqlite-connector.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage-dependencies/libs/sqlite-native-driver.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage-dependencies/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage-dependencies/sqlite3.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage-dependencies/sqlite3.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/AUTHORS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/CHANGES.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/SQLitePlugin.coffee.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/bin/test.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/bin/test.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/circle.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/scripts/beforePluginInstall.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/scripts/prepareSpec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/boot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/console.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine-html.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine_favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/basic-db-tx-sql-storage-results.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/browser-check-startup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/db-open-close-delete-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/db-simultaneous-tx-access-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/db-sql-operations-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/db-tx-error-handling-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/db-tx-error-mapping-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/db-tx-multiple-update-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/db-tx-sql-features-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/db-tx-sql-select-value-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/db-tx-string-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/db-tx-value-bindings-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/ext-tx-blob-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/regexp-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/self-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/sql-batch-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/sqlite-version-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/spec/www/spec/tx-semantics-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/android/io/sqlc/SQLiteAndroidDatabase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/android/io/sqlc/SQLiteConnectorDatabase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/android/io/sqlc/SQLitePlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/ios/PSPDFThreadSafeMutableDictionary.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/ios/PSPDFThreadSafeMutableDictionary.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/ios/SQLitePlugin.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/ios/SQLitePlugin.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Constants.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Constants.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Database.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Database.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/SQLite3.Shared.vcxitems" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/SQLite3.UWP/SQLite3.UWP.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/SQLite3.Windows/SQLite3.Windows.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/SQLite3.WindowsPhone/SQLite3.WindowsPhone.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/SQLite3.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Statement.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Statement.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/pch.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/pch.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3JS/js/SQLite3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/src/windows/sqlite-proxy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/tests/plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/tests/tests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cordova-sqlite-storage/www/SQLitePlugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/example/parse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/readme.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/all_bool.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/bool.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/dash.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/default_bool.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/dotted.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/kv_short.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/long.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/num.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/parse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/parse_modified.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/short.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/stop_early.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/unknown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/minimist/test/whitespace.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sax/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sax/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sax/lib/sax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sax/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xml2js/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xml2js/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xml2js/lib/bom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xml2js/lib/builder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xml2js/lib/defaults.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xml2js/lib/parser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xml2js/lib/processors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xml2js/lib/xml2js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xml2js/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/Utility.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLAttribute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLCData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLComment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLDTDAttList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLDTDElement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLDTDEntity.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLDTDNotation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLDeclaration.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLDocType.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLDocument.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLDocumentCB.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLElement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLNode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLProcessingInstruction.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLRaw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLStreamWriter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLStringWriter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLStringifier.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLText.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/XMLWriterBase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xmlbuilder/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/android.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/libs/sqlite-connector.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/libs/sqlite-native-driver.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/app/src/libs/tbxml-android.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/io/sqlc/SQLiteAndroidDatabase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/io/sqlc/SQLiteConnectorDatabase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/io/sqlc/SQLitePlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/nl/xservices/plugins/Toast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/AsyncLoadImage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/AsyncLoadImageInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/BitmapCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/CordovaGoogleMaps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/Environment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/IPluginView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/MyPlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/MyPluginInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/MyPluginLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/ObjectCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginAsyncInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginCircle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginGeocoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginGroundOverlay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginKmlOverlay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginLocationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginMarker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginMarkerCluster.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginPolygon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginPolyline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginStreetViewPanorama.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginTileOverlay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginTileProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/plugin/google/maps/PluginUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/libs/tbxml-android.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable/dummy_my_location_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable/dummy_mylocation_button_shadow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/layout/dummy_infowindow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-ar/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-da/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-de/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-fr/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-hi/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-ja/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-nl/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-pl/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-pt-rPT/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-ru/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-uk/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values-vi/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/cordova-plugin-googlemaps/buyplus-tbxml-android.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/browser.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/browser.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/platform_www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/platform_www/cordova_plugins.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/cordova_plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/android.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/browser.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/browser.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/documentations.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/encode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/geocoder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/groundoverlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/htmlInfoWindow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/kmloverlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/locationService.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/marker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/markercluster.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/poly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/polygon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/polyline.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/spherical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/streetview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/tileoverlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/images/touch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/plugin.xml.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/after_plugin_install.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/frameworks/tbxml-android.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/frameworks/tbxml-android.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/AsyncLoadImage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/AsyncLoadImageInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/BitmapCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/CordovaGoogleMaps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/Environment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/IPluginView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/MyPlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/MyPluginInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/MyPluginLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/ObjectCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginAsyncInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginCircle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginGeocoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginGroundOverlay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginKmlOverlay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginLocationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginMarker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginMarkerCluster.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginPolygon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginPolyline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginStreetViewPanorama.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginTileOverlay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginTileProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/plugin/google/maps/PluginUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/drawable/dummy_my_location_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/drawable/dummy_mylocation_button_shadow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/layout/dummy_infowindow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-ar/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-da/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-de/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-fr/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-hi/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-in/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-ja/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-nb/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-nl/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-pl/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-pt-rPT/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-ru/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-uk/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values-vi/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/android/res/values/pgm_strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/before_plugin_install.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/before_plugin_rm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/CordovaGoogleMaps.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/CordovaGoogleMaps.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/Environment.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/Environment.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/GMSCoordinateBounds+Geometry.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/GMSCoordinateBounds+Geometry.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/IPluginProtocol.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/IPluginView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/MFGoogleMapAdditions/GMSCoordinateBounds+Geometry.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/MFGoogleMapAdditions/GMSCoordinateBounds+Geometry.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/MFGoogleMapAdditions/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/MFGoogleMapAdditions/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/MyPluginLayer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/MyPluginLayer.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/MyPluginScrollView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/MyPluginScrollView.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData+Base64.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData+Base64.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData+Base64.podspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/NSData-Base64/NSData+Base64.podspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginCircle.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginCircle.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginGeocoder.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginGeocoder.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginGroundOverlay.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginGroundOverlay.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginKmlOverlay.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginKmlOverlay.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginLocationService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginLocationService.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMap.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMap.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMapViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMapViewController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMarker.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMarker.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMarkerCluster.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginMarkerCluster.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginObjects.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginObjects.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginPolygon.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginPolygon.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginPolyline.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginPolyline.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginStreetViewPanorama.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginStreetViewPanorama.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginStreetViewPanoramaController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginStreetViewPanoramaController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginTileOverlay.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginTileOverlay.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginTileProvider.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginTileProvider.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginUtil.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginUtil.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/PluginViewController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/TBXML.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/TBXML.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/UIImageCache.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/GoogleMaps/UIImageCache.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/check_sdk_version.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_ar.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_da.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_de.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_en.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_fr.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_hi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_in.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_ja.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_nb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_nl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_pl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_pt-BR.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_ru.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_uk.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/src/ios/strings/pgm_Localizable_vi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/BaseArrayClass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/BaseClass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/CameraPosition.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/Circle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/Cluster.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/Common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/CordovaGoogleMaps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/Environment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/Geocoder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/GroundOverlay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/HtmlInfoWindow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/KmlLoader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/KmlOverlay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/LatLng.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/LatLngBounds.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/Location.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/LocationService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/Map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/MapTypeId.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/Marker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/MarkerCluster.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/Overlay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/Polygon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/Polyline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/StreetViewPanorama.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/TileOverlay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/VisibleRegion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/commandQueueExecutor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/encoding.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/event.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/geomodel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/googlemaps-cdv-plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/pluginInit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/poly.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/spherical.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/android/nl/xservices/plugins/Toast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/.cproject" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/device/libToast.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/device/public/json_reader.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/device/public/json_value.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/device/public/json_writer.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/device/public/plugin.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/device/public/tokenizer.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/device/src/Logger.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/device/src/toast_js.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/device/src/toast_ndk.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json/autolink.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json/config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json/features.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json/forwards.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json/json.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json/reader.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json/value.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json/writer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json_batchallocator.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json_internalarray.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json_internalmap.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json_reader.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json_value.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json_valueiterator.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/json_writer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/plugin.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/plugin.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/tokenizer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/public/tokenizer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/simulator/libToast.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/simulator/public/json_reader.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/simulator/public/json_value.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/simulator/public/json_writer.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/simulator/public/plugin.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/simulator/public/tokenizer.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/simulator/src/Logger.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/simulator/src/toast_js.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/simulator/src/toast_ndk.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/src/Logger.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/src/Logger.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/src/toast_js.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/src/toast_js.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/src/toast_ndk.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/blackberry10/native/src/toast_ndk.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/ios/Toast+UIView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/ios/Toast+UIView.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/ios/Toast.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/ios/Toast.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/windows/toastProxy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/src/wp8/Toast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-x-toast/www/Toast.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/AUTHORS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/CHANGES.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/SQLitePlugin.coffee.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/bin/test.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/bin/test.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/circle.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/.bin/shjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/.bin/shjs.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/balanced-match/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/balanced-match/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/balanced-match/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/balanced-match/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/balanced-match/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/brace-expansion/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/brace-expansion/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/brace-expansion/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/brace-expansion/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/concat-map/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/concat-map/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/concat-map/README.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/concat-map/example/map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/concat-map/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/concat-map/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/concat-map/test/map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/cordova-sqlite-storage-dependencies/README-fix1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/cordova-sqlite-storage-dependencies/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/cordova-sqlite-storage-dependencies/a1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/cordova-sqlite-storage-dependencies/a2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/cordova-sqlite-storage-dependencies/libs/sqlite-connector.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/cordova-sqlite-storage-dependencies/libs/sqlite-native-driver.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/cordova-sqlite-storage-dependencies/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/cordova-sqlite-storage-dependencies/sqlite3.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/cordova-sqlite-storage-dependencies/sqlite3.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/fs.realpath/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/fs.realpath/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/fs.realpath/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/fs.realpath/old.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/fs.realpath/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/glob/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/glob/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/glob/changelog.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/glob/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/glob/glob.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/glob/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/glob/sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/inflight/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/inflight/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/inflight/inflight.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/inflight/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/inherits/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/inherits/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/inherits/inherits.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/inherits/inherits_browser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/inherits/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/interpret/CHANGELOG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/interpret/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/interpret/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/interpret/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/interpret/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/minimatch/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/minimatch/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/minimatch/minimatch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/minimatch/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/once/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/once/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/once/once.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/once/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/path-is-absolute/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/path-is-absolute/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/path-is-absolute/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/path-is-absolute/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/path-parse/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/path-parse/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/path-parse/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/path-parse/index.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/path-parse/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/path-parse/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/path-parse/test.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/rechoir/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/rechoir/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/rechoir/CHANGELOG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/rechoir/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/rechoir/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/rechoir/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/rechoir/lib/extension.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/rechoir/lib/normalize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/rechoir/lib/register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/rechoir/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/appveyor.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/example/async.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/example/sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/lib/async.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/lib/caller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/lib/core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/lib/core.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/lib/node-modules-paths.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/lib/sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/readme.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/dotdot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/dotdot/abc/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/dotdot/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/faulty_basedir.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/filter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/filter_sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/mock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/mock_sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/module_dir.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/module_dir/xmodules/aaa/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/module_dir/ymodules/aaa/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/module_dir/zmodules/bbb/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/module_dir/zmodules/bbb/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/node-modules-paths.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/node_path.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/node_path/x/aaa/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/node_path/x/ccc/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/node_path/y/bbb/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/node_path/y/ccc/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/nonstring.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/pathfilter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/pathfilter/deep_ref/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/precedence.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/precedence/aaa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/precedence/aaa/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/precedence/aaa/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/precedence/bbb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/precedence/bbb/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/baz/doom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/baz/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/baz/quux.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/browser_field/a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/browser_field/b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/browser_field/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/cup.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/dot_main/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/dot_main/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/dot_slash_main/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/dot_slash_main/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/foo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/incorrect_main/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/incorrect_main/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/mug.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/mug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/other_path/lib/other-lib.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/other_path/root.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/quux/foo/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/same_names/foo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/same_names/foo/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/symlinked/_/node_modules/foo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/symlinked/_/symlink_target/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver/without_basedir/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/resolver_sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/subdirs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/resolve/test/symlinks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/bin/shjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/commands.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/global.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/make.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/shell.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/cat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/cd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/chmod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/cp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/dirs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/echo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/exec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/find.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/grep.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/head.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/ln.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/ls.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/mkdir.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/mv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/popd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/pushd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/pwd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/rm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/sed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/set.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/sort.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/tail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/tempdir.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/to.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/toEnd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/touch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/uniq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/shelljs/src/which.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/wrappy/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/wrappy/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/wrappy/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/wrappy/wrappy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/scripts/beforePluginInstall.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/scripts/prepareSpec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/boot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/console.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine-html.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine_favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/basic-db-tx-sql-storage-results.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/browser-check-startup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-open-close-delete-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-simultaneous-tx-access-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-sql-operations-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-error-handling-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-error-mapping-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-multiple-update-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-sql-features-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-sql-select-value-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-string-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-value-bindings-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/ext-tx-blob-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/regexp-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/self-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/sql-batch-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/sqlite-version-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/tx-semantics-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/android/io/sqlc/SQLiteAndroidDatabase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/android/io/sqlc/SQLiteConnectorDatabase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/android/io/sqlc/SQLitePlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/ios/PSPDFThreadSafeMutableDictionary.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/ios/PSPDFThreadSafeMutableDictionary.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/ios/SQLitePlugin.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/ios/SQLitePlugin.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Constants.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Constants.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Database.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Database.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/SQLite3.Shared.vcxitems" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/SQLite3.UWP/SQLite3.UWP.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/SQLite3.Windows/SQLite3.Windows.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/SQLite3.WindowsPhone/SQLite3.WindowsPhone.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/SQLite3.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Statement.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/Statement.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/pch.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3/pch.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-Win-RT/SQLite3JS/js/SQLite3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/sqlite-proxy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/tests/plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/tests/tests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/www/SQLitePlugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/fetch.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fetch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/index.js" afterDir="false" />
     </list>
@@ -990,43 +26,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="24" selection-start-line="24" selection-end-line="38" selection-end-column="14" />
+            <state relative-caret-position="183">
+              <caret line="29" column="31" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="31" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="109" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="backup.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/css/backup.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+            <state relative-caret-position="478">
+              <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -1052,8 +70,8 @@
       <list>
         <option value="$PROJECT_DIR$/www/js/redirect.js" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
-        <option value="$PROJECT_DIR$/www/js/index.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/index.js" />
       </list>
     </option>
   </component>
@@ -1082,7 +100,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1105,6 +122,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1131,7 +149,7 @@
     <property name="node.js.selected.package.prettier" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSHint" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1165,11 +183,12 @@
       <workItem from="1528052301555" duration="2236000" />
       <workItem from="1528054770480" duration="2323000" />
       <workItem from="1528419084477" duration="11635000" />
+      <workItem from="1528464617356" duration="13139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22580000" />
+    <option name="totallyTimeSpent" value="35719000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1212,12 +231,45 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="38" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="109" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/backup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1303,34 +355,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/backup.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="663">
           <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
+        <state relative-caret-position="1853">
           <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="109" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/wesley/Desktop/buyplus/www/js/index.js">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/www/js/index.js</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="644.5" y="344.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="24" selection-start-line="24" selection-end-line="38" selection-end-column="14" />
+        <state relative-caret-position="183">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="31" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
         </state>
       </provider>
     </entry>
