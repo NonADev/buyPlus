@@ -14,24 +14,13 @@
         "cordova-browser": "^5.0.3",
         "cordova-plugin-contacts": "^3.0.1",
         "cordova-plugin-geolocation": "^4.0.1",
-        "cordova-plugin-googlemaps": "^2.3.4",
-        "cordova-plugin-whitelist": "^1.3.3",
-        "cordova-plugin-x-toast": "^2.6.2",
-        "cordova-sqlite-storage": "^2.3.2"
+        "cordova-plugin-whitelist": "^1.3.3"
     },
     "cordova": {
         "plugins": {
             "cordova-plugin-whitelist": {},
             "cordova-plugin-contacts": {},
-            "cordova-plugin-googlemaps": {
-                "API_KEY_FOR_ANDROID": "AIzaSyDS_JJ83_sVpFt44vvdm2aUPRKrA6N65Uo",
-                "API_KEY_FOR_IOS": "AIzaSyCCr2q8zZ1qju7QDZ9m6S1YmLXBc2Ld6Fw",
-                "PLAY_SERVICES_VERSION": "15.0.1",
-                "ANDROID_SUPPORT_V4_VERSION": "26.1.0"
-            },
-            "cordova-sqlite-storage": {},
-            "cordova-plugin-geolocation": {},
-            "cordova-plugin-x-toast": {}
+            "cordova-plugin-geolocation": {}
         },
         "platforms": [
             "browser",

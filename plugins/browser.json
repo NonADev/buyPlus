@@ -13,16 +13,7 @@
     "cordova-plugin-contacts": {
       "PACKAGE_NAME": "com.etec.buyplus"
     },
-    "cordova-plugin-googlemaps": {
-      "PACKAGE_NAME": "com.etec.buyplus"
-    },
-    "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "com.etec.buyplus"
-    },
     "cordova-plugin-geolocation": {
-      "PACKAGE_NAME": "com.etec.buyplus"
-    },
-    "cordova-plugin-x-toast": {
       "PACKAGE_NAME": "com.etec.buyplus"
     }
   },

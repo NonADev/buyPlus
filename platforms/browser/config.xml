@@ -9,8 +9,8 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <allow-navigation href="*" />
     <access origin="https://*" />
+    <allow-navigation href="*" />
     <allow-navigation href="https://maps.googleapis.com/*" />
     <allow-navigation href="https://maps.googleapis.com" />
     <allow-intent href="http://*/*" />

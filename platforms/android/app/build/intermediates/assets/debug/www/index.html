@@ -3,8 +3,7 @@
     <!-- ANDROID key=AIzaSyDS_JJ83_sVpFt44vvdm2aUPRKrA6N65Uo -->
     <!-- IOS key=AIzaSyCCr2q8zZ1qju7QDZ9m6S1YmLXBc2Ld6Fw -->
     <head>
-    	<!-- METAS  
-        <meta http-equiv="Content-Security-Policy" content="font-src data: *; img-src * data:; script-src *; default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src * 'unsafe-inline'; media-src *">--> 
+    	<!-- METAS -->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">        
@@ -18,45 +17,49 @@
         <title>Hello World</title> 
     	<!-- OTHERS -->	
     	<!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/index.css">
     	<!-- CSS -->
     </head>
     <body>
-        <div id="pageLogin" data-role="page">
-            <center>
-                <img src="./img/logo.png" class="logo">
-                <input type="email" id="txtLogin" placeholder="email" data-wrapper-class="ui-custom">
-                <input type="password" id="txtPass" placeholder="senha" data-wrapper-class="ui-custom">
-                <input id="btnLogin" type="button" value="Login" data-wrapper-class="ui-custom">
-                <hr>
-                <input id="btnGoToRegister" type="button" value="registrar" data-wrapper-class="ui-custom">
-            </center>
-        </div>
         <div id="pageMap" data-role="page">
-			<div id="seachGeo">
-				<input id="customGeocoder" type="text" placeholder="Digite o Endereço" data-wrapper-class="ui-custom">
-				<input type="button" value="Test" data-wrapper-class="ui-custom">
-			</div>
-            <div class="navbar">
+            <div id="theMap" style="width: 100vw; height: 40vh;">
+
+            </div>
+            <div id="seachGeo" style="display: none;">
+                <input id="customGeocoder" type="text" placeholder="Digite o Endereço" data-wrapper-class="ui-custom">
+                <input type="button" value="Test" data-wrapper-class="ui-custom">
+            </div>
+            <div class="navbar" style="display: none;">
                 <a>Perfil</a>
                 <a>Mapa</a>
                 <a>Lista</a>
                 <a>Evento</a>
             </div>
         </div>
-		<div id="pageRegister" data-role="page">
+        <div id="pageRegister" data-role="page">
             <center>
                 <img src="./img/logo.png" class="logo">
-    			<form autocomplete="off">
-					<input type="text" id="registerNome" placeholder="nome" data-wrapper-class="ui-custom">
-					<input type="email" id="registerEmail" placeholder="e-mail" data-wrapper-class="ui-custom">
-					<input type="text" id="registerTelefone" placeholder="telefone" data-wrapper-class="ui-custom">
-					<input type="password" id="registerSenha" placeholder="senha" data-wrapper-class="ui-custom">
-					<input type="text" id="registerConfirmarSenha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
-					<input id="btnRegisterUser" type="button" value="registrar" data-wrapper-class="ui-custom">
-    			</form>
+                <input type="text" id="registerNome" placeholder="nome" data-wrapper-class="ui-custom">
+                <input type="email" id="registerEmail" placeholder="e-mail" data-wrapper-class="ui-custom">
+                <input type="text" id="registerTelefone" placeholder="telefone" data-wrapper-class="ui-custom">
+                <input type="password" id="registerSenha" placeholder="senha" data-wrapper-class="ui-custom">
+                <input type="text" id="registerConfirmarSenha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
+                <input id="btnRegisterUser" type="button" value="registrar" data-wrapper-class="ui-custom">
+                <hr>
+                <input id="btnVoltarLogin" type="button" value="voltar" data-wrapper-class="ui-custom">
             </center>
-		</div>
+        </div>
+        <div id="pageLogin" data-role="page">
+            <center>
+                <img src="./img/logo.png">
+                <input type="email" id="txtLogin" placeholder="email" data-wrapper-class="ui-custom">
+                <input type="password" id="txtPass" placeholder="senha" data-wrapper-class="ui-custom">
+                <input id="btnLogin" type="button" value="login" class="shadowLogin" data-wrapper-class="ui-custom">
+                <hr>
+                <input id="btnGoToRegister" type="button" value="registrar" data-wrapper-class="ui-custom">
+            </center>
+        </div>
         <div id="pagePerfil" data-role="page">
             <!--<img>-->
             <input type="text" id="txtPerfilNome" placeholder="nome" data-wrapper-class="ui-custom">
@@ -66,6 +69,7 @@
         </div>
 
     	<!-- JS -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS_JJ83_sVpFt44vvdm2aUPRKrA6N65Uo"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     	<!-- JS -->

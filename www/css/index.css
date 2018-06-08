@@ -1,131 +1,115 @@
 *{
     padding: 0;
     margin: 0;
-} /*-- RETIRA A MARGEN PADRAO --*/
-
-div[id="pageRegister"] .ui-input-text.ui-custom ::placeholder{
-    color: #9400D3;
-    text-shadow: none;
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
-
-div[id="pageLogin"] .ui-input-text.ui-custom ::placeholder{
-    color: #FFA500;
-    text-shadow: none;
-    font-weight: bold;
-}
-/*-- RETIRA OS EFEITOS DO PLACEHOLDER --*/
-
-div[id="pageRegister"] input[type="text"], div[id="pageRegister"] input[type="password"], div[id="pageRegister"] input[type="email"], div[id="pageRegister"]{
-    background-color: #FFA500    !important;
-}
-
-div[id="pageLogin"] input[type="text"], div[id="pageLogin"] input[type="password"], div[id="pageLogin"] input[type="email"], div[id="pageLogin"]{
-    background-color: #9400D3    !important;
-	color: white;	
-}
-
-div[id="pageRegister"] .ui-input-text.ui-custom {
-    text-shadow: none;
-    vertical-align: middle;
-    width: 75vw;
-    border: none;
-    border-radius: unset;
-    box-shadow: none;
-    border-bottom: 2px solid #9400D3;
+/* LOGIN */
+div[id="pageLogin"] img{
     margin-top: 6vh;
-}
-
-div[id="pageLogin"] .ui-input-text.ui-custom {
-     text-shadow: none;
-     vertical-align: middle;
-     width: 75vw;
-     border: none;
-     border-radius: unset;
-     box-shadow: none;
-     border-bottom: 2px solid #FFA500;
-     margin-top: 6vh;
- }
-
-div[id="pageLogin"] hr{
-    margin-top: 10vh;
-    width: 75vw;
-    border: none;
-    border-bottom: 2px solid #FFA500;
-}
-
-.logo{
-    position: static;
-    margin-top: 3vh;
     width: 15vw;
     height: 15vw;
 }
 
-div[id="pageLogin"] .ui-input-btn.ui-custom, div[id="pageRegister"] .ui-input-btn.ui-custom {
-	background-color: #9400D3;
-    color: white;
-    text-shadow: none;
+div[id="pageLogin"], div[id="pageLogin"] .ui-input-text.ui-custom{
+    background-color: #9400D3;
+}
+
+div[id="pageLogin"] .ui-input-text.ui-custom {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5vh;
     border: none;
     border-radius: unset;
-    width: 60vw;
-    box-shadow: none;	
-}
-
-div[id="pageLogin"] .ui-input-btn.ui-custom, div[id="pageRegister"] .ui-input-btn.ui-custom {
-    margin-top: 13vh; 
-}
-
-div[id="pageMap"] div[id="seachGeo"]{
-	position: static;
-	margin-top: 60vh;
-	width: 100vw;
-	display: inline-block;
-}
-
-div[id="pageMap"] div[id="seachGeo"] .ui-input-text.ui-custom {
-	margin-left: 12vw;
-	float: left;
-	background-color: white;
-	border: 2px solid #9400D3;
-	width: 60vw;
-	padding-bottom: 0.5vh;
-	padding-top: 0.5vh;
-	border-radius: 0px;	
-}
-
-div[id="pageMap"] div[id="seachGeo"] .ui-input-btn.ui-custom{
-	padding-bottom: 2vh; 
-	padding-top: 2vh; 
-	width: 5vw;
-	border: none;
-	border-radius: 0px;
-	border-left: 2px solid #9400D3;
-	background-color: #9400D3;
-}
-
-/* MAPA */
-
-div[id="pageMap"]{
-    background-color: orange;
-}
-
-/* MAPA */
-
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    border-bottom: 2px solid #FFA500;
     text-shadow: none;
-    font-size: 17px;
+    box-shadow: none;
+    color: #FFA500;
+    width: 70vw;
+    height: 5vh;
 }
+
+div[id="pageLogin"] .ui-input-text.ui-custom ::placeholder {
+    font-family: 'Roboto', sans-serif;
+    box-shadow: none;
+    text-shadow: none;
+    color: #FFA500;
+}
+
+div[id="pageLogin"] .ui-input-btn.ui-custom{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    background-color: #9400D3;
+    border: none;
+    border-radius: unset;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)  ;
+    text-shadow: none;
+    color: white;
+    width: 35vw;
+}
+
+div[id="pageLogin"] .ui-input-btn.ui-custom:active {
+    background-color: #FFA500;
+}
+
+div[id="pageLogin"] hr{
+    width: 75vw;
+    border: none;
+    border-bottom: 2px solid #FFA500;
+}
+/* LOGIN */
+/* REGISTRO */
+div[id="pageRegister"] img{
+    margin-top: 6vh;
+    width: 15vw;
+    height: 15vw;
+}
+
+div[id="pageRegister"], div[id="pageRegister"] .ui-input-text.ui-custom{
+    background-color: #FFA500;
+}
+
+div[id="pageRegister"] .ui-input-text.ui-custom{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5vh;
+    border: none;
+    border-radius: unset;
+    border-bottom: 2px solid #9400D3;
+    text-shadow: none;
+    box-shadow: none;
+    color: #9400D3;
+    width: 70vw;
+    height: 5vh;
+}
+
+div[id="pageRegister"] .ui-input-text.ui-custom ::placeholder{
+    color: #9400D3;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+div[id="pageRegister"] .ui-input-btn.ui-custom{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    background-color: #9400D3;
+    border: none;
+    border-radius: unset;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-shadow: none;
+    color: white;
+    width: 35vw;
+}
+
+div[id="pageRegister"] .ui-input-btn.ui-custom:active {
+    background-color: #8A2BE2;
+}
+
+div[id="pageRegister"] hr{
+    width: 75vw;
+    border: none;
+    border-bottom: 2px solid #9400D3;
+}
+/* REGISTRO */
