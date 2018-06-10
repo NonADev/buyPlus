@@ -32,7 +32,7 @@ switch ($request['acao']) {
 		if(mysqli_num_rows($rr)==1){
 			$arr['result'] = true;
 			$arr['alert'] = false;
-			$arr['err'] = '##logado';
+			$arr['err'] = '##server::Logado';
 			$rowz = mysqli_fetch_row($rr);
 			$arr['pk_id'] = $rowz[0];
 			$arr['nome'] = $rowz[1];
@@ -74,12 +74,12 @@ switch ($request['acao']) {
 		else if ($conn->query($sql)) {			
 			$arr['result'] = true;
 			$arr['alert'] = false;
-			$arr['err'] = "##New record created successfully";
+			$arr['err'] = "##server::New record created successfully";
 		} 
 		else {
 			$arr['result'] = false;
 			$arr['alert'] = true;
-			$arr['err'] = "##Error: '$sql'";
+			$arr['err'] = "##server::Unknown Error: '$sql'";
 		}	
 		echo json_encode($arr);		
 	break;

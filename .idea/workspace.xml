@@ -4,14 +4,16 @@
     <list default="true" id="8e4fdc1f-66b2-495f-adfe-eb80494724ab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/cordova-browser" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/cordova-browser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cordova-browser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cordova-browser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/browser.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/browser.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,8 +31,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="29" column="31" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="31" />
+            <state relative-caret-position="136">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -43,8 +45,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+            <state relative-caret-position="1118">
+              <caret line="145" column="33" lean-forward="true" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -100,6 +102,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="buyplus" type="cbb8eebc:String" user="buyplus" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="buyplus" type="cbb8eebc:String" user="buyplus" />
+              <item name="www" type="cbb8eebc:String" user="www" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,7 +140,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -149,6 +166,7 @@
     <property name="node.js.selected.package.prettier" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
@@ -168,6 +186,21 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Run Browser" type="PhoneGap" factoryName="PhoneGap/Cordova" activateToolWindowBeforeRun="false">
+      <option name="myExecutable" value="C:\Users\wesley\AppData\Roaming\npm\cordova.cmd" />
+      <option name="myWorkDir" value="$PROJECT_DIR$" />
+      <option name="myCommand" value="run" />
+      <option name="myPassParent" value="true" />
+      <option name="myPlatform" value="browser" />
+      <option name="myExtraArgs" value="" />
+      <option name="hasTarget" value="false" />
+      <option name="target" value="" />
+      <method>
+        <option name="PhonegapTask" enabled="false" />
+      </method>
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -184,11 +217,12 @@
       <workItem from="1528054770480" duration="2323000" />
       <workItem from="1528419084477" duration="11635000" />
       <workItem from="1528464617356" duration="13139000" />
+      <workItem from="1528580848425" duration="2359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35719000" />
+    <option name="totallyTimeSpent" value="38078000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -202,13 +236,14 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18314321" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18314321" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32885906" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32885906" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32885906" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -229,6 +264,25 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -375,19 +429,20 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="644.5" y="344.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="645.0" y="345.0" />
           <SelectedNodes />
           <Categories>
             <Category>All</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="136">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -398,8 +453,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+        <state relative-caret-position="1118">
+          <caret line="145" column="33" lean-forward="true" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
         </state>
       </provider>
     </entry>

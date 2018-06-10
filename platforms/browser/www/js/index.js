@@ -48,18 +48,20 @@ var app = {
                     console.log(json.err);
                     app.db.transaction(function (tx) {
                         var sql = "INSERT INTO logado (pk_id, nome, email, telefone, senha) VALUES ('"+json.pk_id+"', '"+json.nome+"', '"+json.email+"', '"+json.telefone+"', '"+json.senha+"')";
-                        console.log(sql);
+                        console.log("##cliente::Logado>"+sql);
                         tx.executeSql(sql);
+                        app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
+                        $.mobile.changePage("#pageMap");
                     });
                 }
-                else if(json.alert == true){
+                else if(json.result == false && json.alert == true){
                     alert(json.err);
                 }
             },
             error: function(){
-                console.log("##error");
+                console.log("##cliente::error");
             }
-        });
+        });		
     },
 	
 	dbRegisterUser: function(){
@@ -147,7 +149,7 @@ var app = {
         div = document.getElementById("theMap");
         map = new google.maps.Map(div, {
             center: {lat: lat, lng: lon},
-            zoom: 15    //quanto maior mais proximo
+            zoom: 20 //quanto maior mais proximo
         });
     }
 };
