@@ -149,7 +149,7 @@ var app = {
         div = document.getElementById("theMap");
         map = new google.maps.Map(div, {
             center: {lat: lat, lng: lon},
-            zoom: 20 //quanto maior mais proximo
+            zoom: 18 //quanto maior mais proximo
         });
     }
 };
