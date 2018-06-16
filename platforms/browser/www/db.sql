@@ -8,5 +8,42 @@ CREATE TABLE usuario(
     telefone NVARCHAR(50) NOT NULL UNIQUE, 
     senha NVARCHAR(50) NOT NULL
 );
-SELECT * FROM usuario;
-SELECT * FROM usuario WHERE email = 'wesley@gmail.com' && senha = 'aionaion'
+CREATE TABLE admUSer(
+	pk_id INT AUTO_INCREMENT PRIMARY KEY,
+    fk_usuario INT NOT NULL REFERENCES usuario(pk_id)
+);
+CREATE TABLE lista(
+	pk_id INT AUTO_INCREMENT PRIMARY KEY,
+    nome NVARCHAR(45) NOT NULL,
+    categoria NVARCHAR(45),
+    fk_usuario INT NOT NULL REFERENCES usuario(pk_id)
+);
+CREATE TABLE item(
+	pk_id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(45) NOT NULL,
+    marca VARCHAR(45),
+    preco DOUBLE,
+    qtdMinimaAtacado DOUBLE,
+    validade DATE,
+    tipo NVARCHAR(45),
+    fk_lista INT NOT NULL REFERENCES lista(pk_id)
+);
+CREATE TABLE mercado(
+	pk_id INT AUTO_INCREMENT PRIMARY KEY,
+	nome NVARCHAR(45) NOT NULL,
+    telefone NVARCHAR(20) NOT NULL,
+    latitude DOUBLE,
+    longitude DOUBLE
+);
+CREATE TABLE evento(
+	pk_id INT AUTO_INCREMENT PRIMARY KEY,
+	nome NVARCHAR(45) NOT NULL,
+    dataHora DATETIME NOT NULL,
+    fk_lista INT NOT NULL REFERENCES lista(pk_id),
+    fk_mercado INT NOT NULL REFERENCES mercado(pk_id)
+);
+CREATE TABLE participacaoEvento(
+	pk_id INT AUTO_INCREMENT PRIMARY KEY,
+    fk_usuario INT NOT NULL REFERENCES usuario(pk_id),
+    fk_evento INT NOT NULL REFERENCES evento(pk_id)
+);

@@ -113,3 +113,33 @@ div[id="pageRegister"] hr{
     border-bottom: 2px solid #9400D3;
 }
 /* REGISTRO */
+/* PERFIL */
+div[id="pagePerfil"] img{
+	margin-top: 3vh;
+	width: 30vw;
+	height: 30vw;
+	border-radius: 100%;
+}
+/* PERFIL */
+/* NAVBAR */
+div div[id="navBar"]{
+	overflow: hidden;
+	background-color: #9400D3;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+div div[id="navBar"]  .ui-btn.ui-custom{
+	display: inline-block;
+	text-align: center;	
+	background-color: #9400D3;
+	padding-left: 10vw;
+	padding-right: 10vw;
+	border: none;
+	box-shadow: unset;
+	border-radius: unset;
+	text-shadow: none;
+	color: white;
+}
+/* NAVBAR */

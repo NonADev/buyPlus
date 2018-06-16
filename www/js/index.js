@@ -12,6 +12,15 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
 	    this.loginTable();
+		this.dbAutoLogin();
+		/* RETIRAR SAPORA */
+		
+		document.getElementById('btn1').addEventListener('click', function(){alert('btn1')});
+		document.getElementById('btn2').addEventListener('click', function(){alert('btn2')});
+		document.getElementById('btn3').addEventListener('click', function(){alert('btn3')});
+		
+		/* RETIRAR SAPORA */
+		document.getElementById('btnManterDados').addEventListener('click', function(){$.mobile.changePage('#pageManterDados')});
         document.getElementById('btnGoToRegister').addEventListener('click', this.goToPageRegister);
         document.getElementById('btnRegisterUser').addEventListener('click', this.dbRegisterUser);
         document.getElementById('btnLogin').addEventListener('click', this.dbMakeLogin);
@@ -24,10 +33,47 @@ var app = {
     loginTable: function(){
 	    app.db = window.openDatabase('loginMagicTable', 1.0, 'nope', 10000000);
 	    app.db.transaction(function(tx) {
-            tx.executeSql("DROP TABLE IF EXISTS logado");
+            //tx.executeSql("DROP TABLE IF EXISTS logado");
             tx.executeSql("CREATE TABLE IF NOT EXISTS logado (pk_id INTEGER, nome VARCHAR(50), telefone VARCHAR(20), email VARCHAR(50), senha VARCHAR(50))");
         });
     },
+	
+	dbAutoLogin: function(){
+	    app.db.transaction(function(tx) {
+            tx.executeSql("select * from logado", [], function(tx, result){
+				if(result.rows.length==1){
+					var vEmail="v";
+					var vSenha="v";
+					vEmail = result.rows[0].email;
+					vSenha = result.rows[0].senha;
+					$.ajax({
+						type: "POST",
+						url: "http://"+app.ip+"/index.php",
+						data: {
+							acao: 'login',
+							email: vEmail,
+							senha: vSenha
+						},
+						dataType: "json",
+						success: function (json) {
+							if(json.result == true){
+								app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
+								$.mobile.changePage("#pagePerfil");
+							}
+						},
+						error: function(){
+							console.log("##cliente::dberror");
+						}
+					});		
+				}
+				else{
+					console.log("##cliente::autoLogin:false");
+					return;
+				}
+			});			
+        });		
+        
+	},
 
     dbMakeLogin: function(){
         var vNome;
@@ -49,9 +95,10 @@ var app = {
                     app.db.transaction(function (tx) {
                         var sql = "INSERT INTO logado (pk_id, nome, email, telefone, senha) VALUES ('"+json.pk_id+"', '"+json.nome+"', '"+json.email+"', '"+json.telefone+"', '"+json.senha+"')";
                         console.log("##cliente::Logado>"+sql);
+						tx.executeSql("delete from logado where pk_id = pk_id");
                         tx.executeSql(sql);
                         app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
-                        $.mobile.changePage("#pageMap");
+                        $.mobile.changePage("#pagePerfil");
                     });
                 }
                 else if(json.result == false && json.alert == true){
