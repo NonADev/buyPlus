@@ -61,19 +61,28 @@
                 <a>Evento</a>
             </div>
         </div>
+        <div id="pageListas" data-role="page">
+            <div class="navBar">
+                <center>
+                    <input onclick="$.mobile.changePage('#pagePerfil');" type="button" data-iconpos="notext" data-icon="user" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+                    <input onclick="$.mobile.changePage('#pageListas')" type="button" data-iconpos="notext" data-icon="bullets" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+                    <input type="button" data-iconpos="notext" data-icon="home" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+                </center>
+            </div>
+        </div>
         <div id="pagePerfil" data-role="page">
             <center><img src="img/avatar.png"></center>
 			<input id="btnManterDados" type="button" value="Alterar Dados">
-			<input type="button" value="Sair">
-			<div id="navBar">
-				<center>				
-				<input id="btn1" type="button" data-iconpos="notext" data-icon="home" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
-				<input id="btn2" type="button" data-iconpos="notext" data-icon="home" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
-				<input id="btn3" type="button" data-iconpos="notext" data-icon="home" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+			<input id="btnSair" type="button" value="Sair">
+			<div class="navBar">
+				<center>
+                    <input onclick="$.mobile.changePage('#pagePerfil')" type="button" data-iconpos="notext" data-icon="user" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+                    <input onclick="$.mobile.changePage('#pageListas')" type="button" data-iconpos="notext" data-icon="bullets" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+                    <input type="button" data-iconpos="notext" data-icon="home" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
 				</center>
 			</div>
         </div>
-		<div id="pageManterDados">
+		<div id="pageManterDados" data-role="page">
 			<input type="text">
 			<input type="text">
 			<input type="text">

@@ -7,6 +7,24 @@ $request = $_SERVER['REQUEST_METHOD'] == 'GET' ? $_GET : $_POST;
 
  
 switch ($request['acao']) {
+	case "listasById":
+		$vetor;
+		$iden = addslashes($_POST['id']);
+		$qryLista = mysqli_query($conn, "SELECT * FROM lista where fk_usuario='$iden'");   
+		$length = $qryLista->num_rows;
+		if($length){
+			while($resultado = mysqli_fetch_assoc($qryLista)){
+				$vetor[] = array_map('utf8_encode', $resultado); 
+			}    			
+			$vetor['result']=true;
+			$vetor['length'] = $length;
+		}
+		else{
+			$vetor['result']=false;
+			$vetor['err']="##server::noResults";
+		}
+		echo json_encode($vetor);
+	break;
 	case "usuarios":
 		if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
 		
@@ -16,6 +34,7 @@ switch ($request['acao']) {
 		while($resultado = mysqli_fetch_assoc($qryLista)){
 			$vetor[] = array_map('utf8_encode', $resultado); 
 		}    
+		$arr['result']==true;
 		
 		//Passando vetor em forma de json
 		echo json_encode($vetor);

@@ -13,13 +13,8 @@ var app = {
     onDeviceReady: function() {
 	    this.loginTable();
 		this.dbAutoLogin();
-		/* RETIRAR SAPORA */
-		
-		document.getElementById('btn1').addEventListener('click', function(){alert('btn1')});
-		document.getElementById('btn2').addEventListener('click', function(){alert('btn2')});
-		document.getElementById('btn3').addEventListener('click', function(){alert('btn3')});
-		
-		/* RETIRAR SAPORA */
+        this.inserirListas();
+        document.getElementById('btnSair').addEventListener('click', this.exitApp);
 		document.getElementById('btnManterDados').addEventListener('click', function(){$.mobile.changePage('#pageManterDados')});
         document.getElementById('btnGoToRegister').addEventListener('click', this.goToPageRegister);
         document.getElementById('btnRegisterUser').addEventListener('click', this.dbRegisterUser);
@@ -30,6 +25,52 @@ var app = {
         $.mobile.changePage("#pageRegister");
 	},
 
+    inserirListas: function(){
+	    var vId;
+        app.db.transaction(function (tx) {
+            tx.executeSql("select * from logado", [], function (tx, result) {
+                vId = result.rows[0].pk_id;
+            });
+        }, function (err) {
+            console.log(err);
+        }, function() {
+            $.ajax({
+                type: "POST",
+                url: "http://" + app.ip + "/index.php",
+                data: {
+                    acao: 'listasById',
+                    id: vId
+                },
+                dataType: "json",
+                success: function (json) {
+                    if (json.result == true) {
+                        for (var i=0;i<json.length;i++) {
+                            $('#pageListas').append(
+                                "<div class='oneList'>" +
+                                "<label class='title'>" + json[i].nome + " </label>" +
+                                "<label class='itens'>" + json[i].categoria + "</label>" +
+                                "</div>");
+                        }
+                        $('#pageListas').append("<div id='newButton'><input id='newList' type='button' data-mini='true' data-icon='plus' data-iconpos='top' data-wrapper-class='ui-custom'></div>");
+                    }
+                    else {
+                        console.log(json.err);
+                    }
+                },
+                error: function () {
+                    console.log("##cliente::GetListasError");
+                }
+            });
+        });
+    },
+
+    exitApp: function(){
+	    app.db.transaction(function (tx) {
+            tx.executeSql("delete * from logado where pk_id = pk_id");
+            $.mobile.changePage("#pageLogin");
+        });
+    },
+
     loginTable: function(){
 	    app.db = window.openDatabase('loginMagicTable', 1.0, 'nope', 10000000);
 	    app.db.transaction(function(tx) {
@@ -39,40 +80,54 @@ var app = {
     },
 	
 	dbAutoLogin: function(){
+        var vEmail;
+        var vSenha;
 	    app.db.transaction(function(tx) {
             tx.executeSql("select * from logado", [], function(tx, result){
 				if(result.rows.length==1){
-					var vEmail="v";
-					var vSenha="v";
 					vEmail = result.rows[0].email;
 					vSenha = result.rows[0].senha;
-					$.ajax({
-						type: "POST",
-						url: "http://"+app.ip+"/index.php",
-						data: {
-							acao: 'login',
-							email: vEmail,
-							senha: vSenha
-						},
-						dataType: "json",
-						success: function (json) {
-							if(json.result == true){
-								app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
-								$.mobile.changePage("#pagePerfil");
-							}
-						},
-						error: function(){
-							console.log("##cliente::dberror");
-						}
-					});		
 				}
 				else{
-					console.log("##cliente::autoLogin:false");
-					return;
+					console.log("##cliente::noData:AutoLogin");
 				}
 			});			
-        });		
-        
+        },function (err) {
+            console.log(err);
+        }, function tryAjaxAutoLogin(){
+            $.ajax({
+                type: "POST",
+                url: "http://"+app.ip+"/index.php",
+                data: {
+                    acao: 'login',
+                    email: vEmail,
+                    senha: vSenha
+                },
+                dataType: "json",
+                success: function (json) {
+                    if(json.result == true){
+                        console.log(json.err);
+                        app.db.transaction(function (tx) {
+                            var sql = "INSERT INTO logado (pk_id, nome, email, telefone, senha) VALUES ('"+json.pk_id+"', '"+json.nome+"', '"+json.email+"', '"+json.telefone+"', '"+json.senha+"')";
+                            console.log("##cliente::Logado:\n"+sql);
+                            tx.executeSql("delete from logado where pk_id = pk_id");
+                            tx.executeSql(sql);
+                            app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
+                            $.mobile.changePage("#pagePerfil");
+                        });
+                    }
+                    else if(json.result == false && json.alert == true){
+                        alert(json.err);
+                    }
+                    else{
+                        console.log(json.err);
+                    }
+                },
+                error: function(){
+                    console.log("##cliente::AutoLoginError");
+                }
+            });
+        });
 	},
 
     dbMakeLogin: function(){

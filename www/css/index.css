@@ -121,8 +121,38 @@ div[id="pagePerfil"] img{
 	border-radius: 100%;
 }
 /* PERFIL */
+/* LISTAS */
+div[id="pageListas"]{
+    background-color: #FFA500;
+}
+
+div[id="pageListas"] .oneList{
+    width: 90vw;
+    margin: 0vw auto;
+    background-color: #9400D3;
+}
+
+div[id="pageListas"] .title, div[id="pageListas"] .itens{
+    color: #FFA500;
+    text-shadow: none;
+}
+
+div[id="pageListas"] div[id="newButton"] .ui-input-btn.ui-custom{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background-color: #9400D3;
+    border: none;
+    border-radius: unset;
+    margin: 0 auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-shadow: none;
+    color: #FFA500;
+    width: 80vw;
+    vertical-align: middle;
+}
+/* LISTAS */
 /* NAVBAR */
-div div[id="navBar"]{
+div div.navBar{
 	overflow: hidden;
 	background-color: #9400D3;
 	position: absolute;
@@ -130,7 +160,7 @@ div div[id="navBar"]{
 	bottom: 0;
 }
 
-div div[id="navBar"]  .ui-btn.ui-custom{
+div div.navBar .ui-btn.ui-custom{
 	display: inline-block;
 	text-align: center;	
 	background-color: #9400D3;
