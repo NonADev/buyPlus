@@ -82,10 +82,11 @@ var app = {
                         itens: items
                     },
                     dataType: "json",
-                    success: function () {
-
+                    success: function (json) {
+                        console.log(json);
                     },
-                    error: function () {
+                    error: function (ext) {
+                        console.log(ext);
                         console.log("##cliente::SaveListAndItensError");
                     }
                 });
@@ -110,11 +111,11 @@ var app = {
                         categoria: document.getElementById('listCategory').value
                     },
                     dataType: "json",
-                    success: function () {
-
+                    success: function (json) {
+                        console.log(json);
                     },
-                    error: function () {
-                        console.log("##cliente::SaveListAndItensError");
+                    error: function (ext) {
+                        console.log(ext);
                     }
                 });
             });
@@ -196,11 +197,11 @@ var app = {
                                 "<label class='itens'>" + json[i].categoria + "</label>" +
                                 "</div>");
                         }
-                        $('#pageListas').append("<div id='newButton'><input onclick='app.gotoNewList()' id='newList' type='button' data-mini='true' data-icon='plus' data-iconpos='top' data-wrapper-class='ui-custom'></div>");
                     }
                     else {
                         console.log(json.err);
                     }
+                    $('#pageListas').append("<div id='newButton'><input onclick='app.gotoNewList()' value='MORE' id='newList' type='button' data-mini='true' data-icon='plus' data-iconpos='top' data-wrapper-class='ui-custom'></div>");
                 },
                 error: function () {
                     console.log("##cliente::GetListasError");
@@ -267,9 +268,17 @@ var app = {
                     }
                     else if(json.result == false && json.alert == true){
                         alert(json.err);
+                        app.db.transaction(function (tx) {
+                            tx.executeSql("delete from logado where pk_id = pk_id");
+                        });
+                        $.mobile.changePage('#pageLogin');
                     }
                     else{
                         console.log(json.err);
+                        app.db.transaction(function (tx) {
+                            tx.executeSql("delete from logado where pk_id = pk_id");
+                        });
+                        $.mobile.changePage('#pageLogin');
                     }
                 },
                 error: function(){

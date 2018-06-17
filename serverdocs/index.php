@@ -25,9 +25,47 @@ switch ($request['acao']) {
 		$idUser = addslashes($_POST['id']);
 		$nomeLista = addslashes($_POST['nome']);
 		$categoriaLista = addslashes($_POST['categoria']);
-
 		
-		echo json_encode('a');
+		$sql = "INSERT INTO lista (nome, categoria, fk_usuario) VALUES ('$nomeLista', '$categoriaLista', '$idUser')";
+		if($conn->query($sql)){
+			/*if(){
+				$sqlIten = "INSERT INTO item (nome, marca, preco, qtdMinimaAtacado, tipo) VALUES ()";
+			}
+			echo json_encode('##server::ListaSalva>$sql');	*/
+			//echo json_encode(count($items));/*count($items)*/
+			$allItems=Array();
+			$fk_lista = mysqli_insert_id($conn);
+			for($i=0;$i<count($items);$i++){
+				$iNome = $items[$i][0];
+				$iNome = "'".$iNome."'";
+				$iMarca = $items[$i][1];
+				if($iMarca==""){
+					$iMarca = "''";
+				}
+				$iPreco = $items[$i][2];
+				if($iPreco==""){
+					$iPreco = 0;
+				}
+				$iQtd = $items[$i][3];
+				if($iQtd==""){
+					$iQtd = 0;
+				}				
+				$iTipo = $items[$i][4];
+				if($iTipo==""){
+					$iTipo = "''";
+				}
+				$sqlIten = "INSERT INTO item (nome, marca, preco, qtdMinimaAtacado, tipo, fk_lista) VALUES ($iNome,$iMarca,$iPreco,$iQtd,$iTipo,$fk_lista)";	
+				if($conn->query($sqlIten)){
+					$allItems[$i]=$sqlIten;
+				}
+			}
+			echo json_encode($allItems);	
+		}
+		else{
+			echo json_encode('##server::ListError>$sql');				
+		}
+		
+		
 	break;
 	case "listasById":
 		$vetor;
