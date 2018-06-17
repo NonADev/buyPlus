@@ -7,10 +7,32 @@ $request = $_SERVER['REQUEST_METHOD'] == 'GET' ? $_GET : $_POST;
 
  
 switch ($request['acao']) {
+	case "saveList":
+		$items;
+		$temItems;
+		if(isset($_POST['itens'])){
+			$temItems = true;
+		}
+		else{
+			$temItems = false;
+		}
+		if($temItems==true){			
+			$items = $_POST['itens'];
+		}
+		$idUser;
+		$nomeLista;
+		$categoriaLista;		
+		$idUser = addslashes($_POST['id']);
+		$nomeLista = addslashes($_POST['nome']);
+		$categoriaLista = addslashes($_POST['categoria']);
+
+		
+		echo json_encode('a');
+	break;
 	case "listasById":
 		$vetor;
 		$iden = addslashes($_POST['id']);
-		$qryLista = mysqli_query($conn, "SELECT * FROM lista where fk_usuario='$iden'");   
+		$qryLista = mysqli_query($conn, "SELECT * FROM lista where fk_usuario='$iden' order by categoria");   
 		$length = $qryLista->num_rows;
 		if($length){
 			while($resultado = mysqli_fetch_assoc($qryLista)){

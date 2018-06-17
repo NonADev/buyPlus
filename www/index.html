@@ -6,16 +6,16 @@
     	<!-- METAS -->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">        
-    	<!-- METAS -->  
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    	<!-- METAS -->
     	<!-- JQUERY -->
         <script src="./js/jquery-2.2.4.min.js"></script>
         <link rel="stylesheet" href="./js/jquerymobile/jquery.mobile-1.4.5.min.css">
         <script src="./js/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
-    	<!-- JQUERY -->  
+    	<!-- JQUERY -->
     	<!-- OTHERS -->
-        <title>Hello World</title> 
-    	<!-- OTHERS -->	
+        <title>Hello World</title>
+    	<!-- OTHERS -->
     	<!-- CSS -->
         <!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
         <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -81,6 +81,26 @@
                     <input type="button" data-iconpos="notext" data-icon="home" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
 				</center>
 			</div>
+        </div>
+        <div id="pageNewList" data-role="page">
+            <div id="listData">
+                <label>titulo da lista:</label>
+                <input id="listName" type="text" data-wrapper-class="ui-custom">
+                <label>Categoria:</label>
+                <input id="listCategory" type="text" data-wrapper-class="ui-custom">
+                <div id="listaItens">
+
+                </div>
+                <input id="btnNewItem" type="button" value="novo item">
+                <input id="btnListSalvar" type="button" value="salvar" data-wrapper-class="ui-custom">
+            </div>
+            <div class="navBar">
+                <center>
+                    <input onclick="$.mobile.changePage('#pagePerfil')" type="button" data-iconpos="notext" data-icon="user" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+                    <input onclick="$.mobile.changePage('#pageListas')" type="button" data-iconpos="notext" data-icon="bullets" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+                    <input type="button" data-iconpos="notext" data-icon="home" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+                </center>
+            </div>
         </div>
 		<div id="pageManterDados" data-role="page">
 			<input type="text">

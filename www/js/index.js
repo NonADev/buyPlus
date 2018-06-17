@@ -14,6 +14,8 @@ var app = {
 	    this.loginTable();
 		this.dbAutoLogin();
         this.inserirListas();
+        document.getElementById('btnListSalvar').addEventListener('click', this.btnSalvarLista);
+        document.getElementById('btnNewItem').addEventListener('click', this.newItem);
         document.getElementById('btnSair').addEventListener('click', this.exitApp);
 		document.getElementById('btnManterDados').addEventListener('click', function(){$.mobile.changePage('#pageManterDados')});
         document.getElementById('btnGoToRegister').addEventListener('click', this.goToPageRegister);
@@ -24,6 +26,149 @@ var app = {
 	goToPageRegister: function(){
         $.mobile.changePage("#pageRegister");
 	},
+
+    newItem: function(){
+	    $('#listaItens').append(
+	        "<hr>" +
+            "<label>Nome</label>" +
+            "<input type='text' name='itemNome'>" +
+            "<label>Marca</label>" +
+            "<input type='text' name='itemMarca'>" +
+            "<label>Preco</label>" +
+            "<input type='text' name='itemPreco'>" +
+            "<label>Minimo para Atacado</label>" +
+            "<input type='text' name='itemQtd'>" +
+            "<label>Tipo</label >" +
+            "<input type='text' name='itemTipo'>");
+    },
+
+    btnSalvarLista: function(){
+	    var nomes = new Array();
+	    var marcas = new Array();
+        var precos = new Array();
+        var qtds = new Array();
+        var tipos = new Array();
+        var items = new Array();
+        items.temValor = false;
+	    nomes = app.domGetNomesItens();
+        marcas = app.domGetMarcasItens();
+        precos = app.domGetPrecosItens();
+        qtds = app.domGetQtdsItens();
+        tipos = app.domGetTiposItens();
+
+        for(var i=0; i<nomes.length;i++){
+            if(nomes[i]) {
+                items.push(new Array(nomes[i], marcas[i], precos[i], qtds[i], tipos[i]));
+                items.temValor = true;
+            }
+        }
+        if(document.getElementById('listName').value!="" && items.temValor == true) {
+            var identifier = 'n';
+            app.db.transaction(function(tx){
+                tx.executeSql("select * from logado", [], function (tx, values){
+                    identifier = values.rows[0].pk_id;
+                });
+            }, function(err){
+                console.log(err);
+            }, function(){
+                $.ajax({
+                    type: "POST",
+                    url: "http://" + app.ip + "/index.php",
+                    data: {
+                        acao: 'saveList',
+                        id: identifier,
+                        nome: document.getElementById('listName').value,
+                        categoria: document.getElementById('listCategory').value,
+                        itens: items
+                    },
+                    dataType: "json",
+                    success: function () {
+
+                    },
+                    error: function () {
+                        console.log("##cliente::SaveListAndItensError");
+                    }
+                });
+            });
+        }
+        else if(document.getElementById('listName').value!=""){
+            var identifier = 'n';
+            app.db.transaction(function(tx){
+                tx.executeSql("select * from logado", [], function (tx, values){
+                    identifier = values.rows[0].pk_id;
+                });
+            }, function(err){
+                console.log(err);
+            }, function(){
+                $.ajax({
+                    type: "POST",
+                    url: "http://" + app.ip + "/index.php",
+                    data: {
+                        acao: 'saveList',
+                        id: identifier,
+                        nome: document.getElementById('listName').value,
+                        categoria: document.getElementById('listCategory').value
+                    },
+                    dataType: "json",
+                    success: function () {
+
+                    },
+                    error: function () {
+                        console.log("##cliente::SaveListAndItensError");
+                    }
+                });
+            });
+        }
+        else{
+            alert('Nome da Lista Inválida');
+        }
+        //console.log(items);
+    },
+
+    domGetTiposItens: function(){
+        var inputTipos = document.getElementsByName('itemTipo');
+        var arr = new Array();
+        for(var i=0; i<inputTipos.length; i++){
+            arr[i]= inputTipos[i].value;
+        }
+        return arr;
+    },
+
+    domGetQtdsItens: function(){
+        var inputQtds = document.getElementsByName('itemQtd');
+        var arr = new Array();
+        for(var i=0; i<inputQtds.length; i++){
+            arr[i]= inputQtds[i].value;
+        }
+        return arr;
+    },
+
+    domGetPrecosItens: function(){
+        var inputPrecos = document.getElementsByName('itemPreco');
+        var arr = new Array();
+        for(var i=0; i<inputPrecos.length; i++){
+            arr[i]= inputPrecos[i].value;
+        }
+        return arr;
+    },
+
+    domGetMarcasItens: function(){
+        var inputMarcas = document.getElementsByName('itemMarca');
+        var arr = new Array();
+        for(var i=0; i<inputMarcas.length; i++){
+            arr[i]= inputMarcas[i].value;
+        }
+        return arr;
+    },
+
+    domGetNomesItens: function(){
+        var inputNames = document.getElementsByName('itemNome');
+        var arr = new Array();
+        for(var i=0; i<inputNames.length; i++){
+            arr[i]= inputNames[i].value;
+        }
+        return arr;
+    },
 
     inserirListas: function(){
 	    var vId;
@@ -51,7 +196,7 @@ var app = {
                                 "<label class='itens'>" + json[i].categoria + "</label>" +
                                 "</div>");
                         }
-                        $('#pageListas').append("<div id='newButton'><input id='newList' type='button' data-mini='true' data-icon='plus' data-iconpos='top' data-wrapper-class='ui-custom'></div>");
+                        $('#pageListas').append("<div id='newButton'><input onclick='app.gotoNewList()' id='newList' type='button' data-mini='true' data-icon='plus' data-iconpos='top' data-wrapper-class='ui-custom'></div>");
                     }
                     else {
                         console.log(json.err);
@@ -62,6 +207,10 @@ var app = {
                 }
             });
         });
+    },
+
+    gotoNewList: function(){
+	    $.mobile.changePage('#pageNewList');
     },
 
     exitApp: function(){

@@ -121,6 +121,33 @@ div[id="pagePerfil"] img{
 	border-radius: 100%;
 }
 /* PERFIL */
+/* NOVA LISTA */
+div[id="pageNewList"]{
+    background-color: #FFA500;
+    color: #FFA500;
+    text-shadow: none;
+}
+
+div[id="pageNewList"] div[id="listData"]{
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 3vh;
+    background-color: #9400D3;
+}
+
+div[id="pageNewList"] div[id="listData"] label{
+    font-weight: bolder;
+}
+
+div[id="pageNewList"] div[id="listData"] .ui-input-btn.ui-custom{
+    margin-bottom: 10vh;
+}
+
+div[id="pageNewList"] div[id="listData"] .ui-input-text.ui-custom{
+    color: #9400D3;
+    font-family: 'Roboto', sans-serif;
+}
+/* NOVA LISTA */
 /* LISTAS */
 div[id="pageListas"]{
     background-color: #FFA500;
@@ -130,6 +157,7 @@ div[id="pageListas"] .oneList{
     width: 90vw;
     margin: 0vw auto;
     background-color: #9400D3;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 div[id="pageListas"] .title, div[id="pageListas"] .itens{
@@ -153,6 +181,7 @@ div[id="pageListas"] div[id="newButton"] .ui-input-btn.ui-custom{
 /* LISTAS */
 /* NAVBAR */
 div div.navBar{
+    margin-top: 10vh;
 	overflow: hidden;
 	background-color: #9400D3;
 	position: absolute;
