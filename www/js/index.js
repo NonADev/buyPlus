@@ -1,5 +1,6 @@
 var app = {
 	ip: '127.0.0.1',
+	idItens: new Array(),
     db: null,
     // Application Constructor
     initialize: function() {
@@ -170,6 +171,10 @@ var app = {
         }
         return arr;
     },
+	
+	clickLista: function(e){
+		alert(""+e);
+	},
 
     inserirListas: function(){
 	    var vId;
@@ -189,15 +194,34 @@ var app = {
                 },
                 dataType: "json",
                 success: function (json) {
-                    if (json.result == true) {
+                    /*if (json.result == true) {
                         for (var i=0;i<json.length;i++) {
                             $('#pageListas').append(
-                                "<div class='oneList'>" +
+                                "<div class='oneList' id='"+json[i].pk_id+"'>" +
                                 "<label class='title'>" + json[i].nome + " </label>" +
                                 "<label class='itens'>" + json[i].categoria + "</label>" +
                                 "</div>");
-                        }
-                    }
+								
+								$( "#" + lista + json[i].pk_id).click(function() {
+								  alert( "Handler for .click() called." );
+								});
+                        }*/
+						
+					if (json.result == true) {
+						for (var i=0;i<json.length;i++) {
+							app.idItens[i] = json[i].pk_id;
+							var cod = '<div class=\'oneList\' id="lista' + json[i].pk_id + '">\n' +
+							'\t\t\t\t\t<label class=\'title\'>' + json[i].nome + ' </label>\n' +
+							'\t\t\t\t\t<label class=\'itens\'>' + json[i].categoria + '</label>\n' +
+							'\t\t\t\t\t</div>';
+							$('#pageListas').append(cod);
+							$("#lista" + json[i].pk_id).click(function(e) {		
+								app.clickLista(e.currentTarget.id);
+							});
+					}
+						
+						
+						}
                     else {
                         console.log(json.err);
                     }
@@ -205,6 +229,7 @@ var app = {
                 },
                 error: function () {
                     console.log("##cliente::GetListasError");
+                    $('#pageListas').append("<div id='newButton'><input onclick='app.gotoNewList()' value='MORE' id='newList' type='button' data-mini='true' data-icon='plus' data-iconpos='top' data-wrapper-class='ui-custom'></div>");
                 }
             });
         });
