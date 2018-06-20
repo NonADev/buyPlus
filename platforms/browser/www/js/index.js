@@ -1,6 +1,5 @@
 var app = {
 	ip: '127.0.0.1',
-	idItens: new Array(),
     db: null,
     // Application Constructor
     initialize: function() {
@@ -14,7 +13,6 @@ var app = {
     onDeviceReady: function() {
 	    this.loginTable();
 		this.dbAutoLogin();
-        this.inserirListas();
         document.getElementById('btnListSalvar').addEventListener('click', this.btnSalvarLista);
         document.getElementById('btnNewItem').addEventListener('click', this.newItem);
         document.getElementById('btnSair').addEventListener('click', this.exitApp);
@@ -171,10 +169,6 @@ var app = {
         }
         return arr;
     },
-	
-	clickLista: function(e){
-		alert(""+e);
-	},
 
     inserirListas: function(){
 	    var vId;
@@ -194,34 +188,19 @@ var app = {
                 },
                 dataType: "json",
                 success: function (json) {
-                    /*if (json.result == true) {
-                        for (var i=0;i<json.length;i++) {
-                            $('#pageListas').append(
-                                "<div class='oneList' id='"+json[i].pk_id+"'>" +
-                                "<label class='title'>" + json[i].nome + " </label>" +
-                                "<label class='itens'>" + json[i].categoria + "</label>" +
-                                "</div>");
-								
-								$( "#" + lista + json[i].pk_id).click(function() {
-								  alert( "Handler for .click() called." );
-								});
-                        }*/
-						
 					if (json.result == true) {
 						for (var i=0;i<json.length;i++) {
-							app.idItens[i] = json[i].pk_id;
 							var cod = '<div class=\'oneList\' id="lista' + json[i].pk_id + '">\n' +
 							'\t\t\t\t\t<label class=\'title\'>' + json[i].nome + ' </label>\n' +
 							'\t\t\t\t\t<label class=\'itens\'>' + json[i].categoria + '</label>\n' +
 							'\t\t\t\t\t</div>';
 							$('#pageListas').append(cod);
-							$("#lista" + json[i].pk_id).click(function(e) {		
-								app.clickLista(e.currentTarget.id);
+							$("#lista" + json[i].pk_id).click(function(e) {
+							    var id = e.currentTarget.id.substring(5);
+								app.showList(id);
 							});
+					    }
 					}
-						
-						
-						}
                     else {
                         console.log(json.err);
                     }
@@ -235,13 +214,36 @@ var app = {
         });
     },
 
+    showList: function(idLista){
+	    $.ajax({
+            type: "POST",
+            url: "http://"+app.ip+"/index.php",
+            data: {
+                acao: 'itensLista',
+                idLista: idLista
+            },
+            dataType: "json",
+            success: function (json) {
+                //$("#showItens").html("");
+                for(var i=0;i<json.length;i++) {
+                    $('#showItens').append('<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset"><input class="inputValue" type="text" value="'+json[i].nome+'" data-wrapper-class="ui-custom"><input type="text" value="'+json[i].marca+'"><input type="text" value="'+json[i].preco+'"><input type="text" value="'+json[i].qtdMinimaAtacado+'"><input type="text" value="'+json[i].tipo+'"></div>');
+                }
+                $.mobile.changePage('#pageListaDeItens');
+            },
+            error: function(ext){
+                console.log(ext);
+                console.log("##cliente::showItemsError");
+            }
+        });
+    },
+
     gotoNewList: function(){
 	    $.mobile.changePage('#pageNewList');
     },
 
     exitApp: function(){
 	    app.db.transaction(function (tx) {
-            tx.executeSql("delete * from logado where pk_id = pk_id");
+            tx.executeSql("delete from logado where pk_id = pk_id");
             $.mobile.changePage("#pageLogin");
         });
     },
@@ -289,6 +291,7 @@ var app = {
                             tx.executeSql(sql);
                             app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
                             $.mobile.changePage("#pagePerfil");
+							app.inserirListas();
                         });
                     }
                     else if(json.result == false && json.alert == true){
@@ -304,7 +307,7 @@ var app = {
                             tx.executeSql("delete from logado where pk_id = pk_id");
                         });
                         $.mobile.changePage('#pageLogin');
-                    }
+                    }					
                 },
                 error: function(){
                     console.log("##cliente::AutoLoginError");
@@ -337,6 +340,7 @@ var app = {
                         tx.executeSql(sql);
                         app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
                         $.mobile.changePage("#pagePerfil");
+						app.inserirListas();
                     });
                 }
                 else if(json.result == false && json.alert == true){

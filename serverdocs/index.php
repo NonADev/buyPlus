@@ -7,6 +7,17 @@ $request = $_SERVER['REQUEST_METHOD'] == 'GET' ? $_GET : $_POST;
 
  
 switch ($request['acao']) {
+	case "itensLista":
+		$idLista = $_POST['idLista'];
+		$sql = "select * from item where fk_lista = $idLista";		
+		$resultSet = mysqli_query($conn, $sql);
+		$returnVetor = Array();
+		while($rr = mysqli_fetch_assoc($resultSet)){
+			$returnVetor[] = array_map('utf8_encode', $rr); 			
+		}
+		echo json_encode($returnVetor);		
+		//else echo("#server::NoItens");
+	break;
 	case "saveList":
 		$items;
 		$temItems;
