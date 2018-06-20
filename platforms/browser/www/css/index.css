@@ -204,10 +204,9 @@ div#pageListaDeItens div#showItens .ui-input-text{
 /* pageListaDeItens */
 /* NAVBAR */
 div div.navBar{
-    margin-top: 10vh;
-	overflow: hidden;
+	overflow: visible;
 	background-color: #9400D3;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	bottom: 0;
 }

@@ -11,6 +11,11 @@
     	<!-- JQUERY -->
         <script src="./js/jquery-2.2.4.min.js"></script>
         <link rel="stylesheet" href="./js/jquerymobile/jquery.mobile-1.4.5.min.css">
+        <script>
+            $(document).on('mobileinit', function () {
+                $.mobile.ignoreContentEnabled = true;
+            });
+        </script>
         <script src="./js/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
     	<!-- JQUERY -->
     	<!-- OTHERS -->
@@ -62,6 +67,9 @@
             </div>
         </div>
         <div id="pageListas" data-role="page">
+            <div id="listListas">
+
+            </div>
             <div class="navBar">
                 <center>
                     <input onclick="$.mobile.changePage('#pagePerfil');" type="button" data-iconpos="notext" data-icon="user" data-role="button" data-inline="true" data-wrapper-class="ui-custom">

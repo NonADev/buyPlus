@@ -194,7 +194,7 @@ var app = {
 							'\t\t\t\t\t<label class=\'title\'>' + json[i].nome + ' </label>\n' +
 							'\t\t\t\t\t<label class=\'itens\'>' + json[i].categoria + '</label>\n' +
 							'\t\t\t\t\t</div>';
-							$('#pageListas').append(cod);
+							$('#listListas').append(cod);
 							$("#lista" + json[i].pk_id).click(function(e) {
 							    var id = e.currentTarget.id.substring(5);
 								app.showList(id);
@@ -226,7 +226,28 @@ var app = {
             success: function (json) {
                 $("#showItens").html("");
                 for(var i=0;i<json.length;i++) {
-                    $('#showItens').append('<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset"><input class="inputValue" type="text" value="'+json[i].nome+'" data-wrapper-class="ui-custom"><input type="text" value="'+json[i].marca+'"><input type="text" value="'+json[i].preco+'"><input type="text" value="'+json[i].qtdMinimaAtacado+'"><input type="text" value="'+json[i].tipo+'"></div>');
+                    $('#showItens').append(
+                        '<label>nome:</label>'+
+                        '<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
+                        '<input class="inputValue" type="text" value="'+json[i].nome+'" data-wrapper-class="ui-custom">' +
+                        '</div>' +
+                        '<label>marca:</label>'+
+                        '<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
+                        '<input class="inputValue" type="text" value="'+json[i].marca+'">' +
+                        '</div>' +
+                        '<label>preco:</label>'+
+                        '<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
+                        '<input type="text" value="'+json[i].preco+'">' +
+                        '</div>' +
+                        '<label>qtd:</label>'+
+                        '<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
+                        '<input class="inputValue" type="text" value="'+json[i].qtdMinimaAtacado+'">' +
+                        '</div>' +
+                        '<label>tipo:</label>'+
+                        '<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
+                        '<input type="text" value="'+json[i].tipo+'">' +
+                        '</div>'
+                    );
                 }
                 $.mobile.changePage('#pageListaDeItens');
             },
