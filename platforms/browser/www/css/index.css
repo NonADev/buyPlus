@@ -123,29 +123,49 @@ div[id="pagePerfil"] img{
 /* PERFIL */
 /* NOVA LISTA */
 div[id="pageNewList"]{
-    background-color: #FFA500;
-    color: #FFA500;
-    text-shadow: none;
-}
-
-div[id="pageNewList"] div[id="listData"]{
-    width: 90vw;
-    margin: 0 auto;
-    margin-top: 3vh;
-    background-color: #9400D3;
-}
-
-div[id="pageNewList"] div[id="listData"] label{
-    font-weight: bolder;
-}
-
-div[id="pageNewList"] div[id="listData"] .ui-input-btn.ui-custom{
-    margin-bottom: 10vh;
+	background-color: #FFA500;
 }
 
 div[id="pageNewList"] div[id="listData"] .ui-input-text.ui-custom{
-    color: #9400D3;
+	color: #9400D3;
+	text-shadow: none;
+	font-weight: bolder;
+	background-color: #FFA500;
+	border: none;
+	box-shadow: none;
+	margin:0 auto;
+	margin-top: 2.5vh;
+	width: 70vw;
+	border-radius: unset;
+    border-bottom: 2px solid #9400D3;
+}
+
+div[id="pageNewList"] div[id="listData"] .ui-input-text.ui-custom ::placeholder{
+	color: #9400D3;
+}
+
+div[id="pageNewList"] div[id="listData"] .ui-input-btn.ui-custom{
     font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background-color: #9400D3;
+    border: none;
+    border-radius: unset;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-shadow: none;
+    color: white;
+    width: 35vw;
+}
+
+div[id="pageNewList"] div[id="listData"] hr{
+    width: 85vw;
+    border: none;
+	margin-top: 6vh;
+	margin-bottom: 4vh;
+    border-bottom: 2px solid #9400D3;
+}
+
+div[id="pageNewList"] div[id="listData"] .ui-input-btn.ui-custom:active {
+    background-color: #8A2BE2;
 }
 /* NOVA LISTA */
 /* LISTAS */

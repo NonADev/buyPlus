@@ -28,17 +28,23 @@ var app = {
 
     newItem: function(){
 	    $('#listaItens').append(
-	        "<hr>" +
-            "<label>Nome</label>" +
-            "<input type='text' name='itemNome'>" +
-            "<label>Marca</label>" +
-            "<input type='text' name='itemMarca'>" +
-            "<label>Preco</label>" +
-            "<input type='text' name='itemPreco'>" +
-            "<label>Minimo para Atacado</label>" +
-            "<input type='text' name='itemQtd'>" +
-            "<label>Tipo</label >" +
-            "<input type='text' name='itemTipo'>");
+			'<hr>' +
+			'<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
+            "<input type='text' placeholder='nome do item' name='itemNome'>" +
+			"</div>" +
+			'<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
+            "<input type='text' placeholder='' name='itemMarca'>" +
+			"</div>" +
+			'<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
+            "<input type='text' placeholder='' name='itemPreco'>" +
+			"</div>" +
+			'<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
+            "<input type='text' placeholder='' name='itemQtd'>" +
+			"</div>" +
+			'<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
+            "<input type='text' placeholder='' name='itemTipo'>" +
+			"</div>"
+			);
     },
 
     btnSalvarLista: function(){
