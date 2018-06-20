@@ -14,7 +14,6 @@ var app = {
     onDeviceReady: function() {
 	    this.loginTable();
 		this.dbAutoLogin();
-        this.inserirListas();
         document.getElementById('btnListSalvar').addEventListener('click', this.btnSalvarLista);
         document.getElementById('btnNewItem').addEventListener('click', this.newItem);
         document.getElementById('btnSair').addEventListener('click', this.exitApp);
@@ -241,7 +240,7 @@ var app = {
 
     exitApp: function(){
 	    app.db.transaction(function (tx) {
-            tx.executeSql("delete * from logado where pk_id = pk_id");
+            tx.executeSql("delete from logado where pk_id = pk_id");
             $.mobile.changePage("#pageLogin");
         });
     },
@@ -289,6 +288,7 @@ var app = {
                             tx.executeSql(sql);
                             app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
                             $.mobile.changePage("#pagePerfil");
+							app.inserirListas();
                         });
                     }
                     else if(json.result == false && json.alert == true){
@@ -304,7 +304,7 @@ var app = {
                             tx.executeSql("delete from logado where pk_id = pk_id");
                         });
                         $.mobile.changePage('#pageLogin');
-                    }
+                    }					
                 },
                 error: function(){
                     console.log("##cliente::AutoLoginError");
@@ -337,6 +337,7 @@ var app = {
                         tx.executeSql(sql);
                         app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
                         $.mobile.changePage("#pagePerfil");
+						app.inserirListas();
                     });
                 }
                 else if(json.result == false && json.alert == true){
