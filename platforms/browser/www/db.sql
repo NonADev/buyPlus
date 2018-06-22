@@ -24,7 +24,6 @@ CREATE TABLE item(
     marca VARCHAR(45),
     preco DOUBLE,
     qtdMinimaAtacado DOUBLE,
-    validade DATE,
     tipo NVARCHAR(45),
     fk_lista INT NOT NULL REFERENCES lista(pk_id)
 );

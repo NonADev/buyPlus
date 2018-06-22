@@ -24,7 +24,6 @@ div[id="pageLogin"] .ui-input-text.ui-custom {
     box-shadow: none;
     color: #FFA500;
     width: 70vw;
-    height: 5vh;
 }
 
 div[id="pageLogin"] .ui-input-text.ui-custom ::placeholder {
@@ -79,7 +78,6 @@ div[id="pageRegister"] .ui-input-text.ui-custom{
     box-shadow: none;
     color: #9400D3;
     width: 70vw;
-    height: 5vh;
 }
 
 div[id="pageRegister"] .ui-input-text.ui-custom ::placeholder{
@@ -140,8 +138,24 @@ div[id="pageNewList"] div[id="listData"] .ui-input-text.ui-custom{
     border-bottom: 2px solid #9400D3;
 }
 
+div[id="pageNewList"] div[id="listData"] hr{
+    width: 85vw;
+    border: none;
+	margin-top: 7vh;
+	margin-bottom: 4vh;
+    border-bottom: 2px solid #9400D3;
+}
+
 div[id="pageNewList"] div[id="listData"] .ui-input-text.ui-custom ::placeholder{
-	color: #9400D3;
+    color: #9400D3;
+}
+
+div[id="pageNewList"] div[id="listData"] div[id="btns"] div:first-child{
+    margin-top: 5vh;
+}
+
+div[id="pageNewList"] div[id="listData"] div[id="btns"] div:last-child{
+    margin-bottom: 8vh;
 }
 
 div[id="pageNewList"] div[id="listData"] .ui-input-btn.ui-custom{
@@ -154,14 +168,6 @@ div[id="pageNewList"] div[id="listData"] .ui-input-btn.ui-custom{
     text-shadow: none;
     color: white;
     width: 35vw;
-}
-
-div[id="pageNewList"] div[id="listData"] hr{
-    width: 85vw;
-    border: none;
-	margin-top: 6vh;
-	margin-bottom: 4vh;
-    border-bottom: 2px solid #9400D3;
 }
 
 div[id="pageNewList"] div[id="listData"] .ui-input-btn.ui-custom:active {

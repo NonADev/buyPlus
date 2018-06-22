@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 $conn = new mysqli('localhost', 'root', '', 'buyPlus');
@@ -15,8 +16,18 @@ switch ($request['acao']) {
 		while($rr = mysqli_fetch_assoc($resultSet)){
 			$returnVetor[] = array_map('utf8_encode', $rr); 			
 		}
-		echo json_encode($returnVetor);		
+		echo json_encode($returnVetor, JSON_UNESCAPED_UNICODE);		
 		//else echo("#server::NoItens");
+	break;
+	case "debug":			
+		$sql = "SELECT * FROM lista";
+		$rr = mysqli_query($conn, $sql);
+		$rrr;
+		while($rrr = mysqli_fetch_array($rr)){
+			echo utf8_encode($rrr[1]);
+		}
+		echo 'iai';
+		echo "num vai dar nao";
 	break;
 	case "saveList":
 		$items;
@@ -33,50 +44,57 @@ switch ($request['acao']) {
 		$idUser;
 		$nomeLista;
 		$categoriaLista;		
-		$idUser = addslashes($_POST['id']);
-		$nomeLista = addslashes($_POST['nome']);
-		$categoriaLista = addslashes($_POST['categoria']);
+		$idUser = utf8_decode($_POST['id']);
+		$nomeLista = utf8_decode($_POST['nome']);
+		$categoriaLista = utf8_decode($_POST['categoria']);
 		
 		$sql = "INSERT INTO lista (nome, categoria, fk_usuario) VALUES ('$nomeLista', '$categoriaLista', '$idUser')";
 		if($conn->query($sql)){
-			/*if(){
-				$sqlIten = "INSERT INTO item (nome, marca, preco, qtdMinimaAtacado, tipo) VALUES ()";
+			if($temItems==false){
+				echo json_encode("##server:nãoTeveItens;-;",  JSON_UNESCAPED_UNICODE);
 			}
-			echo json_encode('##server::ListaSalva>$sql');	*/
-			//echo json_encode(count($items));/*count($items)*/
-			$allItems=Array();
-			$fk_lista = mysqli_insert_id($conn);
-			for($i=0;$i<count($items);$i++){
-				$iNome = $items[$i][0];
-				$iNome = "'".$iNome."'";
-				$iMarca = $items[$i][1];
-				if($iMarca==""){
-					$iMarca = "''";
+			else{
+				/*if(){
+					$sqlIten = "INSERT INTO item (nome, marca, preco, qtdMinimaAtacado, tipo) VALUES ()";
 				}
-				$iPreco = $items[$i][2];
-				if($iPreco==""){
-					$iPreco = 0;
+				echo json_encode('##server::ListaSalva>$sql');	*/
+				//echo json_encode(count($items));/*count($items)*/
+				$allItems=Array();
+				$fk_lista = mysqli_insert_id($conn);
+				for($i=0;$i<count($items);$i++){
+					$iNome = utf8_decode($items[$i][0]);
+					$iNome = "'".$iNome."'";
+					$iMarca = $items[$i][1];
+					if($iMarca==""){
+						$iMarca = "''";
+					}
+					$iPreco = $items[$i][2];
+					if($iPreco==""){
+						$iPreco = 0;
+					}
+					$iQtd = $items[$i][3];
+					if($iQtd==""){
+						$iQtd = 0;
+					}				
+					$iTipo = $items[$i][4];
+					if($iTipo==""){
+						$iTipo = "''";
+					}
+					$sqlIten = "INSERT INTO item (nome, marca, preco, qtdMinimaAtacado, tipo, fk_lista) VALUES ($iNome,$iMarca,$iPreco,$iQtd,$iTipo,$fk_lista)";	
+					if($conn->query($sqlIten)){
+						$allItems[$i]=$sqlIten;
+					}
 				}
-				$iQtd = $items[$i][3];
-				if($iQtd==""){
-					$iQtd = 0;
-				}				
-				$iTipo = $items[$i][4];
-				if($iTipo==""){
-					$iTipo = "''";
-				}
-				$sqlIten = "INSERT INTO item (nome, marca, preco, qtdMinimaAtacado, tipo, fk_lista) VALUES ($iNome,$iMarca,$iPreco,$iQtd,$iTipo,$fk_lista)";	
-				if($conn->query($sqlIten)){
-					$allItems[$i]=$sqlIten;
-				}
+				echo json_encode($allItems, JSON_UNESCAPED_UNICODE);	
 			}
-			echo json_encode($allItems);	
 		}
 		else{
-			echo json_encode('##server::ListError>$sql');				
+			echo json_encode('##server::ListError>$sql', JSON_UNESCAPED_UNICODE);				
 		}
 		
 		
+	break;
+	case "debugando";
 	break;
 	case "listasById":
 		$vetor;
@@ -94,7 +112,7 @@ switch ($request['acao']) {
 			$vetor['result']=false;
 			$vetor['err']="##server::noResults";
 		}
-		echo json_encode($vetor);
+		echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
 	break;
 	case "usuarios":
 		if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
@@ -108,7 +126,7 @@ switch ($request['acao']) {
 		$arr['result']==true;
 		
 		//Passando vetor em forma de json
-		echo json_encode($vetor);
+		echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
 	break;
 	/* ----------------------------- */
 	case "login":
@@ -135,7 +153,7 @@ switch ($request['acao']) {
 			$arr['alert'] = true;
 			$arr['err'] = 'O nome de usuário ou senha está incorreta, ou não existe';			
 		}
-		echo json_encode($arr);		
+		echo json_encode($arr, JSON_UNESCAPED_UNICODE);		
 	break;
 	/* ----------------------------- */	
 	case "registrarUsuario":
@@ -171,7 +189,7 @@ switch ($request['acao']) {
 			$arr['alert'] = true;
 			$arr['err'] = "##server::Unknown Error: '$sql'";
 		}	
-		echo json_encode($arr);		
+		echo json_encode($arr, JSON_UNESCAPED_UNICODE);		
 	break;
 	/* ----------------------------- */
 }

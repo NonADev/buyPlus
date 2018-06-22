@@ -30,19 +30,19 @@ var app = {
 	    $('#listaItens').append(
 			'<hr>' +
 			'<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
-            "<input type='text' placeholder='nome do item' name='itemNome'>" +
+            "<input type='text' placeholder='nome do item *' name='itemNome'>" +
 			"</div>" +
 			'<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
-            "<input type='text' placeholder='' name='itemMarca'>" +
+            "<input type='text' placeholder='marca' name='itemMarca'>" +
 			"</div>" +
 			'<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
-            "<input type='text' placeholder='' name='itemPreco'>" +
+            "<input type='text' placeholder='preco' name='itemPreco'>" +
 			"</div>" +
 			'<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
-            "<input type='text' placeholder='' name='itemQtd'>" +
+            "<input type='text' placeholder='quantidade para atacado' name='itemQtd'>" +
 			"</div>" +
 			'<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
-            "<input type='text' placeholder='' name='itemTipo'>" +
+            "<input type='text' placeholder='categoria' name='itemTipo'>" +
 			"</div>"
 			);
     },
@@ -88,7 +88,7 @@ var app = {
                     },
                     dataType: "json",
                     success: function (json) {
-                        console.log(json);
+                        $.mobile.changePage("#pageListas");
                     },
                     error: function (ext) {
                         console.log(ext);
@@ -97,7 +97,7 @@ var app = {
                 });
             });
         }
-        else if(document.getElementById('listName').value!=""){
+        else if(document.getElementById('listName').value!="" && items.temValor == false){
             var identifier = 'n';
             app.db.transaction(function(tx){
                 tx.executeSql("select * from logado", [], function (tx, values){
@@ -196,10 +196,10 @@ var app = {
                 success: function (json) {
 					if (json.result == true) {
 						for (var i=0;i<json.length;i++) {
-							var cod = '<div class=\'oneList\' id="lista' + json[i].pk_id + '">\n' +
-							'\t\t\t\t\t<label class=\'title\'>' + json[i].nome + ' </label>\n' +
-							'\t\t\t\t\t<label class=\'itens\'>' + json[i].categoria + '</label>\n' +
-							'\t\t\t\t\t</div>';
+							var cod = '<div class="oneList" id="lista'+ json[i].pk_id + '">' +
+							'<label class="title">' + json[i].nome + ' </label>\n' +
+							'<label class="itens">' + json[i].categoria + '</label>' +
+							'</div>';
 							$('#listListas').append(cod);
 							$("#lista" + json[i].pk_id).click(function(e) {
 							    var id = e.currentTarget.id.substring(5);
@@ -212,8 +212,9 @@ var app = {
                     }
                     $('#pageListas').append("<div id='newButton'><input onclick='app.gotoNewList()' value='MORE' id='newList' type='button' data-mini='true' data-icon='plus' data-iconpos='top' data-wrapper-class='ui-custom'></div>");
                 },
-                error: function () {
+                error: function (ext) {
                     console.log("##cliente::GetListasError");
+                    console.log(ext);
                     $('#pageListas').append("<div id='newButton'><input onclick='app.gotoNewList()' value='MORE' id='newList' type='button' data-mini='true' data-icon='plus' data-iconpos='top' data-wrapper-class='ui-custom'></div>");
                 }
             });
