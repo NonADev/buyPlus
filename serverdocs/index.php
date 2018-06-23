@@ -99,7 +99,9 @@ switch ($request['acao']) {
 	case "listasById":
 		$vetor;
 		$iden = addslashes($_POST['id']);
-		$qryLista = mysqli_query($conn, "SELECT * FROM lista where fk_usuario='$iden' order by categoria");   
+		$qquery = "SELECT * FROM lista where fk_usuario='$iden' order by nome";
+		$qquery = "select *,  (select count(*) from item where item.fk_lista = lista.pk_id) as items from lista where lista.fk_usuario = '$iden'";
+		$qryLista = mysqli_query($conn, $qquery); 
 		$length = $qryLista->num_rows;
 		if($length){
 			while($resultado = mysqli_fetch_assoc($qryLista)){

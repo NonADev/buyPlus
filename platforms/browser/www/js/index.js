@@ -196,11 +196,16 @@ var app = {
                 success: function (json) {
 					if (json.result == true) {
 						for (var i=0;i<json.length;i++) {
-							var cod = '<div class="oneList" id="lista'+ json[i].pk_id + '">' +
-							'<label class="title">' + json[i].nome + ' </label>\n' +
-							'<label class="itens">' + json[i].categoria + '</label>' +
-							'</div>';
-							$('#listListas').append(cod);
+							var button =
+                            '<a id="lista' + json[i].pk_id + '" class="ui-btn ui-icon-bullets ui-btn-icon-left" role="button" style="border: unset;margin: unset;">' +
+                                '<span style="float: left; font-weight: bolder;">' + json[i].nome + '</span><br>' +
+                                '<span style="font-weight: normal; float: left;">' + json[i].categoria + '</span>' +
+                                '<span style="float: right; font-weight: normal;">' + json[i].items + ' items</span>' +
+                            '</a>';
+							$('#listListas').append(button);
+							document.getElementById("lista" + json[i].pk_id).addEventListener('onmousedown', function(e) {
+							    alert(e.currentTarget.id);
+                            });
 							$("#lista" + json[i].pk_id).click(function(e) {
 							    var id = e.currentTarget.id.substring(5);
 								app.showList(id);
@@ -210,12 +215,10 @@ var app = {
                     else {
                         console.log(json.err);
                     }
-                    $('#pageListas').append("<div id='newButton'><input onclick='app.gotoNewList()' value='MORE' id='newList' type='button' data-mini='true' data-icon='plus' data-iconpos='top' data-wrapper-class='ui-custom'></div>");
                 },
                 error: function (ext) {
                     console.log("##cliente::GetListasError");
                     console.log(ext);
-                    $('#pageListas').append("<div id='newButton'><input onclick='app.gotoNewList()' value='MORE' id='newList' type='button' data-mini='true' data-icon='plus' data-iconpos='top' data-wrapper-class='ui-custom'></div>");
                 }
             });
         });
@@ -234,26 +237,9 @@ var app = {
                 $("#showItens").html("");
                 for(var i=0;i<json.length;i++) {
                     $('#showItens').append(
-                        '<label>nome:</label>'+
-                        '<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
-                        '<input class="inputValue" type="text" value="'+json[i].nome+'" data-wrapper-class="ui-custom">' +
-                        '</div>' +
-                        '<label>marca:</label>'+
-                        '<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
-                        '<input class="inputValue" type="text" value="'+json[i].marca+'">' +
-                        '</div>' +
-                        '<label>preco:</label>'+
-                        '<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
-                        '<input type="text" value="'+json[i].preco+'">' +
-                        '</div>' +
-                        '<label>qtd:</label>'+
-                        '<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
-                        '<input class="inputValue" type="text" value="'+json[i].qtdMinimaAtacado+'">' +
-                        '</div>' +
-                        '<label>tipo:</label>'+
-                        '<div class="ui-input-text ui-body-inherit ui-corner-all ui-custom ui-shadow-inset">' +
-                        '<input type="text" value="'+json[i].tipo+'">' +
-                        '</div>'
+                        '<a class="ui-btn ui-icon-edit ui-btn-icon-left">'+
+                        '<span>'+ json[i].nome +'</span>'+
+                        '</a>'
                     );
                 }
                 $.mobile.changePage('#pageListaDeItens');
@@ -337,7 +323,8 @@ var app = {
                         $.mobile.changePage('#pageLogin');
                     }					
                 },
-                error: function(){
+                error: function(ext){
+                    console.log(ext);
                     console.log("##cliente::AutoLoginError");
                 }
             });
