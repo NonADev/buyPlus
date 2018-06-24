@@ -26,6 +26,11 @@ var app = {
         $.mobile.changePage("#pageRegister");
 	},
 
+    goToPageListas: function(){
+	    app.inserirListas();
+	    $.mobile.changePage('#pageListas');
+    },
+
     newItem: function(){
 	    $('#listaItens').append(
 			'<hr>' +
@@ -88,13 +93,15 @@ var app = {
                     },
                     dataType: "json",
                     success: function (json) {
-                        $.mobile.changePage("#pageListas");
+                        console.log("%c"+json,"color: green;");
+                        console.log("client::listaSalva");
                     },
                     error: function (ext) {
                         console.log(ext);
                         console.log("##cliente::SaveListAndItensError");
                     }
                 });
+                app.goToPageListas();
             });
         }
         else if(document.getElementById('listName').value!="" && items.temValor == false){
@@ -195,9 +202,10 @@ var app = {
                 dataType: "json",
                 success: function (json) {
 					if (json.result == true) {
+					    $('#listListas').html("");
 						for (var i=0;i<json.length;i++) {
 							var button =
-                            '<a id="lista' + json[i].pk_id + '" class="ui-btn ui-icon-bullets ui-btn-icon-left" role="button" style="border: unset;margin: unset;">' +
+                            '<a id="lista' + json[i].pk_id + '" dt-id="'+ json[i].pk_id +'" dt-nome="'+ json[i].nome +'" dt-categoria="'+ json[i].categoria +'" class="ui-btn ui-icon-bullets ui-btn-icon-left" role="button" style="margin: unset;">' +
                                 '<span style="float: left; font-weight: bolder;">' + json[i].nome + '</span><br>' +
                                 '<span style="font-weight: normal; float: left;">' + json[i].categoria + '</span>' +
                                 '<span style="float: right; font-weight: normal;">' + json[i].items + ' items</span>' +
@@ -207,8 +215,9 @@ var app = {
 							    alert(e.currentTarget.id);
                             });
 							$("#lista" + json[i].pk_id).click(function(e) {
+                                var ddados = {id: $(e.currentTarget).attr('dt-id'),nome: $(e.currentTarget).attr('dt-nome'), categoria: $(e.currentTarget).attr('dt-categoria')};
 							    var id = e.currentTarget.id.substring(5);
-								app.showList(id);
+								app.showList(id, ddados);
 							});
 					    }
 					}
@@ -224,7 +233,7 @@ var app = {
         });
     },
 
-    showList: function(idLista){
+    showList: function(idLista, dados){
 	    $.ajax({
             type: "POST",
             url: "http://"+app.ip+"/index.php",
@@ -234,19 +243,74 @@ var app = {
             },
             dataType: "json",
             success: function (json) {
+                console.log(dados);
                 $("#showItens").html("");
+                $('#showItens').append(
+                    '<a href="#'+ dados.id +'" data-rel="popup" class="ui-btn" style="margin: unset;">' +
+                        '<span id="spanNomeLista">'+ dados.nome +'</span><br>' +
+                        '<span id="spanCategoriaLista" style="font-weight:normal;">'+ dados.categoria +'</span>' +
+                    '</a>' +
+                    '<div data-history="false" data-role="popup" data-dismissible="false" id="'+ dados.id +'">' +
+                        '<div data-role="header" data-theme="a">'+
+                            '<h1>Atualizar Lista</h1>'+
+                        '</div>'+
+                        '<div role="main" class="ui-content">'+
+                            '<h4 class="ui-title">nome da lista</h4>'+
+                            '<input id="txtDataNome" type="text" value="'+dados.nome+'">'+
+                            '<h4 class="ui-title">categoria da lista</h4>'+
+                            '<input id="txtDataCategoria" type="text" value="'+dados.categoria+'">'+
+                            '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>'+
+                            '<a id="atualizar'+dados.id+'" dt-id="'+ dados.id +'" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>'+
+                        '</div>'+
+                    '</div>'
+                );
+                document.getElementById("atualizar"+dados.id).addEventListener('click', function(e){
+                    var vNome = document.getElementById('txtDataNome').value;
+                    var vCategoria = document.getElementById('txtDataCategoria').value;
+                    if(vNome==""){
+                        alert('nome precisa ser um campo válido');
+                    }
+                    app.atualizarLista($(e.currentTarget).attr('dt-id'), vNome, vCategoria);
+                    document.getElementById('spanNomeLista').textContent  = vNome;
+                    document.getElementById('spanCategoriaLista').textContent    = vCategoria;
+                });
                 for(var i=0;i<json.length;i++) {
+                    var varMarca;
+                    if(json[i].marca == "") varMarca = 'não definido';
+                    else varMarca = json[i].marca;
                     $('#showItens').append(
-                        '<a class="ui-btn ui-icon-edit ui-btn-icon-left">'+
-                        '<span>'+ json[i].nome +'</span>'+
+                        '<a href="" data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" role="button" style="margin: unset;">'+
+                            '<span style="font-weight: bold; float: left;">'+ json[i].nome +'</span><br>'+
+                            '<span style="font-weight: normal; float: left;">'+ varMarca +'</span>'+
                         '</a>'
                     );
                 }
+                $("#showItens").trigger( "updatelayout" );
                 $.mobile.changePage('#pageListaDeItens');
             },
             error: function(ext){
                 console.log(ext);
                 console.log("##cliente::showItemsError");
+            }
+        });
+    },
+
+    atualizarLista: function(idLista, nomeLista, categoriaLista){
+	    $.ajax({
+            type: "POST",
+            url: "http://" + app.ip + "/index.php",
+            data: {
+                acao: 'updateLista',
+                idLista: idLista,
+                nomeLista: nomeLista,
+                categoriaLista: categoriaLista
+            },
+            dataType: "json",
+            success: function (json) {
+                console.log(json);
+            },
+            error: function (ext) {
+                console.log(ext);
             }
         });
     },
@@ -300,7 +364,8 @@ var app = {
                         console.log(json.err);
                         app.db.transaction(function (tx) {
                             var sql = "INSERT INTO logado (pk_id, nome, email, telefone, senha) VALUES ('"+json.pk_id+"', '"+json.nome+"', '"+json.email+"', '"+json.telefone+"', '"+json.senha+"')";
-                            console.log("##cliente::Logado:\n"+sql);
+                            console.log("%c"+sql,"color: green;");
+                            console.log("##cliente::Logado");
                             tx.executeSql("delete from logado where pk_id = pk_id");
                             tx.executeSql(sql);
                             app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
