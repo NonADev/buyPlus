@@ -96,11 +96,23 @@ switch ($request['acao']) {
 	break;
 	case "debugando";
 	break;
+	case "updateLista";
+		$idLista = utf8_decode($_POST['idLista']);
+		$nomeLista = utf8_decode($_POST['nomeLista']);
+		$categoriaLista = utf8_decode($_POST['categoriaLista']);
+		$sql = "update lista set nome = '$nomeLista', categoria = '$categoriaLista' where pk_id = $idLista";
+		if($conn->query($sql)){
+			echo json_encode("##server::SucessListUpdate", JSON_UNESCAPED_UNICODE);
+		}
+		else{		
+			echo json_encode("##server::failListUpdate", JSON_UNESCAPED_UNICODE);
+		}
+	break;
 	case "listasById":
 		$vetor;
 		$iden = addslashes($_POST['id']);
 		$qquery = "SELECT * FROM lista where fk_usuario='$iden' order by nome";
-		$qquery = "select *,  (select count(*) from item where item.fk_lista = lista.pk_id) as items from lista where lista.fk_usuario = '$iden'";
+		$qquery = "select *,  (select count(*) from item where item.fk_lista = lista.pk_id) as items from lista where lista.fk_usuario = '$iden' order by items desc";
 		$qryLista = mysqli_query($conn, $qquery); 
 		$length = $qryLista->num_rows;
 		if($length){
