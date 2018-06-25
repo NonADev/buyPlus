@@ -1,6 +1,7 @@
 var app = {
 	ip: '127.0.0.1',
     db: null,
+    varCountTrigger: false,
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -243,54 +244,168 @@ var app = {
             },
             dataType: "json",
             success: function (json) {
-                console.log(dados);
                 $("#showItens").html("");
                 $('#showItens').append(
                     '<a href="#'+ dados.id +'" data-rel="popup" class="ui-btn" style="margin: unset;">' +
                         '<span id="spanNomeLista">'+ dados.nome +'</span><br>' +
                         '<span id="spanCategoriaLista" style="font-weight:normal;">'+ dados.categoria +'</span>' +
-                    '</a>' +
-                    '<div data-history="false" data-role="popup" data-dismissible="false" id="'+ dados.id +'">' +
-                        '<div data-role="header" data-theme="a">'+
-                            '<h1>Atualizar Lista</h1>'+
-                        '</div>'+
-                        '<div role="main" class="ui-content">'+
-                            '<h4 class="ui-title">nome da lista</h4>'+
-                            '<input id="txtDataNome" type="text" value="'+dados.nome+'">'+
-                            '<h4 class="ui-title">categoria da lista</h4>'+
-                            '<input id="txtDataCategoria" type="text" value="'+dados.categoria+'">'+
-                            '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>'+
-                            '<a id="atualizar'+dados.id+'" dt-id="'+ dados.id +'" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>'+
-                        '</div>'+
-                    '</div>'
+                    '</a>'
                 );
-                document.getElementById("atualizar"+dados.id).addEventListener('click', function(e){
+                if(app.varCountTrigger==false){
+                    $('#myPopup').html('').append(
+                        '<div id="' + dados.id + '" data-role="popup" data-dismissible="false" data-history="false" >' +
+                        '<div data-role="header" data-theme="a">' +
+                        '<h1>Atualizar Lista</h1>' +
+                        '</div>' +
+                        '<div role="main" class="ui-content">' +
+                        '<h4 class="ui-title">nome da lista</h4>' +
+                        '<input id="txtDataNome" type="text" value="' + dados.nome + '">' +
+                        '<h4 class="ui-title">categoria da lista</h4>' +
+                        '<input id="txtDataCategoria" type="text" value="' + dados.categoria + '">' +
+                        '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
+                        '<a id="atualizar' + dados.id + '" dt-id="' + dados.id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
+                        '</div>' +
+                        '</div>'
+                    );
+                }
+                else
+                {
+                    $('#myPopup').html('').append(
+                        '<div id="' + dados.id + '" data-role="popup" data-dismissible="false" data-history="false" >' +
+                        '<div data-role="header" data-theme="a">' +
+                        '<h1>Atualizar Lista</h1>' +
+                        '</div>' +
+                        '<div role="main" class="ui-content">' +
+                        '<h4 class="ui-title">nome da lista</h4>' +
+                        '<input id="txtDataNome" type="text" value="' + dados.nome + '">' +
+                        '<h4 class="ui-title">categoria da lista</h4>' +
+                        '<input id="txtDataCategoria" type="text" value="' + dados.categoria + '">' +
+                        '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
+                        '<a id="lista' + dados.id + '" dt-id="' + dados.id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
+                        '</div>' +
+                        '</div>'
+                    ).trigger('create');
+                }
+                document.getElementById("lista"+dados.id).addEventListener('click', function(e){
                     var vNome = document.getElementById('txtDataNome').value;
                     var vCategoria = document.getElementById('txtDataCategoria').value;
                     if(vNome==""){
                         alert('nome precisa ser um campo válido');
                     }
-                    app.atualizarLista($(e.currentTarget).attr('dt-id'), vNome, vCategoria);
-                    document.getElementById('spanNomeLista').textContent  = vNome;
-                    document.getElementById('spanCategoriaLista').textContent  = vCategoria;
+                    else{
+                        app.atualizarLista($(e.currentTarget).attr('dt-id'), vNome, vCategoria);
+                    }
                 });
                 for(var i=0;i<json.length;i++) {
                     var varMarca;
                     if(json[i].marca == "") varMarca = 'não definido';
                     else varMarca = json[i].marca;
                     $('#showItens').append(
-                        '<a href="" data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" role="button" style="margin: unset;">'+
-                            '<span style="font-weight: bold; float: left;">'+ json[i].nome +'</span><br>'+
-                            '<span style="font-weight: normal; float: left;">'+ varMarca +'</span>'+
+                        '<a href="#i'+ json[i].pk_id +'" data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" style="margin: unset;">'+
+                            '<span id="spanNome'+ json[i].pk_id +'" style="font-weight: bold; float: left;">'+ json[i].nome +'</span><br>'+
+                            '<span id="spanMarca'+ json[i].pk_id +'" style="font-weight: normal; float: left;">'+ varMarca +' ◆ </span>'+ '<span style="float: left; font-weight: normal;margin-left: 1vw;"> '+ json[i].qtdMinimaAtacado +'</span>'+
                         '</a>'
                     );
+                    if(app.varCountTrigger==false) {
+                        $('#myPopup').append(
+                            '<div id="i' + json[i].pk_id + '" data-role="popup" data-dismissible="false" data-history="false" >' +
+                            '<div data-role="header" data-theme="a">' +
+                            '<h1>Atualizar Item</h1>' +
+                            '</div>' +
+                            '<div role="main" class="ui-content">' +
+                            '<h4 class="ui-title">nome do item</h4>' +
+                            '<input id="itemNome' + json[i].pk_id + '" type="text" value="' + json[i].nome + '">' +
+                            '<h4 class="ui-title">marca do item</h4>' +
+                            '<input id="itemMarca' + json[i].pk_id + '" type="text" value="' + json[i].marca + '">' +
+                            '<h4 class="ui-title">preco do item</h4>' +
+                            '<input id="itemPreco' + json[i].pk_id + '" type="number" value="' + json[i].preco + '">' +
+                            '<h4 class="ui-title">tipo do item</h4>' +
+                            '<input id="itemTipo' + json[i].pk_id + '" type="text" value="' + json[i].tipo + '">' +
+                            '<h4 class="ui-title">quantidade minima para atacado</h4>' +
+                            '<input id="itemQtdAtacado' + json[i].pk_id + '" type="number" value="' + json[i].qtdMinimaAtacado + '">' +
+                            '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
+                            '<a id="btnItem' + json[i].pk_id + '" dt-id="' + json[i].pk_id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
+                            '</div>' +
+                            '</div>'
+                        );
+                    }
+                    else{
+                        //append de cima com .trigger('create');
+                        $('#myPopup').append(
+                            '<div id="i' + json[i].pk_id + '" data-role="popup" data-dismissible="false" data-history="false" >' +
+                            '<div data-role="header" data-theme="a">' +
+                            '<h1>Atualizar Item</h1>' +
+                            '</div>' +
+                            '<div role="main" class="ui-content">' +
+                            '<h4 class="ui-title">nome do item</h4>' +
+                            '<input id="itemNome' + json[i].pk_id + '" type="text" value="' + json[i].nome + '">' +
+                            '<h4 class="ui-title">marca do item</h4>' +
+                            '<input id="itemMarca' + json[i].pk_id + '" type="text" value="' + json[i].marca + '">' +
+                            '<h4 class="ui-title">preco do item</h4>' +
+                            '<input id="itemPreco' + json[i].pk_id + '" type="number" value="' + json[i].preco + '">' +
+                            '<h4 class="ui-title">tipo do item</h4>' +
+                            '<input id="itemTipo' + json[i].pk_id + '" type="text" value="' + json[i].tipo + '">' +
+                            '<h4 class="ui-title">quantidade minima para atacado</h4>' +
+                            '<input id="itemQtdAtacado' + json[i].pk_id + '" type="number" value="' + json[i].qtdMinimaAtacado + '" style="text-align: center">' +
+                            '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
+                            '<a id="btnItem' + json[i].pk_id + '" dt-id="' + json[i].pk_id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
+                            '</div>' +
+                            '</div>'
+                        ).trigger('create');
+                    }
+                    document.getElementById('btnItem'+json[i].pk_id).addEventListener('click', function (e) {
+                        var idItem = $(e.currentTarget).attr('dt-id');
+                        var vvNome = document.getElementById('itemNome'+idItem).value;
+                        var vvMarca = document.getElementById('itemMarca'+idItem).value;
+                        var vvPreco = document.getElementById('itemPreco'+idItem).value;
+                        var vvTipo = document.getElementById('itemTipo'+idItem).value;
+                        var vvQtdAtacado = document.getElementById('itemQtdAtacado'+idItem).value;
+                        if(vvNome==""){
+                            alert("o item precisa de um nome valido");
+                        }
+                        else if(vvPreco<0){
+                            alert("o valor do item precisa ser positivo ou nulo");
+                        }
+                        else if(vvQtdAtacado<0){
+                            alert("a quantidade de itens para atacado só pode ser positivo ou nulo");
+                        }
+                        else {
+                            app.atualizarItem(idItem, vvNome, vvMarca, vvPreco, vvQtdAtacado, vvTipo);
+                        }
+                    });
                 }
-                $("#showItens").trigger( "updatelayout" );
+                app.varCountTrigger=true;
+                //$("#showItens").trigger( "updatelayout" ); //nao sei pra que serve, aparentemente nada
                 $.mobile.changePage('#pageListaDeItens');
             },
             error: function(ext){
                 console.log(ext);
                 console.log("##cliente::showItemsError");
+            }
+        });
+    },
+
+    atualizarItem: function(idItem, nome, marca, preco, qtdMinima, tipo){
+        $.ajax({
+            type: "POST",
+            url: "http://" + app.ip + "/index.php",
+            data: {
+                acao: 'updateItem',
+                idItem: idItem,
+                nomeItem: nome,
+                marcaItem: marca,
+                precoItem: preco,
+                qtdItem: qtdMinima,
+                tipoItem: tipo
+            },
+            dataType: "json",
+            success: function (json) {
+                console.log(json);
+                document.getElementById('spanNome'+idItem).textContent  = nome;
+                document.getElementById('spanMarca'+idItem).textContent = marca + '◆';
+            },
+            error: function (ext) {
+                console.log(ext);
             }
         });
     },
@@ -308,6 +423,8 @@ var app = {
             dataType: "json",
             success: function (json) {
                 console.log(json);
+                document.getElementById('spanNomeLista').textContent  = nomeLista;
+                document.getElementById('spanCategoriaLista').textContent = categoriaLista;
             },
             error: function (ext) {
                 console.log(ext);
