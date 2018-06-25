@@ -94,9 +94,24 @@ switch ($request['acao']) {
 		
 		
 	break;
-	case "debugando";
+	case "debugando":
 	break;
-	case "updateLista";
+	case "updateItem":
+		$idItem = utf8_decode($_POST['idItem']);
+		$nomeItem = utf8_decode($_POST['nomeItem']);
+		$marcaItem = utf8_decode($_POST['marcaItem']);
+		$precoItem = utf8_decode($_POST['precoItem']);
+		$qtdItem = utf8_decode($_POST['qtdItem']);
+		$tipoItem = utf8_decode($_POST['tipoItem']);	
+		$sql="update item set nome = '$nomeItem', marca = '$marcaItem', preco = '$precoItem', qtdMinimaAtacado = '$qtdItem', tipo = '$tipoItem' where pk_id = $idItem";
+		if($conn->query($sql)){
+			echo json_encode("##server::ItemSaved",JSON_UNESCAPED_UNICODE);
+		}
+		else{
+			echo json_encode("##server::error:$sql",JSON_UNESCAPED_UNICODE);
+		}
+	break;
+	case "updateLista":
 		$idLista = utf8_decode($_POST['idLista']);
 		$nomeLista = utf8_decode($_POST['nomeLista']);
 		$categoriaLista = utf8_decode($_POST['categoriaLista']);
