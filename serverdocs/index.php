@@ -96,6 +96,25 @@ switch ($request['acao']) {
 	break;
 	case "debugando":
 	break;
+	case "oneItem":		
+		$idLista = utf8_decode($_POST['idLista']);
+		$nomeItem = utf8_decode($_POST['nomeItem']);
+		$marcaItem = utf8_decode($_POST['marcaItem']);
+		$precoItem = utf8_decode($_POST['precoItem']);
+		$qtdItem = utf8_decode($_POST['qtdItem']);
+		$tipoItem = utf8_decode($_POST['tipoItem']);
+		$sql = "INSERT INTO item (fk_lista, nome, marca, preco, qtdMinimaAtacado, tipo) VALUES ($idLista,'$nomeItem','$marcaItem','$precoItem','$qtdItem','$tipoItem')";
+		if($conn->query($sql)){
+			$idItem = 5;
+			$idItem = mysqli_insert_id($conn);
+			$vetor['idItem'] = $idItem;
+			$vetor['err'] = "##server::oneItemSaved";
+			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
+		}
+		else{
+			echo json_encode("##server::oneItemError", JSON_UNESCAPED_UNICODE);						
+		}
+	break;
 	case "updateItem":
 		$idItem = utf8_decode($_POST['idItem']);
 		$nomeItem = utf8_decode($_POST['nomeItem']);
