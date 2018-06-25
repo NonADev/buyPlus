@@ -247,7 +247,7 @@ var app = {
                 $("#showItens").html("");
                 $('#showItens').append(
                     '<a href="#'+ dados.id +'" data-rel="popup" class="ui-btn" style="margin: unset;">' +
-                        '<span id="spanNomeLista">'+ dados.nome +'</span><br>' +
+                        '<span id="spanNomeLista" dt-idLista="'+ idLista +'">'+ dados.nome +'</span><br>' +
                         '<span id="spanCategoriaLista" style="font-weight:normal;">'+ dados.categoria +'</span>' +
                     '</a>'
                 );
@@ -346,7 +346,7 @@ var app = {
                             '<h4 class="ui-title">tipo do item</h4>' +
                             '<input id="itemTipo' + json[i].pk_id + '" type="text" value="' + json[i].tipo + '">' +
                             '<h4 class="ui-title">quantidade minima para atacado</h4>' +
-                            '<input id="itemQtdAtacado' + json[i].pk_id + '" type="number" value="' + json[i].qtdMinimaAtacado + '" style="text-align: center">' +
+                            '<input id="itemQtdAtacado' + json[i].pk_id + '" type="number" value="' + json[i].qtdMinimaAtacado + '">' +
                             '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
                             '<a id="btnItem' + json[i].pk_id + '" dt-id="' + json[i].pk_id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
                             '</div>' +
@@ -381,6 +381,96 @@ var app = {
             error: function(ext){
                 console.log(ext);
                 console.log("##cliente::showItemsError");
+            }
+        });
+    },
+
+    btnNewItem: function(){
+	    $('#newItemPopup').popup("open");
+    },
+
+    insertNewItem: function(){
+        var idLista = $('#spanNomeLista').attr('dt-idLista');
+        var nome = document.getElementById('novoItemNome').value;
+        var marca = document.getElementById('novoItemMarca').value;
+        var preco = document.getElementById('novoItemPreco').value;
+        var tipo = document.getElementById('novoItemTipo').value;
+        var qtd = document.getElementById('novoItemQtdAtacado').value;
+        if(nome==""){
+            alert('o nome precisa ser válido');
+        }
+        else {
+            app.saveItem(idLista, nome, marca, preco, tipo, qtd);
+        }
+    },
+
+    saveItem: function(id, nome, marca, preco, qtdMinima, tipo){
+        $.ajax({
+            type: "POST",
+            url: "http://" + app.ip + "/index.php",
+            data: {
+                acao: 'oneItem',
+                idLista: id,
+                nomeItem: nome,
+                marcaItem: marca,
+                precoItem: preco,
+                qtdItem: qtdMinima,
+                tipoItem: tipo
+            },
+            dataType: "json",
+            success: function (json) {
+                console.log(json.err);
+                console.log(json.idItem);
+                $('#showItens').append(
+                    '<a href="#i'+ json.idItem +'" data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" style="margin: unset;">'+
+                    '<span id="spanNome'+ json.idItem +'" style="font-weight: bold; float: left;">'+ nome +'</span><br>'+
+                    '<span id="spanMarca'+ json.idItem +'" style="font-weight: normal; float: left;">'+ marca +' ◆ </span>'+ '<span style="float: left; font-weight: normal;margin-left: 1vw;"> '+ qtdMinima +'</span>'+
+                    '</a>'
+                );
+                $('#myPopup').append(
+                    '<div id="i' + json.idItem + '" data-role="popup" data-dismissible="false" data-history="false" >' +
+                    '<div data-role="header" data-theme="a">' +
+                    '<h1>Atualizar Item</h1>' +
+                    '</div>' +
+                    '<div role="main" class="ui-content">' +
+                    '<h4 class="ui-title">nome do item</h4>' +
+                    '<input id="itemNome' + json.idItem + '" type="text" value="' + nome + '">' +
+                    '<h4 class="ui-title">marca do item</h4>' +
+                    '<input id="itemMarca' +json.idItem + '" type="text" value="' + marca + '">' +
+                    '<h4 class="ui-title">preco do item</h4>' +
+                    '<input id="itemPreco' + json.idItem + '" type="number" value="' + preco + '">' +
+                    '<h4 class="ui-title">tipo do item</h4>' +
+                    '<input id="itemTipo' + json.idItem + '" type="text" value="' + tipo + '">' +
+                    '<h4 class="ui-title">quantidade minima para atacado</h4>' +
+                    '<input id="itemQtdAtacado' + json.idItem + '" type="number" value="' + qtdMinima + '">' +
+                    '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
+                    '<a id="btnItem' + json.idItem + '" dt-id="' + json.idItem + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
+                    '</div>' +
+                    '</div>'
+                ).trigger('create');
+                document.getElementById('btnItem'+json.idItem).addEventListener('click', function (e) {
+                    var idItem =  $(e.currentTarget).attr('dt-id');
+                    var vvNome = document.getElementById('itemNome'+idItem).value;
+                    var vvMarca = document.getElementById('itemMarca'+idItem).value;
+                    var vvPreco = document.getElementById('itemPreco'+idItem).value;
+                    var vvTipo = document.getElementById('itemTipo'+idItem).value;
+                    var vvQtdAtacado = document.getElementById('itemQtdAtacado'+idItem).value;
+                    if(vvNome==""){
+                        alert("o item precisa de um nome valido");
+                    }
+                    else if(vvPreco<0){
+                        alert("o valor do item precisa ser positivo ou nulo");
+                    }
+                    else if(vvQtdAtacado<0){
+                        alert("a quantidade de itens para atacado só pode ser positivo ou nulo");
+                    }
+                    else {
+                        app.atualizarItem(idItem, vvNome, vvMarca, vvPreco, vvQtdAtacado, vvTipo);
+                    }
+                });
+            },
+            error: function (ext){
+                console.log(ext);
             }
         });
     },
