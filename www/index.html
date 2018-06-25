@@ -24,17 +24,17 @@
     	<!-- CSS -->
     </head>
     <body>
-    <div id="pageLogin" data-role="page">
-        <center>
-            <img src="./img/logo.png">
-            <input type="email" id="loginEmail" placeholder="email" data-wrapper-class="ui-custom">
-            <input type="password" id="loginSenha" placeholder="senha" data-wrapper-class="ui-custom">
-            <input id="btnLogin" type="button" value="login" class="shadowLogin" data-wrapper-class="ui-custom">
-            <hr>
-            <input id="btnGoToRegister" type="button" value="registrar" data-wrapper-class="ui-custom">
-        </center>
-    </div>
-    <div id="pageRegister" data-role="page">
+		<div id="pageLogin" data-role="page">
+			<center>
+				<img src="./img/logo.png">
+				<input type="email" id="loginEmail" placeholder="email" data-wrapper-class="ui-custom">
+				<input type="password" id="loginSenha" placeholder="senha" data-wrapper-class="ui-custom">
+				<input id="btnLogin" type="button" value="login" class="shadowLogin" data-wrapper-class="ui-custom">
+				<hr>
+				<input id="btnGoToRegister" type="button" value="registrar" data-wrapper-class="ui-custom">
+			</center>
+		</div>
+		<div id="pageRegister" data-role="page">
             <center>
                 <img src="./img/logo.png" class="logo">
                 <input type="text" id="registerNome" placeholder="nome" data-wrapper-class="ui-custom">
@@ -47,6 +47,16 @@
                 <input id="btnVoltarLogin" type="button" value="voltar" data-wrapper-class="ui-custom">
             </center>
         </div>
+		<div id="pageHome" data-role="page">
+		
+            <div class="navBar">
+                <center>
+                    <input onclick="$.mobile.changePage('#pagePerfil');" type="button" data-iconpos="notext" data-icon="user" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+                    <input onclick="app.goToPageListas();" type="button" data-iconpos="notext" data-icon="bullets" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+                    <input type="button" data-iconpos="notext" data-icon="home" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
+                </center>
+            </div>
+		</div>
         <div id="pageMap" data-role="page">
             <div id="theMap" style="width: 100vw; height: 40vh;">
 

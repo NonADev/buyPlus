@@ -281,12 +281,13 @@ var app = {
                         '<h4 class="ui-title">categoria da lista</h4>' +
                         '<input id="txtDataCategoria" type="text" value="' + dados.categoria + '">' +
                         '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
-                        '<a id="lista' + dados.id + '" dt-id="' + dados.id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
+                        '<a id="atualizar' + dados.id + '" dt-id="' + dados.id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
                         '</div>' +
                         '</div>'
                     ).trigger('create');
                 }
-                document.getElementById("lista"+dados.id).addEventListener('click', function(e){
+                document.getElementById("atualizar"+dados.id).addEventListener('click', function(e){
+					console.log('iaeoisu');
                     var vNome = document.getElementById('txtDataNome').value;
                     var vCategoria = document.getElementById('txtDataCategoria').value;
                     if(vNome==""){
@@ -513,6 +514,7 @@ var app = {
             dataType: "json",
             success: function (json) {
                 console.log(json);
+                console.log("##cliente::oieou");
                 document.getElementById('spanNomeLista').textContent  = nomeLista;
                 document.getElementById('spanCategoriaLista').textContent = categoriaLista;
             },
