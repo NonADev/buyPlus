@@ -96,6 +96,17 @@ switch ($request['acao']) {
 	break;
 	case "debugando":
 	break;
+	case "listarEventos":
+		$sql = "select pk_id, nome, dataHora, fk_lista, fk_mercado, (select nome from usuario join lista where (lista.pk_id = evento.fk_lista) AND (lista.fk_usuario = usuario.pk_id)) as usuario from evento";
+		$result;
+		$vetor;
+		if($result = $conn->query($sql)){
+			while($ffetch = mysqli_fetch_assoc($result)){
+				$vetor[] = array_map('utf8_encode', $ffetch); 
+			}
+			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
+		}		
+	break;
 	case "oneItem":		
 		$idLista = utf8_decode($_POST['idLista']);
 		$nomeItem = utf8_decode($_POST['nomeItem']);
@@ -103,6 +114,12 @@ switch ($request['acao']) {
 		$precoItem = utf8_decode($_POST['precoItem']);
 		$qtdItem = utf8_decode($_POST['qtdItem']);
 		$tipoItem = utf8_decode($_POST['tipoItem']);
+		if($precoItem==""){
+			$precoItem = 0;
+		}
+		if($qtdItem == ""){
+			$qtdItem = 0;
+		}
 		$sql = "INSERT INTO item (fk_lista, nome, marca, preco, qtdMinimaAtacado, tipo) VALUES ($idLista,'$nomeItem','$marcaItem','$precoItem','$qtdItem','$tipoItem')";
 		if($conn->query($sql)){
 			$idItem = 5;

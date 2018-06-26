@@ -14,6 +14,7 @@ var app = {
     onDeviceReady: function() {
 	    this.loginTable();
 		this.dbAutoLogin();
+		this.getEventos();
         document.getElementById('btnListSalvar').addEventListener('click', this.btnSalvarLista);
         document.getElementById('btnNewItem').addEventListener('click', this.newItem);
         document.getElementById('btnSair').addEventListener('click', this.exitApp);
@@ -102,6 +103,7 @@ var app = {
                         console.log("##cliente::SaveListAndItensError");
                     }
                 });
+                app.zerarNewList();
                 app.goToPageListas();
             });
         }
@@ -131,12 +133,48 @@ var app = {
                         console.log(ext);
                     }
                 });
+                app.zerarNewList();
+                app.goToPageListas();
             });
         }
         else{
             alert('Nome da Lista Inválida');
         }
         //console.log(items);
+    },
+
+    zerarNewList: function(){
+        $('#listName').val("");
+        $('#listaItens').html("");
+    },
+
+    getEventos: function(){
+	    $.ajax({
+            type: "POST",
+            url: "http://" + app.ip + "/index.php",
+            data: {
+                acao: 'listarEventos'
+            },
+            dataType: "json",
+            success: function (json) {
+                for(var i=0;i<json.length;i++){
+                    app.listarEventos(json[i]);
+                }
+            },
+            error: function (ext){
+                console.log(ext);
+            }
+        });
+    },
+
+    listarEventos: function(evento){
+        $('#listEventos').append(
+            '<a href="#'+ evento.pk_id +'" data-rel="popup" class="ui-btn" style="margin: unset;">' +
+            '<span id="spanEventoNome">'+ evento.nome +'</span><br>' +
+            '<span id="spanEventoNome">'+ evento.usuario +'</span><br>' +
+            '<span id="spanEventoDataHora" style="font-weight:normal;">'+ evento.dataHora +'</span>' +
+            '</a>'
+        );
     },
 
     domGetTiposItens: function(){
