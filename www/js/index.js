@@ -15,6 +15,8 @@ var app = {
 	    this.loginTable();
 		this.dbAutoLogin();
 		this.getEventos();
+        this.listarListas();
+        this.loadInput();
         document.getElementById('btnListSalvar').addEventListener('click', this.btnSalvarLista);
         document.getElementById('btnNewItem').addEventListener('click', this.newItem);
         document.getElementById('btnSair').addEventListener('click', this.exitApp);
@@ -169,12 +171,15 @@ var app = {
 
     listarEventos: function(evento){
         $('#listEventos').append(
-            '<a href="#'+ evento.pk_id +'" data-rel="popup" class="ui-btn" style="margin: unset;">' +
+            '<a id="evento'+ evento.pk_id +'" href="#mapPopup" dt-lat="'+evento.lat+'" dt-lng="'+evento.lng+'" dt-pk_id="'+ evento.pk_id +'" data-rel="popup" class="ui-btn" style="margin: unset;">' +
             '<span id="spanEventoNome">'+ evento.nome +'</span><br>' +
             '<span id="spanEventoEmail" style="font-weight: normal; float: left;">'+ evento.usuario +'</span><br>' +
             '<span id="spanEventoDataHora" style="font-weight:normal;">'+ evento.dataHora +'</span>' +
             '</a>'
         );
+        document.getElementById('evento'+evento.pk_id).addEventListener('click', function(e){
+            app.loadMap($(e.currentTarget).attr('dt-lat'), $(e.currentTarget).attr('dt-lng'));
+        });
     },
 
     domGetTiposItens: function(){
@@ -220,6 +225,41 @@ var app = {
             arr[i]= inputNames[i].value;
         }
         return arr;
+    },
+
+    listarListas: function(){
+	    var vId;
+        app.db.transaction(function (tx) {
+                tx.executeSql("select * from logado", [], function (tx, result) {
+                    vId = result.rows[0].pk_id;
+                });
+            }, function (err) {
+                console.log(err);
+            }, function() {
+            $.ajax({
+                type: "POST",
+                url: "http://" + app.ip + "/index.php",
+                data: {
+                    acao: 'listasById',
+                    id: vId
+                },
+                dataType: "json",
+                success: function (json) {
+                    if(json.result){
+                        for(var i = 0; i< json.length;i++){
+                            var x = document.getElementById("minhasListas");
+                            x.append(new Option(json[i].nome, json[i].pk_id));
+                        }
+                    }
+                    else{
+                        console.log(json.err);
+                    }
+                },
+                error: function (ext) {
+                    console.log(ext);
+                }
+            });
+        });
     },
 
     inserirListas: function(){
@@ -615,7 +655,6 @@ var app = {
                             console.log("##cliente::Logado");
                             tx.executeSql("delete from logado where pk_id = pk_id");
                             tx.executeSql(sql);
-                            app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
                             $.mobile.changePage("#pagePerfil");
 							app.inserirListas();
                         });
@@ -665,7 +704,6 @@ var app = {
                         console.log("##cliente::Logado>"+sql);
 						tx.executeSql("delete from logado where pk_id = pk_id");
                         tx.executeSql(sql);
-                        app.getLatLong(); //Abre o mapa só quando logado para economizar dados e processamento
                         $.mobile.changePage("#pagePerfil");
 						app.inserirListas();
                     });
@@ -748,25 +786,39 @@ var app = {
 			});
 		}
 	},
-	
-    getLatLong:function() {
-        var lat = 51.49575692748839;
-        var lon = -0.14600197187496633;
+
+    loadMap:function (varLat, varLng) {
+        varLat = parseFloat(varLat);
+        varLng = parseFloat(varLng);
+        var mercadoLatLng = {lat: varLat, lng: varLng};
+	    var div = document.getElementById("popupMap");
+        var map = new google.maps.Map(div, {
+            center: {lat: varLat, lng: varLng},
+            zoom: 15 //quanto maior mais proximo
+        });
         navigator.geolocation.getCurrentPosition(function(position) {
-            this.lat = position.coords.latitude;
-            this.lon = position.coords.longitude;
-            app.loadMap(this.lat, this.lon);
+            var meuLatLng = {lat: position.coords.latitude, lng: position.coords.longitude};
+            var request = {
+                origin:meuLatLng,
+                destination:mercadoLatLng,
+                travelMode: 'DRIVING'
+            };
+            var directionsService = new google.maps.DirectionsService();
+            var directionsDisplay = new google.maps.DirectionsRenderer();
+            directionsDisplay.setMap(map);
+            directionsDisplay.setPanel(div);
+            directionsService.route(request, function(response, status) {
+                console.log(response);
+                if (status == 'OK') {
+                    directionsDisplay.setDirections(response);
+                }
+            });
         });
     },
 
-    loadMap:function (lat, lon) {
-        var div;
-        var map;
-        div = document.getElementById("theMap");
-        map = new google.maps.Map(div, {
-            center: {lat: lat, lng: lon},
-            zoom: 18 //quanto maior mais proximo
-        });
+    loadInput:function(){
+        var input = document.getElementById('searchBox');
+        var autocomplete = new google.maps.places.Autocomplete(input);
     }
 };
 app.initialize();

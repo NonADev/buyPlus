@@ -51,7 +51,41 @@
             <div id="listEventos">
 
             </div>
-            <button data-rel="popup"  class="ui-icon-plus ui-btn-icon-left" data-iconpos="notext" style="top: 80vh;z-index: 100;left: 80vw;position: fixed;font-size: 3vh;font-weight: normal;border: 1px solid transparent;text-transform: uppercase;overflow: visible;box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);color: white;background-color: #9400D3;padding: 0;border-radius: 50%;width: 56px;height: 56px;min-width: 56px;">+</button>
+            <div id="mapPopup" data-role="popup" data-dismissible="false" data-history="false" >
+                <div data-role="header" data-theme="a">
+                    <h1>Localização</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <div id="popupMap" style="width: 80vw; height: 40vh;">
+
+                    </div>
+                    <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>
+                    <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Participar</a>
+                </div>
+            </div>
+            <div id="criarEventoPopup" data-role="popup" data-dismissible="false" data-history="false" >
+                <div data-role="header" data-theme="a">
+                    <h1>Criar Evento</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <h4 class="ui-title">nome do evento: </h4>
+                    <input type="text" style="text-align: center;">
+                    <h4 class="ui-title">data:</h4>
+                    <input type="date" style="text-align: center;">
+                    <h4 class="ui-title">hora:</h4>
+                    <input type="time" style="text-align: center;">
+                    <h4 class="ui-title">lista:</h4>
+                    <select id="minhasListas" style="text-align: center;">
+                    </select>
+                    <h4 class="ui-title">mercado:</h4>
+                    <div id="searchContainer">
+                        <input id="searchBox" type="text" style="z-index: 110;display: inline;">
+                    </div>
+                    <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>
+                    <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>
+                </div>
+            </div>
+            <button onclick=" $('#criarEventoPopup').popup('open')" data-rel="popup"  class="ui-icon-plus ui-btn-icon-left" data-iconpos="notext" style="top: 80vh;z-index: 100;left: 80vw;position: fixed;font-size: 3vh;font-weight: normal;border: 1px solid transparent;text-transform: uppercase;overflow: visible;box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);color: white;background-color: #9400D3;padding: 0;border-radius: 50%;width: 56px;height: 56px;min-width: 56px;">+</button>
             <div class="navBar">
                 <center>
                     <input onclick="$.mobile.changePage('#pagePerfil');app.zerarNewList();" type="button" data-iconpos="notext" data-icon="user" data-role="button" data-inline="true" data-wrapper-class="ui-custom">
@@ -175,7 +209,7 @@
             </div>
 		</div>
     	<!-- JS -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS_JJ83_sVpFt44vvdm2aUPRKrA6N65Uo"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS_JJ83_sVpFt44vvdm2aUPRKrA6N65Uo&libraries=places"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     	<!-- JS -->
