@@ -817,8 +817,62 @@ var app = {
         });
     },
 
+    mapSelector:function () { //selecionando qualquer lugar
+        $.ajax({
+            type: "POST",
+            url: "http://"+app.ip+"/index.php",
+            data: {
+                acao: 'getMercados'
+            },
+            dataType: "json",
+            success: function (json) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var meuLatLng = {lat: position.coords.latitude, lng: position.coords.longitude};
+                    var div = document.getElementById("selectMapEvent");
+                    app.map = new google.maps.Map(div, {
+                        center: meuLatLng,
+                        zoom: 12 //quanto maior mais proximo
+                    });/*
+                    for (var i = 0; i < json.length; i++) {
+                        var lalo = {lat: parseFloat(json[i].latitude), lng: parseFloat(json[i].longitude)};
+                        //var marker =
+                        new google.maps.Marker({
+                            position: lalo,
+                            map: app.map,
+                            title: json[i].nome
+                        });
+                    }*/
+                    app.map.addListener('click', function(e) {
+                        if(app.marker == null) {
+                            app.marker = new google.maps.Marker({
+                                position: {lat: parseFloat(e.latLng.lat()), lng: parseFloat(e.latLng.lng())},
+                                map: app.map,
+                                title: 'iaieiou'
+                            });
+                        }
+                        else{
+                            app.marker.setMap(null);
+                            app.marker = null;
+                            app.marker = new google.maps.Marker({
+                                position: {lat: parseFloat(e.latLng.lat()), lng: parseFloat(e.latLng.lng())},
+                                map: app.map,
+                                title: 'iaieiou'
+                            });
+                        }
+                        document.getElementById('myLat').innerHTML  = e.latLng.lat();
+                        document.getElementById('myLng').innerHTML  = e.latLng.lng();
+                    });
+                });
+            },
+            error: function (ext){
+                console.log(ext);
+            }
+        });
+    },
+    marker: null,
+/* BACKUP
     mapSelector:function () {
-	    $.ajax({
+        $.ajax({
             type: "POST",
             url: "http://"+app.ip+"/index.php",
             data: {
@@ -850,7 +904,7 @@ var app = {
                             console.log(marker[i]);
                             infowindow.setContent(contentString);
                             infowindow.setPosition(e.latLng);
-                            infowindow.open(app.map);
+                            infowindow.open(app.map, marker[i]); //perguntar como colocar o marker pra usar sem ser estatico
                         });
                     }
                 });
@@ -858,9 +912,9 @@ var app = {
             error: function (ext){
                 console.log(ext);
             }
-	    });
+        });
     },
-
+*/
     createTicket: function(){
 	    $.ajax({
             type: "POST",
