@@ -96,8 +96,11 @@ switch ($request['acao']) {
 	break;
 	case "debugando":
 	break;
+	case "insertEvento":
+		//$sql = "inse";
+	break;
 	case "listarEventos":
-		$sql = "select pk_id, nome, dataHora, fk_lista, fk_mercado, (select nome from usuario join lista where (lista.pk_id = evento.fk_lista) AND (lista.fk_usuario = usuario.pk_id)) as usuario from evento";
+		$sql = "select pk_id, nome, DATE_FORMAT(dataHora, '%d/%m %H:%i') as dataHora, fk_lista, fk_mercado, (select latitude from mercado where pk_id = evento.fk_mercado) as lat, (select longitude from mercado where pk_id = evento.fk_mercado) as lng, (select usuario.nome from usuario join lista where (lista.pk_id = evento.fk_lista) AND (lista.fk_usuario = usuario.pk_id)) as usuario from evento;";
 		$result;
 		$vetor;
 		if($result = $conn->query($sql)){
@@ -106,6 +109,9 @@ switch ($request['acao']) {
 			}
 			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
 		}		
+		else{
+			echo json_encode("##server::listarEventosError", JSON_UNESCAPED_UNICODE);
+		}
 	break;
 	case "oneItem":		
 		$idLista = utf8_decode($_POST['idLista']);
