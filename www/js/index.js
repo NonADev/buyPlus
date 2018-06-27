@@ -809,7 +809,6 @@ var app = {
             directionsDisplay.setMap(map);
             directionsDisplay.setPanel(div);
             directionsService.route(request, function(response, status) {
-                console.log(response);
                 if (status == 'OK') {
                     directionsDisplay.setDirections(response);
                 }
@@ -835,11 +834,19 @@ var app = {
                     });
                     for (var i = 0; i < json.length; i++) {
                         var lalo = {lat: parseFloat(json[i].latitude), lng: parseFloat(json[i].longitude)};
-                        var contentString =
+                        var geocoder = new google.maps.Geocoder();
+						var endereco;
+						geocoder.geocode({'location': lalo}, function(results, status) {
+							endereco = results[0].formatted_address;
+							console.log(endereco);
+						});
+						var contentString =
                          '<div>' +
-                            '<h4>' + json[i].pk_id + '</h4>'
+							'<h3>'+ json[i].nome +'</h3>'+
+							'<h4>'+ endereco +'</h4>'+
+                            '<h4>' + json[i].pk_id + '</h4>' +
                         '</div>';
-                        console.log(json[i].pk_id);
+						console.log(endereco);
                         var marker = new google.maps.Marker({
                             position: lalo,
                             map: app.map,
@@ -848,15 +855,23 @@ var app = {
                         marker.info = new google.maps.InfoWindow({
                             content: contentString
                         });
+						marker.fk_mercado = json[i].pk_id;
                         google.maps.event.addListener(marker, 'click', function() {
                             this.info.open(app.map, this);
+							document.getElementById('mercadoEvento').value = this.fk_mercado;
                         });
                     }
                 });
             },
             error: function (ext){
                 console.log(ext);
-            }
+            },
+			complete: function(data) {
+				console.log("SEMPRE FUNFA!"); 
+				console.log(data);
+				//A function to be called when the request finishes 
+				// (after success and error callbacks are executed). 
+			}
         });
     },
 
@@ -880,6 +895,32 @@ var app = {
             }
 
         });
-    }
+    },
+	
+	inserirMercado: function(){
+		var identifier = 'n';
+		app.db.transaction(function(tx){
+			tx.executeSql("select * from logado", [], function (tx, values){
+				identifier = values.rows[0].pk_id;
+			});
+		}, function(err){
+			console.log(err);
+		}, function(){
+			var fk_user = identifier;
+			var nome = document.getElementById('nomeEvento').value;
+			var data = document.getElementById('dataEvento').value;
+			var hora = document.getElementById('horaEvento').value;
+			var lista = document.getElementById('minhasListas').value;
+			var fk_mercado = document.getElementById('mercadoEvento').value;
+			console.log(nome);
+			console.log(data);
+			console.log(hora);
+			console.log(lista);
+			console.log(fk_mercado);
+			if(fk_mercado==""){
+				alert('aokao');
+			}
+		});
+	}
 };
 app.initialize();
