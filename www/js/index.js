@@ -1,6 +1,7 @@
 var app = {
 	ip: '127.0.0.1',
     db: null,
+    map: null,
     varCountTrigger: false,
     // Application Constructor
     initialize: function() {
@@ -16,7 +17,7 @@ var app = {
 		this.dbAutoLogin();
 		this.getEventos();
         this.listarListas();
-        this.loadInput();
+        this.mapSelector();
         document.getElementById('btnListSalvar').addEventListener('click', this.btnSalvarLista);
         document.getElementById('btnNewItem').addEventListener('click', this.newItem);
         document.getElementById('btnSair').addEventListener('click', this.exitApp);
@@ -791,7 +792,7 @@ var app = {
         varLat = parseFloat(varLat);
         varLng = parseFloat(varLng);
         var mercadoLatLng = {lat: varLat, lng: varLng};
-	    var div = document.getElementById("popupMap");
+        var div = document.getElementById("popupMap");
         var map = new google.maps.Map(div, {
             center: {lat: varLat, lng: varLng},
             zoom: 15 //quanto maior mais proximo
@@ -816,9 +817,70 @@ var app = {
         });
     },
 
-    loadInput:function(){
-        var input = document.getElementById('searchBox');
-        var autocomplete = new google.maps.places.Autocomplete(input);
+    mapSelector:function () {
+	    $.ajax({
+            type: "POST",
+            url: "http://"+app.ip+"/index.php",
+            data: {
+                acao: 'getMercados'
+            },
+            dataType: "json",
+            success: function (json) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var meuLatLng = {lat: position.coords.latitude, lng: position.coords.longitude};
+                    var div = document.getElementById("selectMapEvent");
+                    app.map = new google.maps.Map(div, {
+                        center: meuLatLng,
+                        zoom: 12 //quanto maior mais proximo
+                    });
+                    for (var i = 0; i < json.length; i++) {
+                        var lalo = {lat: parseFloat(json[i].latitude), lng: parseFloat(json[i].longitude)};
+                        var marker=[];
+                        marker[i] = new google.maps.Marker({
+                            position: lalo,
+                            map: app.map,
+                            title: json[i].nome
+                        });
+                        var infowindow = new google.maps.InfoWindow();
+                        var contentString = '<div>' +
+                            '<h4>' + json[i].nome + '</h4>'
+                        '</div>';
+                        marker[i].addListener('click', function(e, i) {
+                            console.log(e)
+                            console.log(marker[i]);
+                            infowindow.setContent(contentString);
+                            infowindow.setPosition(e.latLng);
+                            infowindow.open(app.map, marker[i]); //perguntar como colocar o marker pra usar sem ser estatico
+                        });
+                    }
+                });
+            },
+            error: function (ext){
+                console.log(ext);
+            }
+	    });
+    },
+
+    createTicket: function(){
+	    $.ajax({
+            type: "POST",
+            url: "http://"+app.ip+"/index.php",
+            data: {
+                acao: 'registrarUsuario',
+                nome: vNome,
+                email: vEmail,
+                telefone: vTelefone,
+                senha: vSenha
+            },
+            dataType: "json",
+            success:function(json){
+                console.log(json);
+            },
+            error:function(ext){
+                console.log(ext);
+            }
+
+        });
     }
 };
 app.initialize();

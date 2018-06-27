@@ -96,6 +96,19 @@ switch ($request['acao']) {
 	break;
 	case "debugando":
 	break;
+	case "getMercados":
+		$sql = "select * from mercado";
+		$result;		
+		if($result = $conn->query($sql)){
+			while($ffetch = mysqli_fetch_assoc($result)){
+				$vetor[] = array_map('utf8_encode', $ffetch); 
+			}
+			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
+		}	
+		else{
+			echo json_encode("##server::listarMercadosError", JSON_UNESCAPED_UNICODE);
+		}	
+	break;
 	case "insertEvento":
 		//$sql = "inse";
 	break;
