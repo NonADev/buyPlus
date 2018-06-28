@@ -168,6 +168,7 @@ var app = {
             dataType: "json",
             success: function (json) {
                 $('#popupItensEvento').html('');
+				console.log(json);
                 for(var i=0; i<json.length;i++){
                     $('#popupItensEvento').append(
                         '<a data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" style="margin: unset;">'+
@@ -193,9 +194,9 @@ var app = {
             dataType: "json",
             success: function (json) {
                 $('#listEventos').html('');
-                for(var i=0;i<json.length;i++) {
-                    app.listarEventos(json[i]);
-                }
+				for(var i=0;i<json.length;i++) {
+					app.listarEventos(json[i]);
+				}
             },
             error: function (ext){
                 console.log(ext);
@@ -285,7 +286,7 @@ var app = {
                         var x = document.getElementById("minhasListas");
                         $(x).html('');
                         for(var i = 0; i< json.length;i++){
-                            x.append(new Option(json[i].nome, json[i].pk_id)).trigger('create');
+                            x.append(new Option(json[i].nome, json[i].pk_id));
                         }
                     }
                     else{

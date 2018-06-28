@@ -13,11 +13,15 @@ switch ($request['acao']) {
 		$sql = "select * from item where fk_lista = $idLista";		
 		$resultSet = mysqli_query($conn, $sql);
 		$returnVetor = Array();
-		while($rr = mysqli_fetch_assoc($resultSet)){
-			$returnVetor[] = array_map('utf8_encode', $rr); 			
+		if(isset($returnVetor)){
+			while($rr = mysqli_fetch_assoc($resultSet)){
+				$returnVetor[] = array_map('utf8_encode', $rr); 			
+			}
+			echo json_encode($returnVetor, JSON_UNESCAPED_UNICODE);		
 		}
-		echo json_encode($returnVetor, JSON_UNESCAPED_UNICODE);		
-		//else echo("#server::NoItens");
+		else{			
+			echo json_encode("#server::NoItens", JSON_UNESCAPED_UNICODE);
+		}
 	break;
 	case "participacoesById":
 		$pk = utf8_decode($_POST['id']);
@@ -140,10 +144,13 @@ switch ($request['acao']) {
 		$sql = "select * from mercado";
 		$result;		
 		if($result = $conn->query($sql)){
+			$vetor = [];
 			while($ffetch = mysqli_fetch_assoc($result)){
 				$vetor[] = array_map('utf8_encode', $ffetch); 
 			}
-			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
+			if(isset($vetor)){
+				echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
+			}
 		}	
 		else{
 			echo json_encode("##server::listarMercadosError", JSON_UNESCAPED_UNICODE);

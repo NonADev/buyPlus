@@ -47,3 +47,4 @@ CREATE TABLE participacaoEvento(
     fk_evento INT NOT NULL REFERENCES evento(pk_id)
 ) CHARACTER SET utf8;
 INSERT INTO mercado (nome, telefone, latitude, longitude) VALUES ('assai', '59595959', -23.523004, -46.474086);
+INSERT INTO mercado (nome, telefone, latitude, longitude) VALUES ('atacado', '59595959', -23.559748, -46.446949);
