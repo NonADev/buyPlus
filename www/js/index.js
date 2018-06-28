@@ -836,14 +836,13 @@ var app = {
                         var lalo = {lat: parseFloat(json[i].latitude), lng: parseFloat(json[i].longitude)};
                         var geocoder = new google.maps.Geocoder();
 						var endereco;
-						geocoder.geocode({'location': lalo}, function(results, status) {
+						/*geocoder.geocode({'location': lalo}, function(results, status) {
 							endereco = results[0].formatted_address;
 							console.log(endereco);
-						});
+						});*/
 						var contentString =
                          '<div>' +
 							'<h3>'+ json[i].nome +'</h3>'+
-							'<h4>'+ endereco +'</h4>'+
                             '<h4>' + json[i].pk_id + '</h4>' +
                         '</div>';
 						console.log(endereco);
@@ -897,7 +896,7 @@ var app = {
         });
     },
 	
-	inserirMercado: function(){
+	inserirLista: function(){
 		var identifier = 'n';
 		app.db.transaction(function(tx){
 			tx.executeSql("select * from logado", [], function (tx, values){
@@ -912,14 +911,32 @@ var app = {
 			var hora = document.getElementById('horaEvento').value;
 			var lista = document.getElementById('minhasListas').value;
 			var fk_mercado = document.getElementById('mercadoEvento').value;
-			console.log(nome);
-			console.log(data);
-			console.log(hora);
-			console.log(lista);
-			console.log(fk_mercado);
 			if(fk_mercado==""){
 				alert('aokao');
 			}
+			var dataHora = data+" "+hora;
+			console.log(dataHora);
+			$.ajax({
+                type: "POST",
+                url: "http://"+app.ip+"/index.php",
+                data: {
+                    acao: 'inserirEvento',
+                    idUsuario: fk_user,
+                    idMercado: fk_mercado,
+					idLista: lista,
+					nome: nome,
+					dataHora: dataHora					
+                },
+                dataType: "json",
+                success: function (json) {
+					console.log(json);
+					$('#listEventos').html('');
+					app.getEventos();
+				},
+				error: function(ext){
+					console.log(ext);					
+				}				
+			});
 		});
 	}
 };

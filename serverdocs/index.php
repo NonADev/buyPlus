@@ -109,8 +109,19 @@ switch ($request['acao']) {
 			echo json_encode("##server::listarMercadosError", JSON_UNESCAPED_UNICODE);
 		}	
 	break;
-	case "insertEvento":
-		//$sql = "inse";
+	case "inserirEvento":		
+		$idUsuario= utf8_decode($_POST['idUsuario']);
+		$idMercado=  utf8_decode($_POST['idMercado']);
+		$idLista= utf8_decode($_POST['idLista']);
+		$nome=  utf8_decode($_POST['nome']);
+		$dataHora=  utf8_decode($_POST['dataHora']);	
+		$sql = "insert into evento (nome, dataHora, fk_lista, fk_mercado) values ('$nome', '$dataHora', $idLista, $idMercado)";
+		if($conn->query($sql)){
+			echo json_encode("##server::clienteSaved", JSON_UNESCAPED_UNICODE);
+		}
+		else{
+			echo json_encode("##server::clienteNotSaved", JSON_UNESCAPED_UNICODE);			
+		}
 	break;
 	case "listarEventos":
 		$sql = "select pk_id, nome, DATE_FORMAT(dataHora, '%d/%m %H:%i') as dataHora, fk_lista, fk_mercado, (select latitude from mercado where pk_id = evento.fk_mercado) as lat, (select longitude from mercado where pk_id = evento.fk_mercado) as lng, (select usuario.nome from usuario join lista where (lista.pk_id = evento.fk_lista) AND (lista.fk_usuario = usuario.pk_id)) as usuario from evento;";
