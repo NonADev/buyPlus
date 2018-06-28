@@ -200,6 +200,11 @@ div[id="pageListas"] div[id="listListas"] a:last-child{
 
 
 /* pageListaDeItens */
+/* pageEvento */
+div#pageHome div#listEventos a:last-child{
+    margin-bottom: 7vh !important;
+}
+/* pageEvento */
 /* NAVBAR */
 div div.navBar{
 	overflow: visible;
@@ -223,3 +228,17 @@ div div.navBar .ui-btn.ui-custom{
 	color: white;
 }
 /* NAVBAR */
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 80vw;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.show {
+    display: block !important;
+}

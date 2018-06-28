@@ -1,6 +1,7 @@
 var app = {
 	ip: '127.0.0.1',
     db: null,
+    userPk: null,
     map: null,
     varCountTrigger: false,
     // Application Constructor
@@ -25,6 +26,10 @@ var app = {
         document.getElementById('btnGoToRegister').addEventListener('click', this.goToPageRegister);
         document.getElementById('btnRegisterUser').addEventListener('click', this.dbRegisterUser);
         document.getElementById('btnLogin').addEventListener('click', this.dbMakeLogin);
+        document.getElementById('btnParticipacao').addEventListener('click', this.createTicket);
+        document.getElementById('togleButton').addEventListener('click', function () {
+            document.getElementById("popupItensEvento").classList.toggle("show");
+        });
     },
 	
 	goToPageRegister: function(){
@@ -100,6 +105,7 @@ var app = {
                     success: function (json) {
                         console.log("%c"+json,"color: green;");
                         console.log("client::listaSalva");
+                        app.listarListas();
                     },
                     error: function (ext) {
                         console.log(ext);
@@ -151,6 +157,32 @@ var app = {
         $('#listaItens').html("");
     },
 
+    setItensMap: function(e, evento){
+        $.ajax({
+            type: "POST",
+            url: "http://" + app.ip + "/index.php",
+            data: {
+                acao: 'itensLista',
+                idLista: $(e).attr('dt-idLista')
+            },
+            dataType: "json",
+            success: function (json) {
+                $('#popupItensEvento').html('');
+                for(var i=0; i<json.length;i++){
+                    $('#popupItensEvento').append(
+                        '<a data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" style="margin: unset;">'+
+                        '<span style="font-weight: bold; float: left;">'+ json[i].nome +'</span><br>'+
+                        '<span style="font-weight: normal; float: left;">'+ json[i].marca +' ◆ </span>'+ '<span style="float: left; font-weight: normal;margin-left: 1vw;"> '+ json[i].qtdMinimaAtacado +'</span>'+
+                        '</a>'
+                    );
+                }
+            },
+            error: function (ext) {
+                console.log(ext);
+            }
+        });
+    },
+
     getEventos: function(){
 	    $.ajax({
             type: "POST",
@@ -160,7 +192,8 @@ var app = {
             },
             dataType: "json",
             success: function (json) {
-                for(var i=0;i<json.length;i++){
+                $('#listEventos').html('');
+                for(var i=0;i<json.length;i++) {
                     app.listarEventos(json[i]);
                 }
             },
@@ -172,13 +205,15 @@ var app = {
 
     listarEventos: function(evento){
         $('#listEventos').append(
-            '<a id="evento'+ evento.pk_id +'" href="#mapPopup" dt-lat="'+evento.lat+'" dt-lng="'+evento.lng+'" dt-pk_id="'+ evento.pk_id +'" data-rel="popup" class="ui-btn" style="margin: unset;">' +
+            '<a id="evento'+ evento.pk_id +'" href="#mapPopup" dt-lat="'+evento.lat+'" dt-idLista="'+ evento.fk_lista +'" dt-lng="'+evento.lng+'" dt-pk_id="'+ evento.pk_id +'" data-rel="popup" class="ui-btn" style="margin: unset;">' +
             '<span id="spanEventoNome">'+ evento.nome +'</span><br>' +
             '<span id="spanEventoEmail" style="font-weight: normal; float: left;">'+ evento.usuario +'</span><br>' +
-            '<span id="spanEventoDataHora" style="font-weight:normal;">'+ evento.dataHora +'</span>' +
+            '<span style="float: left;font-weight: normal;">Participantes: '+ evento.participacoes +'</span><span id="spanEventoDataHora" style="font-weight:normal;">'+ evento.dataHora +'</span>' +
             '</a>'
         );
+        document.getElementById('evento'+evento.pk_id).addEventListener('click', function(e){app.setItensMap(this, evento);});
         document.getElementById('evento'+evento.pk_id).addEventListener('click', function(e){
+            $('#btnParticipacao').attr('dt-id', $(e.currentTarget).attr('dt-pk_id'));
             app.loadMap($(e.currentTarget).attr('dt-lat'), $(e.currentTarget).attr('dt-lng'));
         });
     },
@@ -247,8 +282,9 @@ var app = {
                 dataType: "json",
                 success: function (json) {
                     if(json.result){
+                        var x = document.getElementById("minhasListas");
+                        $(x).html('');
                         for(var i = 0; i< json.length;i++){
-                            var x = document.getElementById("minhasListas");
                             x.append(new Option(json[i].nome, json[i].pk_id));
                         }
                     }
@@ -609,8 +645,9 @@ var app = {
 
     exitApp: function(){
 	    app.db.transaction(function (tx) {
-            tx.executeSql("delete from logado where pk_id = pk_id");
+            tx.executeSql("drop table logado");
             $.mobile.changePage("#pageLogin");
+            app.loginTable();
         });
     },
 
@@ -628,6 +665,7 @@ var app = {
 	    app.db.transaction(function(tx) {
             tx.executeSql("select * from logado", [], function(tx, result){
 				if(result.rows.length==1){
+				    app.userPK = result.rows[0].pk_id;
 					vEmail = result.rows[0].email;
 					vSenha = result.rows[0].senha;
 				}
@@ -834,18 +872,11 @@ var app = {
                     });
                     for (var i = 0; i < json.length; i++) {
                         var lalo = {lat: parseFloat(json[i].latitude), lng: parseFloat(json[i].longitude)};
-                        var geocoder = new google.maps.Geocoder();
-						var endereco;
-						/*geocoder.geocode({'location': lalo}, function(results, status) {
-							endereco = results[0].formatted_address;
-							console.log(endereco);
-						});*/
 						var contentString =
                          '<div>' +
 							'<h3>'+ json[i].nome +'</h3>'+
                             '<h4>' + json[i].pk_id + '</h4>' +
                         '</div>';
-						console.log(endereco);
                         var marker = new google.maps.Marker({
                             position: lalo,
                             map: app.map,
@@ -864,40 +895,50 @@ var app = {
             },
             error: function (ext){
                 console.log(ext);
-            },
-			complete: function(data) {
-				console.log("SEMPRE FUNFA!"); 
-				console.log(data);
-				//A function to be called when the request finishes 
-				// (after success and error callbacks are executed). 
-			}
+            }
         });
     },
 
-    createTicket: function(){
-	    $.ajax({
-            type: "POST",
-            url: "http://"+app.ip+"/index.php",
-            data: {
-                acao: 'registrarUsuario',
-                nome: vNome,
-                email: vEmail,
-                telefone: vTelefone,
-                senha: vSenha
-            },
-            dataType: "json",
-            success:function(json){
-                console.log(json);
-            },
-            error:function(ext){
-                console.log(ext);
-            }
-
+    createTicket: function(e){
+	    var vEvento = $(e.currentTarget).attr('dt-id');
+        var vUser;
+	    app.db.transaction(function(tx){
+                tx.executeSql("select * from logado", [], function (tx, values){
+                    vUser = values.rows[0].pk_id;
+                });
+            }, function(err){
+                console.log(err);
+            }, function() {
+            $.ajax({
+                type: "POST",
+                url: "http://"+app.ip+"/index.php",
+                data: {
+                    acao: 'createTicket',
+                    fk_user: vUser,
+                    fk_evento: vEvento
+                },
+                dataType: "json",
+                success:function(json){
+                    if(json.result == true){
+                        alert(json.msg);
+                    }
+                    else if(json.result == false && json.alert == true){
+                        alert(json.msg);
+                    }
+                    else{
+                        console.log(json.msg);
+                    }
+                },
+                error:function(ext){
+                    console.log(ext);
+                }
+            });
         });
     },
 	
-	inserirLista: function(){
+	inserirEvento: function(){
 		var identifier = 'n';
+		var fkEvent
 		app.db.transaction(function(tx){
 			tx.executeSql("select * from logado", [], function (tx, values){
 				identifier = values.rows[0].pk_id;
@@ -929,15 +970,79 @@ var app = {
                 },
                 dataType: "json",
                 success: function (json) {
-					console.log(json);
-					$('#listEventos').html('');
-					app.getEventos();
+                    if(json.result==true) {
+                        console.log(json.msg);
+                        $('#listEventos').html('');
+                        app.getEventos();
+                    }
 				},
 				error: function(ext){
 					console.log(ext);					
 				}				
 			});
 		});
-	}
+	},
+
+    showParticipacoes: function(){
+	    $('divParticipacoes').html('');
+	    $.ajax({
+            type: "POST",
+            url: "http://"+app.ip+"/index.php",
+            data: {
+                acao: 'participacoesById',
+                id: app.userPK
+            },
+            dataType: "json",
+            success: function (evento) {
+                $('#divEventosListas').html('');
+                console.log(evento.length);
+                for(var i=0; i<evento.length;i++) {
+
+                    $('#divEventosListas').append(
+                        '<a id="evento' + evento[i].pk_id + '" dt-lat="' + evento[i].latitude + '" dt-idLista="' + evento[i].fk_lista + '" dt-lng="' + evento[i].longitude + '" dt-pk_id="' + evento[i].pk_id + '" data-rel="popup" class="ui-btn" style="margin: unset;">' +
+                        '<span>' + evento[i].nome + '</span><br>' +
+                        '<span style="float: left;font-weight: normal;">Participantes: ' + evento[i].participacoes + '</span><span style="font-weight:normal;">' + evento[i].dataHora + '</span>' +
+                        '</a>'
+                    );
+                    var mmId = 'evento'+evento[i].pk_id;
+                    document.getElementById(mmId).addEventListener('click', function (e) {
+                        $('#mapPopup2').popup("open");
+                        app.loadMap2($(e.currentTarget).attr('dt-lat'), $(e.currentTarget).attr('dt-lng'));
+                    });
+                }
+            },
+            error: function(ext){
+                console.log(ext);
+            }
+        });
+    },
+
+    loadMap2:function (varLat, varLng) {
+        varLat = parseFloat(varLat);
+        varLng = parseFloat(varLng);
+        var mercadoLatLng = {lat: varLat, lng: varLng};
+        var div = document.getElementById("mapEvento");
+        var map = new google.maps.Map(div, {
+            center: {lat: varLat, lng: varLng},
+            zoom: 15 //quanto maior mais proximo
+        });
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var meuLatLng = {lat: position.coords.latitude, lng: position.coords.longitude};
+            var request = {
+                origin:meuLatLng,
+                destination:mercadoLatLng,
+                travelMode: 'DRIVING'
+            };
+            var directionsService = new google.maps.DirectionsService();
+            var directionsDisplay = new google.maps.DirectionsRenderer();
+            directionsDisplay.setMap(map);
+            directionsDisplay.setPanel(div);
+            directionsService.route(request, function(response, status) {
+                if (status == 'OK') {
+                    directionsDisplay.setDirections(response);
+                }
+            });
+        });
+    },
 };
 app.initialize();

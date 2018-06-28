@@ -19,6 +19,20 @@ switch ($request['acao']) {
 		echo json_encode($returnVetor, JSON_UNESCAPED_UNICODE);		
 		//else echo("#server::NoItens");
 	break;
+	case "participacoesById":
+		$pk = utf8_decode($_POST['id']);
+		$sql = "select (select nome from evento where pk_id = ll.fk_evento) as nome,pk_id, (select fk_lista from evento where pk_id = ll.fk_evento) as fk_lista,(select count(*) from participacaoEvento as l where l.fk_evento = ll.fk_evento) as participacoes, (select nome from evento where pk_id = ll.fk_evento) as nome, (select DATE_FORMAT(dataHora, '%d/%m %H:%i') from evento where pk_id = ll.fk_evento) as dataHora, (select (select latitude from mercado where pk_id = evento.fk_mercado) from evento where pk_id = ll.fk_evento) as latitude, (select (select longitude from mercado where pk_id = evento.fk_mercado) from evento where pk_id = ll.fk_evento) as longitude from participacaoEvento as ll where fk_usuario = $pk AND fk_evento > 0";
+		$vetor=[];
+		if($result = $conn->query($sql)){
+			while($rr = mysqli_fetch_assoc($result)){
+				$vetor[] = array_map('utf8_encode', $rr);
+			}
+		}
+		else{
+			$vetor = "##server::errorParticipacoes";
+		}
+		echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
+	break;
 	case "debug":			
 		$sql = "SELECT * FROM lista";
 		$rr = mysqli_query($conn, $sql);
@@ -96,6 +110,32 @@ switch ($request['acao']) {
 	break;
 	case "debugando":
 	break;
+	case "createTicket":
+		$us = utf8_decode($_POST['fk_user']);;
+		$ev = utf8_decode($_POST['fk_evento']);;
+		$sql = "insert into participacaoEvento (fk_usuario, fk_evento) values ($us, $ev)";
+		$sqlT = "select * from participacaoEvento where fk_usuario = $us && fk_evento = $ev";
+		$vetor = [];
+		$vetor['result']=false;
+		$vetor['msg']="##server::databaseError>$sql";
+		if(mysqli_num_rows($conn->query($sqlT))>0){
+			$vetor['result']=false;
+			$vetor['alert']=true;
+			$vetor['msg']="já está participando do evento";
+			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
+		}		
+		else if($conn->query($sql)){
+			$vetor['result']=true;
+			$vetor['alert']=true;
+			$vetor['msg']="Boas Compras";			
+			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
+		}
+		else{
+			$vetor['result']=false;
+			$vetor['alert']=true;
+			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
+		}
+	break;
 	case "getMercados":
 		$sql = "select * from mercado";
 		$result;		
@@ -116,22 +156,38 @@ switch ($request['acao']) {
 		$nome=  utf8_decode($_POST['nome']);
 		$dataHora=  utf8_decode($_POST['dataHora']);	
 		$sql = "insert into evento (nome, dataHora, fk_lista, fk_mercado) values ('$nome', '$dataHora', $idLista, $idMercado)";
+		$vetor=[];
+		$vetor['result'] = false;
+		$vetor['msg']="##server::clienteNotSaved";
 		if($conn->query($sql)){
-			echo json_encode("##server::clienteSaved", JSON_UNESCAPED_UNICODE);
+			$vetor['msg'] = "##server::clienteSaved";
+			$vetor['result'] = true;
+			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
 		}
 		else{
-			echo json_encode("##server::clienteNotSaved", JSON_UNESCAPED_UNICODE);			
+			$vetor['result'] = false;
+			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);			
+		}
+		$mKey = mysqli_insert_id($conn);
+		$sql = "insert into participacaoEvento (fk_usuario, fk_evento) values ($idUsuario, $mKey)";
+		if($conn->query($sql)){
+			//faz nada
 		}
 	break;
 	case "listarEventos":
-		$sql = "select pk_id, nome, DATE_FORMAT(dataHora, '%d/%m %H:%i') as dataHora, fk_lista, fk_mercado, (select latitude from mercado where pk_id = evento.fk_mercado) as lat, (select longitude from mercado where pk_id = evento.fk_mercado) as lng, (select usuario.nome from usuario join lista where (lista.pk_id = evento.fk_lista) AND (lista.fk_usuario = usuario.pk_id)) as usuario from evento;";
+		$sql = "select pk_id, nome, DATE_FORMAT(dataHora, '%d/%m %H:%i') as dataHora, fk_lista, fk_mercado, (select latitude from mercado where pk_id = evento.fk_mercado) as lat, (select longitude from mercado where pk_id = evento.fk_mercado) as lng, (select usuario.nome from usuario join lista where (lista.pk_id = evento.fk_lista) AND (lista.fk_usuario = usuario.pk_id)) as usuario, (select count(*) from participacaoEvento where fk_evento = evento.pk_id) as participacoes from evento;";
 		$result;
 		$vetor;
 		if($result = $conn->query($sql)){
 			while($ffetch = mysqli_fetch_assoc($result)){
 				$vetor[] = array_map('utf8_encode', $ffetch); 
 			}
-			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
+			if(isset($vetor)){
+				echo json_encode($vetor, JSON_UNESCAPED_UNICODE);				
+			}
+			else{
+				echo json_encode("##server::ERROR", JSON_UNESCAPED_UNICODE);	
+			}
 		}		
 		else{
 			echo json_encode("##server::listarEventosError", JSON_UNESCAPED_UNICODE);
