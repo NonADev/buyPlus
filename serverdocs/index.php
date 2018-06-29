@@ -12,7 +12,12 @@ switch ($request['acao']) {
 		$idEvento = utf8_decode($_POST['idEvento']);
 		$idUsuario = utf8_decode($_POST['idUsuario']);
 		$sql = "delete from participacaoEvento where fk_evento = $idEvento AND fk_usuario = $idUsuario";
-		echo json_encode($sql, JSON_UNESCAPED_UNICODE);		
+		if($conn->query($sql)){
+			echo json_encode("##server::sucessEventParticipationDelete", JSON_UNESCAPED_UNICODE);		
+		}
+		else{
+			echo json_encode("##server::errorEventParticipationDelete", JSON_UNESCAPED_UNICODE);					
+		}
 	break;
 	case "itensLista":
 		$idLista = $_POST['idLista'];
@@ -32,6 +37,7 @@ switch ($request['acao']) {
 	case "participacoesById":
 		$pk = utf8_decode($_POST['id']);
 		$sql = "select (select nome from evento where pk_id = ll.fk_evento) as nome, pk_id, (select pk_id from evento where pk_id = ll.fk_evento) as pk_idEvento, (select fk_lista from evento where pk_id = ll.fk_evento) as fk_lista,(select count(*) from participacaoEvento as l where l.fk_evento = ll.fk_evento) as participacoes, (select nome from evento where pk_id = ll.fk_evento) as nome, (select DATE_FORMAT(dataHora, '%d/%m %H:%i') from evento where pk_id = ll.fk_evento) as dataHora, (select (select latitude from mercado where pk_id = evento.fk_mercado) from evento where pk_id = ll.fk_evento) as latitude, (select (select longitude from mercado where pk_id = evento.fk_mercado) from evento where pk_id = ll.fk_evento) as longitude from participacaoEvento as ll where fk_usuario = $pk AND fk_evento > 0";
+		//$sql = "select (select nome from evento where pk_id = ll.fk_evento) as nome, (select pk_id from evento where pk_id = ll.fk_evento) as pk_id, (select pk_id from evento where pk_id = ll.fk_evento) as pk_idEvento, (select fk_lista from evento where pk_id = ll.fk_evento) as fk_lista,(select count(*) from participacaoEvento as l where l.fk_evento = ll.fk_evento) as participacoes, (select nome from evento where pk_id = ll.fk_evento) as nome, (select DATE_FORMAT(dataHora, '%d/%m %H:%i') from evento where pk_id = ll.fk_evento) as dataHora, (select (select latitude from mercado where pk_id = evento.fk_mercado) from evento where pk_id = ll.fk_evento) as latitude, (select (select longitude from mercado where pk_id = evento.fk_mercado) from evento where pk_id = ll.fk_evento) as longitude from participacaoEvento as ll where fk_usuario = $pk AND fk_evento > 0";
 		$vetor=[];
 		if($result = $conn->query($sql)){
 			while($rr = mysqli_fetch_assoc($result)){

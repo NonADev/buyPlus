@@ -22,8 +22,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="66" column="42" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="42" />
+            <state relative-caret-position="316">
+              <caret line="152" column="43" selection-start-line="152" selection-start-column="23" selection-end-line="152" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -61,8 +61,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="1204" column="37" selection-start-line="1204" selection-start-column="37" selection-end-line="1204" selection-end-column="37" />
+            <state relative-caret-position="282">
+              <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#a#0;n#!!top" expanded="true" />
@@ -117,17 +117,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>listarEve</find>
-      <find>$.mobile.changePage('#pageHome');app.zerarNewList();</find>
-      <find>new Op</find>
-      <find>categ</find>
-      <find>◆</find>
-      <find>'&lt;div id=&quot;i</find>
-      <find>ii</find>
-      <find>id=&quot;i</find>
-      <find>select</find>
-      <find>userPk</find>
-      <find>app.userPK</find>
       <find>transaction</find>
       <find>tx.executeSql(&quot;select * from logado&quot;, [], function(tx, result){</find>
       <find>select * from logado</find>
@@ -147,6 +136,17 @@
       <find>mapPopup2</find>
       <find>setItensMap\</find>
       <find>mapPopup</find>
+      <find>('click',</find>
+      <find>dt-pk_id</find>
+      <find>dt-id</find>
+      <find>dt-</find>
+      <find>createTicket</find>
+      <find>btnParticipacao</find>
+      <find>cancelarParticipacao</find>
+      <find>popup</find>
+      <find>Popup2</find>
+      <find>dt-realId</find>
+      <find>remove()</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -329,12 +329,12 @@
       <workItem from="1530128570489" duration="1546000" />
       <workItem from="1530130862059" duration="1252000" />
       <workItem from="1530180831707" duration="21663000" />
-      <workItem from="1530269469913" duration="18662000" />
+      <workItem from="1530269469913" duration="22710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209105000" />
+    <option name="totallyTimeSpent" value="213153000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -752,8 +752,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="66" column="42" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="42" />
+        <state relative-caret-position="316">
+          <caret line="152" column="43" selection-start-line="152" selection-start-column="23" selection-end-line="152" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -780,8 +780,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="1204" column="37" selection-start-line="1204" selection-start-column="37" selection-end-line="1204" selection-end-column="37" />
+        <state relative-caret-position="282">
+          <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#a#0;n#!!top" expanded="true" />

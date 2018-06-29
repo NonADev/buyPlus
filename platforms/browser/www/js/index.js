@@ -36,8 +36,33 @@ var app = {
         document.getElementById('togleItems').addEventListener('click', function () {
             document.getElementById("divItems").classList.toggle("show");
         });
-        document.getElementById('btnParticipacao').addEventListener('click', app.removeParticipacao);
+        document.getElementById('cancelarParticipacao').addEventListener('click', function(){
+            app.removeParticipacao(this);
+            $.mobile.changePage('#pagePerfil');
+        });
         document.getElementById('btnAlterarDados').addEventListener('click', app.alterarDados);
+    },
+
+    removeParticipacao: function(e){
+	    var click = e.currentTarget;
+        var evento_id = $('#cancelarParticipacao').attr('dt-realId');
+        var usuario_id = app.userPK;
+        $.ajax({
+            type: "POST",
+            url: "http://" + app.ip + "/index.php",
+            data: {
+                acao: 'deleteParticipacao',
+                idEvento: evento_id,
+                idUsuario: usuario_id
+            },
+            dataType: "json",
+            success: function (json) {
+                console.log(json);
+            },
+            error: function (ext) {
+                console.log(ext);
+            }
+        });
     },
 
     alterarDados: function(){
@@ -223,29 +248,8 @@ var app = {
         $('#listaItens').html("");
     },
 
-    removeParticipacao: function(e){
-        console.log(e);
-	    /*
-        $.ajax({
-            type: "POST",
-            url: "http://" + app.ip + "/index.php",
-            data: {
-                acao: 'deleteParticipacao',
-                idEvento: evento_id,
-                idUsuario: usuario_id
-            },
-            dataType: "json",
-            success: function (json) {
-                console.log(json);
-            },
-            error: function (ext) {
-                console.log(ext);
-            }
-        });
-        app.showParticipacoes();*/
-    },
-
     setItensMapParticipacao :function(e, evento){
+	    console.log(evento);
         $.ajax({
             type: "POST",
             url: "http://" + app.ip + "/index.php",
@@ -255,7 +259,7 @@ var app = {
             },
             dataType: "json",
             success: function (json) {
-                $('#popupItensEvento').html('');
+                $('#divItems').html('');
                 for(var i=0; i<json.length;i++){
                     $('#divItems').append(
                         '<a data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" style="margin: unset;">'+
@@ -1180,7 +1184,6 @@ var app = {
 	},
 
     showParticipacoes: function(){
-	    $('divParticipacoes').html('');
 	    $.ajax({
             type: "POST",
             url: "http://"+app.ip+"/index.php",
@@ -1191,22 +1194,21 @@ var app = {
             dataType: "json",
             success: function (evento) {
                 $('#divEventosListas').html('');
-                console.log(evento.length);
                 for(var i=0; i<evento.length;i++) {
                     if(evento.length < 1) break;
                     $('#divEventosListas').append(
-                        '<a id="evento' + evento[i].pk_id + '" dt-lat="' + evento[i].latitude + '" dt-idLista="' + evento[i].fk_lista + '" dt-lng="' + evento[i].longitude + '" dt-pk_id="' + evento[i].pk_id + '" data-rel="popup" class="ui-btn" style="margin: unset;">' +
+                        '<a id="evento' + evento[i].pk_id + '" dt-realId="'+ evento[i].pk_idEvento +'" dt-lat="' + evento[i].latitude + '" dt-idLista="' + evento[i].fk_lista + '" dt-lng="' + evento[i].longitude + '" dt-pk_id="' + evento[i].pk_id + '" data-rel="popup" class="ui-btn" style="margin: unset;">' +
                         '<span>' + evento[i].nome + '</span><br>' +
                         '<span style="float: left;font-weight: normal;">Participantes: ' + evento[i].participacoes + '</span><span style="font-weight:normal;">' + evento[i].dataHora + '</span>' +
                         '</a>'
                     );
                     var mmId = 'evento'+evento[i].pk_id;
                     document.getElementById(mmId).addEventListener('click', function(e){
-                        console.log(this);
                         app.setItensMapParticipacao(this, evento);
                     });
                     document.getElementById(mmId).addEventListener('click', function (e) {
                         $('#mapPopup2').popup("open");
+                        $('#cancelarParticipacao').attr('dt-realId', $(e.currentTarget).attr('dt-realId'));
                         app.loadMap2($(e.currentTarget).attr('dt-lat'), $(e.currentTarget).attr('dt-lng'));
                     });
                 }
