@@ -256,10 +256,7 @@ var app = {
             dataType: "json",
             success: function (json) {
                 $('#popupItensEvento').html('');
-                console.log(json);
                 for(var i=0; i<json.length;i++){
-                    $('#cancelarParticipacao').attr('dt-user', app.userPK);
-                    $('#cancelarParticipacao').attr('dt-evento', $(e).attr('dt-pk_id'));
                     $('#divItems').append(
                         '<a data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" style="margin: unset;">'+
                         '<span style="font-weight: bold; float: left;">'+ json[i].nome +'</span><br>'+
@@ -1204,7 +1201,10 @@ var app = {
                         '</a>'
                     );
                     var mmId = 'evento'+evento[i].pk_id;
-                    document.getElementById(mmId).addEventListener('click', function(e){app.setItensMapParticipacao(this, evento);});
+                    document.getElementById(mmId).addEventListener('click', function(e){
+                        console.log(this);
+                        app.setItensMapParticipacao(this, evento);
+                    });
                     document.getElementById(mmId).addEventListener('click', function (e) {
                         $('#mapPopup2').popup("open");
                         app.loadMap2($(e.currentTarget).attr('dt-lat'), $(e.currentTarget).attr('dt-lng'));

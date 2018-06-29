@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="95ca9a6e-bc94-4b57-ad1b-3f9e6b6224c6" name="New changelist" comment="" />
     <list default="true" id="8e4fdc1f-66b2-495f-adfe-eb80494724ab" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/browser.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/browser.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/www/db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/index.js" afterDir="false" />
     </list>
+    <list id="95ca9a6e-bc94-4b57-ad1b-3f9e6b6224c6" name="New changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -29,8 +22,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="144" column="37" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="37" />
+            <state relative-caret-position="415">
+              <caret line="66" column="42" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -68,8 +61,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15890">
-              <caret line="1204" column="90" selection-start-line="1204" selection-start-column="90" selection-end-line="1204" selection-end-column="90" />
+            <state relative-caret-position="407">
+              <caret line="1204" column="37" selection-start-line="1204" selection-start-column="37" selection-end-line="1204" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#a#0;n#!!top" expanded="true" />
@@ -124,8 +117,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>salvarLisr</find>
-      <find>x.html</find>
       <find>listarEve</find>
       <find>$.mobile.changePage('#pageHome');app.zerarNewList();</find>
       <find>new Op</find>
@@ -154,6 +145,8 @@
       <find>.popup(&quot;open&quot;);</find>
       <find>togleItems</find>
       <find>mapPopup2</find>
+      <find>setItensMap\</find>
+      <find>mapPopup</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -336,12 +329,12 @@
       <workItem from="1530128570489" duration="1546000" />
       <workItem from="1530130862059" duration="1252000" />
       <workItem from="1530180831707" duration="21663000" />
-      <workItem from="1530269469913" duration="17833000" />
+      <workItem from="1530269469913" duration="18662000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208276000" />
+    <option name="totallyTimeSpent" value="209105000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -759,8 +752,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="144" column="37" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="37" />
+        <state relative-caret-position="415">
+          <caret line="66" column="42" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -787,8 +780,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15890">
-          <caret line="1204" column="90" selection-start-line="1204" selection-start-column="90" selection-end-line="1204" selection-end-column="90" />
+        <state relative-caret-position="407">
+          <caret line="1204" column="37" selection-start-line="1204" selection-start-column="37" selection-end-line="1204" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#a#0;n#!!top" expanded="true" />
