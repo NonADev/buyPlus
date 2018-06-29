@@ -36,10 +36,7 @@ var app = {
         document.getElementById('togleItems').addEventListener('click', function () {
             document.getElementById("divItems").classList.toggle("show");
         });
-        document.getElementById('cancelarParticipacao').addEventListener('click', function(){
-            app.removeParticipacao(this);
-            $.mobile.changePage('#pagePerfil');
-        });
+        document.getElementById('cancelarParticipacao').addEventListener('click', this.removeParticipacao);
         document.getElementById('btnAlterarDados').addEventListener('click', app.alterarDados);
     },
 
@@ -228,6 +225,7 @@ var app = {
                     dataType: "json",
                     success: function (json) {
                         console.log(json);
+                        app.listarListas();
                     },
                     error: function (ext) {
                         console.log(ext);
@@ -810,7 +808,6 @@ var app = {
             dataType: "json",
             success: function (json) {
                 console.log(json);
-                console.log("##cliente::oieou");
                 document.getElementById('spanNomeLista').textContent  = nomeLista;
                 document.getElementById('spanCategoriaLista').textContent = categoriaLista;
             },
@@ -1138,7 +1135,7 @@ var app = {
 	
 	inserirEvento: function(){
 		var identifier = 'n';
-		var fkEvent
+		
 		app.db.transaction(function(tx){
 			tx.executeSql("select * from logado", [], function (tx, values){
 				identifier = values.rows[0].pk_id;
@@ -1170,11 +1167,9 @@ var app = {
                 },
                 dataType: "json",
                 success: function (json) {
-                    if(json.result==true) {
                         console.log(json.msg);
                         $('#listEventos').html('');
                         app.getEventos();
-                    }
 				},
 				error: function(ext){
 					console.log(ext);					
