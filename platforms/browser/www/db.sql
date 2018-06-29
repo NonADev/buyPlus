@@ -48,3 +48,8 @@ CREATE TABLE participacaoEvento(
 ) CHARACTER SET utf8;
 INSERT INTO mercado (nome, telefone, latitude, longitude) VALUES ('assai', '59595959', -23.523004, -46.474086);
 INSERT INTO mercado (nome, telefone, latitude, longitude) VALUES ('atacado', '59595959', -23.559748, -46.446949);
+INSERT INTO usuario (nome, email, telefone, senha) VALUES ('wesley', 'wesley@gmail.com', '958192633', 'rubik@etec.211');
+INSERT INTO lista (nome, categoria, fk_usuario) VALUES ('Livros pra novembro', '', 1);
+INSERT INTO item (nome, fk_lista) VALUES ('Silmarillion', 1);
+INSERT INTO evento (nome, dataHora, fk_lista, fk_mercado) VALUES ('Compras de Agosto', '2019/12/06 14:20', 1,1);
+INSERT INTO participacaoEvento (fk_usuario, fk_evento) VALUES (1,1);

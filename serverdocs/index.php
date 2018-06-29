@@ -8,6 +8,12 @@ $request = $_SERVER['REQUEST_METHOD'] == 'GET' ? $_GET : $_POST;
 
  
 switch ($request['acao']) {
+	case "deleteParticipacao":
+		$idEvento = utf8_decode($_POST['idEvento']);
+		$idUsuario = utf8_decode($_POST['idUsuario']);
+		$sql = "delete from participacaoEvento where fk_evento = $idEvento AND fk_usuario = $idUsuario";
+		echo json_encode($sql, JSON_UNESCAPED_UNICODE);		
+	break;
 	case "itensLista":
 		$idLista = $_POST['idLista'];
 		$sql = "select * from item where fk_lista = $idLista";		
@@ -25,7 +31,7 @@ switch ($request['acao']) {
 	break;
 	case "participacoesById":
 		$pk = utf8_decode($_POST['id']);
-		$sql = "select (select nome from evento where pk_id = ll.fk_evento) as nome,pk_id, (select fk_lista from evento where pk_id = ll.fk_evento) as fk_lista,(select count(*) from participacaoEvento as l where l.fk_evento = ll.fk_evento) as participacoes, (select nome from evento where pk_id = ll.fk_evento) as nome, (select DATE_FORMAT(dataHora, '%d/%m %H:%i') from evento where pk_id = ll.fk_evento) as dataHora, (select (select latitude from mercado where pk_id = evento.fk_mercado) from evento where pk_id = ll.fk_evento) as latitude, (select (select longitude from mercado where pk_id = evento.fk_mercado) from evento where pk_id = ll.fk_evento) as longitude from participacaoEvento as ll where fk_usuario = $pk AND fk_evento > 0";
+		$sql = "select (select nome from evento where pk_id = ll.fk_evento) as nome, (select pk_id from evento where pk_id = ll.fk_evento) as pk_id, (select fk_lista from evento where pk_id = ll.fk_evento) as fk_lista,(select count(*) from participacaoEvento as l where l.fk_evento = ll.fk_evento) as participacoes, (select nome from evento where pk_id = ll.fk_evento) as nome, (select DATE_FORMAT(dataHora, '%d/%m %H:%i') from evento where pk_id = ll.fk_evento) as dataHora, (select (select latitude from mercado where pk_id = evento.fk_mercado) from evento where pk_id = ll.fk_evento) as latitude, (select (select longitude from mercado where pk_id = evento.fk_mercado) from evento where pk_id = ll.fk_evento) as longitude from participacaoEvento as ll where fk_usuario = $pk AND fk_evento > 0";
 		$vetor=[];
 		if($result = $conn->query($sql)){
 			while($rr = mysqli_fetch_assoc($result)){
@@ -46,6 +52,50 @@ switch ($request['acao']) {
 		}
 		echo 'iai';
 		echo "num vai dar nao";
+	break;
+	case "deleteItem":
+		$id = utf8_decode($_POST['id']);
+		$sql = "delete from item where pk_id = $id";
+		if($conn->query($sql)){
+			echo json_encode($id,JSON_UNESCAPED_UNICODE);			
+		}
+		else{
+			echo json_encode("##server::DeleteError>$sql",JSON_UNESCAPED_UNICODE);
+		}
+	break;
+	case "updateUser":
+		$id = utf8_decode($_POST['id']);
+		$senha = utf8_decode($_POST['senha']);
+		$telefone = utf8_decode($_POST['telefone']);
+		$nome = utf8_decode($_POST['nome']);
+		$sql = "update usuario set nome = '$nome', senha = '$senha', telefone = '$telefone' where pk_id = $id";
+		if($conn->query($sql)){
+			$vetor['nome'] = $nome;
+			$vetor['senha'] = $senha;
+			$vetor['id'] = $id;
+			$vetor['telefone'] = $telefone;
+			echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
+		}
+		else{
+			echo json_encode("##server::userUpdatedError>$sql", JSON_UNESCAPED_UNICODE);
+		}
+	break;
+	case "deleteLista":
+		$id = utf8_decode($_POST['id']);
+		$sql = "delete from item where fk_lista = $id";
+		$vetor=[];
+		if($conn->query($sql)){
+			$vetor['items'] = true;
+			$sql = "delete from lista where pk_id = $id";
+			if($conn->query($sql)){
+				$vetor['lista'] = true;
+				$vetor['id'] = $id;
+				echo json_encode($vetor,JSON_UNESCAPED_UNICODE);		
+			}	
+		}
+		else{
+			echo json_encode("##server::DeleteError>$sql",JSON_UNESCAPED_UNICODE);
+		}			
 	break;
 	case "saveList":
 		$items;
@@ -81,11 +131,7 @@ switch ($request['acao']) {
 				$fk_lista = mysqli_insert_id($conn);
 				for($i=0;$i<count($items);$i++){
 					$iNome = utf8_decode($items[$i][0]);
-					$iNome = "'".$iNome."'";
 					$iMarca = $items[$i][1];
-					if($iMarca==""){
-						$iMarca = "''";
-					}
 					$iPreco = $items[$i][2];
 					if($iPreco==""){
 						$iPreco = 0;
@@ -95,10 +141,7 @@ switch ($request['acao']) {
 						$iQtd = 0;
 					}				
 					$iTipo = $items[$i][4];
-					if($iTipo==""){
-						$iTipo = "''";
-					}
-					$sqlIten = "INSERT INTO item (nome, marca, preco, qtdMinimaAtacado, tipo, fk_lista) VALUES ($iNome,$iMarca,$iPreco,$iQtd,$iTipo,$fk_lista)";	
+					$sqlIten = "INSERT INTO item (nome, marca, preco, qtdMinimaAtacado, tipo, fk_lista) VALUES ('$iNome','$iMarca',$iPreco,$iQtd,'$iTipo',$fk_lista)";	
 					if($conn->query($sqlIten)){
 						$allItems[$i]=$sqlIten;
 					}
@@ -190,13 +233,15 @@ switch ($request['acao']) {
 				$vetor[] = array_map('utf8_encode', $ffetch); 
 			}
 			if(isset($vetor)){
-				echo json_encode($vetor, JSON_UNESCAPED_UNICODE);				
+				echo json_encode($vetor, JSON_UNESCAPED_UNICODE);
 			}
-			else{
-				echo json_encode("##server::ERROR", JSON_UNESCAPED_UNICODE);	
+			else{			
+				$vetor['result']=false;
+				echo json_encode("##server::ERROR", JSON_UNESCAPED_UNICODE);
 			}
 		}		
 		else{
+			$vetor['result']=false;
 			echo json_encode("##server::listarEventosError", JSON_UNESCAPED_UNICODE);
 		}
 	break;

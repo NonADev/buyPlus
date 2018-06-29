@@ -41,7 +41,7 @@
                 <input type="email" id="registerEmail" placeholder="e-mail" data-wrapper-class="ui-custom">
                 <input type="text" id="registerTelefone" placeholder="telefone" data-wrapper-class="ui-custom">
                 <input type="password" id="registerSenha" placeholder="senha" data-wrapper-class="ui-custom">
-                <input type="text" id="registerConfirmarSenha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
+                <input type="password" id="registerConfirmarSenha" placeholder="confirmar senha" data-wrapper-class="ui-custom">
                 <input id="btnRegisterUser" type="button" value="registrar" data-wrapper-class="ui-custom">
                 <hr>
                 <input id="btnVoltarLogin" type="button" value="voltar" data-wrapper-class="ui-custom">
@@ -150,7 +150,7 @@
 
                 </div>
                 <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>
-                <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar Participação</a>
+                <a id="cancelarParticipacao" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar Participação</a>
             </div>
             </div>
             <div class="navBar">
@@ -233,13 +233,18 @@
                 </center>
             </div>
         </div>
-		<div id="pageManterDados" data-role="page">
-			<input type="text">
-			<input type="text">
-			<input type="text">
-			<input type="text">
-			<input type="button" value="Salvar">
-			<input type="button" value="Excluir conta">
+		<div id="pageManterDados" data-role="page" style="background-color: #FFA500;">
+            <label style="font-weight: bold; margin-left: 5vw; margin-top: 1vh; font-size: 15px; text-shadow: none; color: #9400D3;">nome:</label>
+			<input data-mini="true" id="updateNome" type="text">
+            <label style="font-weight: bold; margin-left: 5vw; margin-top: 1vh; font-size: 15px; text-shadow: none; color: #9400D3;">telefone:</label>
+			<input data-mini="true" id="updateTelefone" type="number">
+            <label style="font-weight: bold; margin-left: 5vw; margin-top: 1vh; font-size: 15px; text-shadow: none; color: #9400D3;">nova senha:</label>
+            <input data-mini="true" id="updateSenha" type="password">
+            <label style="font-weight: bold; margin-left: 5vw; margin-top: 1vh; font-size: 15px; text-shadow: none; color: #9400D3;">confirmar nova senha:</label>
+            <input data-mini="true" id="updateSenha2" type="password">
+            <a id="btnAlterarDados" data-role="button" data-mini="true" style="color: white; text-shadow: none; background-color: #9400D3; border: none; border-radius: unset; font-weight: bold; margin-top: 3vh; font-size: 4.5vw;">
+                <span>Salvar</span>
+            </a>
             <div class="navBar">
                 <center>
                     <input onclick="$.mobile.changePage('#pagePerfil');app.zerarNewList();" type="button" data-iconpos="notext" data-icon="user" data-role="button" data-inline="true" data-wrapper-class="ui-custom">

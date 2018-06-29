@@ -2,6 +2,9 @@ var app = {
 	ip: '127.0.0.1',
     db: null,
     userPk: null,
+    userNome: null,
+    userSenha: null,
+    userTelefone: null,
     map: null,
     varCountTrigger: false,
     // Application Constructor
@@ -30,6 +33,66 @@ var app = {
         document.getElementById('togleButton').addEventListener('click', function () {
             document.getElementById("popupItensEvento").classList.toggle("show");
         });
+        document.getElementById('togleItems').addEventListener('click', function () {
+            document.getElementById("divItems").classList.toggle("show");
+        });
+        document.getElementById('btnParticipacao').addEventListener('click', app.removeParticipacao);
+        document.getElementById('btnAlterarDados').addEventListener('click', app.alterarDados);
+    },
+
+    alterarDados: function(){
+
+	    var nome = document.getElementById('updateNome').value;
+        var senha = document.getElementById('updateSenha').value;
+        var telefone = document.getElementById('updateTelefone').value;
+	    if(senha!=document.getElementById('updateSenha2').value){
+	        alert('as senhas não se correspondem');
+        }
+        else if(senha==""){
+	        alert('o campo senha deve conter um valor válido');
+        }
+        else if(nome==""){
+	        alert('o campo nome deve conter um valor válido');
+        }
+        else if(telefone==""){
+	        alert('o campo telefone deve conter u valor válido');
+        }
+        else if(telefone.length<8) {
+            alert('o campo telefone deve conter no minimo 8 numeros');
+        }
+        else{
+            if(window.confirm("Deseja Alterar seus Dados?")){
+                $.ajax({
+                    type: "POST",
+                    url: "http://" + app.ip + "/index.php",
+                    data: {
+                        acao: 'updateUser',
+                        senha: senha,
+                        telefone: telefone,
+                        nome: nome,
+                        id: app.userPK
+                    },
+                    success: function (json) {
+                        var aaa = "'" + json.id + "','" + json.nome + "','" + json.senha + "','" + json.telefone + "'";
+                        app.db.transaction(function (tx) {
+                            tx.executeSql("delete from logado where pk_id>0");
+                            var eee ="insert into logado (pk_id, nome, senha, telefone) values (" + aaa + ")";
+                            console.log(eee);
+                            tx.executeSql(eee);
+                        });
+                        $.mobile.changePage('#pagePerfil');
+                    },
+                    error: function (ext) {
+                        console.log(ext);
+                    }
+                });
+            }
+            else{
+                $.mobile.changePage('#pagePerfil');
+            }
+        }
+        document.getElementById('updateNome').value = app.userNome;
+        document.getElementById('updateTelefone').value = app.userTelefone;
     },
 	
 	goToPageRegister: function(){
@@ -78,8 +141,12 @@ var app = {
 
         for(var i=0; i<nomes.length;i++){
             if(nomes[i]) {
-                items.push(new Array(nomes[i], marcas[i], precos[i], qtds[i], tipos[i]));
                 items.temValor = true;
+                if(marcas[i]=='') marcas[i] = "";
+                if(precos[i]=='') precos[i] = 0;
+                if(qtds[i]=='') qtds[i] = 0;
+                if(tipos[i]=='') tipos[i] = '';
+                items.push(new Array(nomes[i], marcas[i], precos[i], qtds[i], tipos[i]));
             }
         }
         if(document.getElementById('listName').value!="" && items.temValor == true) {
@@ -103,9 +170,8 @@ var app = {
                     },
                     dataType: "json",
                     success: function (json) {
-                        console.log("%c"+json,"color: green;");
-                        console.log("client::listaSalva");
                         app.listarListas();
+                        console.log(json);
                     },
                     error: function (ext) {
                         console.log(ext);
@@ -157,6 +223,57 @@ var app = {
         $('#listaItens').html("");
     },
 
+    removeParticipacao: function(e){
+        console.log(e);
+	    /*
+        $.ajax({
+            type: "POST",
+            url: "http://" + app.ip + "/index.php",
+            data: {
+                acao: 'deleteParticipacao',
+                idEvento: evento_id,
+                idUsuario: usuario_id
+            },
+            dataType: "json",
+            success: function (json) {
+                console.log(json);
+            },
+            error: function (ext) {
+                console.log(ext);
+            }
+        });
+        app.showParticipacoes();*/
+    },
+
+    setItensMapParticipacao :function(e, evento){
+        $.ajax({
+            type: "POST",
+            url: "http://" + app.ip + "/index.php",
+            data: {
+                acao: 'itensLista',
+                idLista: $(e).attr('dt-idLista')
+            },
+            dataType: "json",
+            success: function (json) {
+                $('#popupItensEvento').html('');
+                console.log(json);
+                for(var i=0; i<json.length;i++){
+                    $('#cancelarParticipacao').attr('dt-user', app.userPK);
+                    $('#cancelarParticipacao').attr('dt-evento', $(e).attr('dt-pk_id'));
+                    $('#divItems').append(
+                        '<a data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" style="margin: unset;">'+
+                        '<span style="font-weight: bold; float: left;">'+ json[i].nome +'</span><br>'+
+                        '<span style="font-weight: normal; float: left;">'+ json[i].marca +' ◆ </span>'+ '<span style="float: left; font-weight: normal;margin-left: 1vw;"> '+ json[i].qtdMinimaAtacado +'</span>'+
+                        '</a>'
+                    );
+                }
+            },
+            error: function (ext) {
+                console.log(ext);
+            }
+        });
+    },
+
     setItensMap: function(e, evento){
         $.ajax({
             type: "POST",
@@ -194,9 +311,10 @@ var app = {
             dataType: "json",
             success: function (json) {
                 $('#listEventos').html('');
-				for(var i=0;i<json.length;i++) {
-					app.listarEventos(json[i]);
-				}
+                console.log(json);
+                for (var i = 0; i < json.length; i++) {
+                    app.listarEventos(json[i]);
+                }
             },
             error: function (ext){
                 console.log(ext);
@@ -205,6 +323,7 @@ var app = {
     },
 
     listarEventos: function(evento){
+	    console.log(evento);
         $('#listEventos').append(
             '<a id="evento'+ evento.pk_id +'" href="#mapPopup" dt-lat="'+evento.lat+'" dt-idLista="'+ evento.fk_lista +'" dt-lng="'+evento.lng+'" dt-pk_id="'+ evento.pk_id +'" data-rel="popup" class="ui-btn" style="margin: unset;">' +
             '<span id="spanEventoNome">'+ evento.nome +'</span><br>' +
@@ -380,6 +499,7 @@ var app = {
                         '<input id="txtDataCategoria" type="text" value="' + dados.categoria + '">' +
                         '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
                         '<a id="atualizar' + dados.id + '" dt-id="' + dados.id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
+                        '<a id="excluirLista' + dados.id + '" dt-id="' + dados.id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Excluir</a>' +
                         '</div>' +
                         '</div>'
                     );
@@ -394,16 +514,38 @@ var app = {
                         '<div role="main" class="ui-content">' +
                         '<h4 class="ui-title">nome da lista</h4>' +
                         '<input id="txtDataNome" type="text" value="' + dados.nome + '">' +
-                        '<h4 class="ui-title">categoria da lista</h4>' +
+                        '<h4 class="ui-title">descrição da lista</h4>' +
                         '<input id="txtDataCategoria" type="text" value="' + dados.categoria + '">' +
                         '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
                         '<a id="atualizar' + dados.id + '" dt-id="' + dados.id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
+                        '<a id="excluirLista' + dados.id + '" dt-id="' + dados.id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Excluir</a>' +
                         '</div>' +
                         '</div>'
                     ).trigger('create');
                 }
+                document.getElementById("excluirLista"+dados.id).addEventListener('click', function(e){
+                    $.ajax({
+                        type: "POST",
+                        url: "http://" + app.ip + "/index.php",
+                        data: {
+                            acao: 'deleteLista',
+                            id: $(this).attr('dt-id')
+                        },
+                        dataType: "json",
+                        success: function (json) {
+                            if(json.items==true&&json.lista==true){
+                                console.log(json.id);
+                                $('#lista'+json.id).remove();
+                                $.mobile.changePage('#pageListas');
+                                console.log('##cliente::lista e items excluidos');
+                            }
+                        },
+                        error: function (ext) {
+                            console.log(ext);
+                        }
+                    });
+                });
                 document.getElementById("atualizar"+dados.id).addEventListener('click', function(e){
-					console.log('iaeoisu');
                     var vNome = document.getElementById('txtDataNome').value;
                     var vCategoria = document.getElementById('txtDataCategoria').value;
                     if(vNome==""){
@@ -418,7 +560,7 @@ var app = {
                     if(json[i].marca == "") varMarca = 'não definido';
                     else varMarca = json[i].marca;
                     $('#showItens').append(
-                        '<a href="#i'+ json[i].pk_id +'" data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" style="margin: unset;">'+
+                        '<a id="ii'+json[i].pk_id+'" href="#i'+ json[i].pk_id +'" data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" style="margin: unset;">'+
                             '<span id="spanNome'+ json[i].pk_id +'" style="font-weight: bold; float: left;">'+ json[i].nome +'</span><br>'+
                             '<span id="spanMarca'+ json[i].pk_id +'" style="font-weight: normal; float: left;">'+ varMarca +' ◆ </span>'+ '<span style="float: left; font-weight: normal;margin-left: 1vw;"> '+ json[i].qtdMinimaAtacado +'</span>'+
                         '</a>'
@@ -442,9 +584,10 @@ var app = {
                             '<input id="itemQtdAtacado' + json[i].pk_id + '" type="number" value="' + json[i].qtdMinimaAtacado + '">' +
                             '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
                             '<a id="btnItem' + json[i].pk_id + '" dt-id="' + json[i].pk_id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
+                            '<a id="btnExcluirItem'+json[i].pk_id +'" dt-id="'+ json[i].pk_id +'" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Excluir Item</a>' +
                             '</div>' +
                             '</div>'
-                        );
+                        ).trigger('create');
                     }
                     else{
                         //append de cima com .trigger('create');
@@ -466,10 +609,28 @@ var app = {
                             '<input id="itemQtdAtacado' + json[i].pk_id + '" type="number" value="' + json[i].qtdMinimaAtacado + '">' +
                             '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
                             '<a id="btnItem' + json[i].pk_id + '" dt-id="' + json[i].pk_id + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
+                            '<a id="btnExcluirItem'+json[i].pk_id +'" dt-id="'+ json[i].pk_id +'" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Excluir Item</a>' +
                             '</div>' +
                             '</div>'
                         ).trigger('create');
                     }
+                    document.getElementById('btnExcluirItem'+json[i].pk_id).addEventListener('click', function (e) {
+                        $.ajax({
+                            type: "POST",
+                            url: "http://" + app.ip + "/index.php",
+                            data: {
+                                acao: 'deleteItem',
+                                id: $(this).attr('dt-id')
+                            },
+                            dataType: "json",
+                            success: function (json) {
+                                $('#ii'+json).remove();
+                            },
+                            error: function (ext){
+                                console.log(ext);
+                            }
+                        });
+                    });
                     document.getElementById('btnItem'+json[i].pk_id).addEventListener('click', function (e) {
                         var idItem = $(e.currentTarget).attr('dt-id');
                         var vvNome = document.getElementById('itemNome'+idItem).value;
@@ -539,7 +700,7 @@ var app = {
                 console.log(json.err);
                 console.log(json.idItem);
                 $('#showItens').append(
-                    '<a href="#i'+ json.idItem +'" data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" style="margin: unset;">'+
+                    '<a id="ii'+ json.idItem +'" href="#i'+ json.idItem +'" data-rel="popup" class="ui-btn ui-icon-tag ui-btn-icon-right" style="margin: unset;">'+
                     '<span id="spanNome'+ json.idItem +'" style="font-weight: bold; float: left;">'+ nome +'</span><br>'+
                     '<span id="spanMarca'+ json.idItem +'" style="font-weight: normal; float: left;">'+ marca +' ◆ </span>'+ '<span style="float: left; font-weight: normal;margin-left: 1vw;"> '+ qtdMinima +'</span>'+
                     '</a>'
@@ -562,9 +723,27 @@ var app = {
                     '<input id="itemQtdAtacado' + json.idItem + '" type="number" value="' + qtdMinima + '">' +
                     '<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Cancelar</a>' +
                     '<a id="btnItem' + json.idItem + '" dt-id="' + json.idItem + '" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Salvar</a>' +
+                    '<a id="btnExcluirItem'+json.idItem +'" dt-id="'+ json.idItem +'" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" style="background-color: #9400D3; border-color: #9400D3;">Excluir Item</a>' +
                     '</div>' +
                     '</div>'
                 ).trigger('create');
+                document.getElementById('btnExcluirItem'+json.idItem).addEventListener('click', function (e) {
+                    $.ajax({
+                        type: "POST",
+                        url: "http://" + app.ip + "/index.php",
+                        data: {
+                            acao: 'deleteItem',
+                            id: $(this).attr('dt-id')
+                        },
+                        dataType: "json",
+                        success: function (json) {
+                            $('#ii'+json).remove();
+                        },
+                        error: function (ext){
+                            console.log(ext);
+                        }
+                    });
+                });
                 document.getElementById('btnItem'+json.idItem).addEventListener('click', function (e) {
                     var idItem =  $(e.currentTarget).attr('dt-id');
                     var vvNome = document.getElementById('itemNome'+idItem).value;
@@ -667,8 +846,13 @@ var app = {
             tx.executeSql("select * from logado", [], function(tx, result){
 				if(result.rows.length==1){
 				    app.userPK = result.rows[0].pk_id;
+				    app.userNome = result.rows[0].nome;
+                    app.userSenha = result.rows[0].senha;
+                    app.userTelefone = result.rows[0].telefone;
 					vEmail = result.rows[0].email;
 					vSenha = result.rows[0].senha;
+                    document.getElementById('updateNome').value = result.rows[0].nome;
+                    document.getElementById('updateTelefone').value = result.rows[0].telefone;
 				}
 				else{
 					console.log("##cliente::noData:AutoLogin");
@@ -746,6 +930,19 @@ var app = {
                         tx.executeSql(sql);
                         $.mobile.changePage("#pagePerfil");
 						app.inserirListas();
+                        tx.executeSql("select * from logado", [], function(tx, result){
+                            if(result.rows.length==1){
+                                app.userPK = result.rows[0].pk_id;
+                                app.userNome = result.rows[0].nome;
+                                app.userSenha = result.rows[0].senha;
+                                app.userTelefone = result.rows[0].telefone;
+                                vEmail = result.rows[0].email;
+                                vSenha = result.rows[0].senha;
+                            }
+                            else{
+                                console.log("##cliente::noData:AutoLogin");
+                            }
+                        });
                     });
                 }
                 else if(json.result == false && json.alert == true){
@@ -888,6 +1085,7 @@ var app = {
                         });
 						marker.fk_mercado = json[i].pk_id;
                         google.maps.event.addListener(marker, 'click', function() {
+                            this.setIcon();
                             this.info.open(app.map, this);
 							document.getElementById('mercadoEvento').value = this.fk_mercado;
                         });
@@ -998,7 +1196,7 @@ var app = {
                 $('#divEventosListas').html('');
                 console.log(evento.length);
                 for(var i=0; i<evento.length;i++) {
-
+                    if(evento.length < 1) break;
                     $('#divEventosListas').append(
                         '<a id="evento' + evento[i].pk_id + '" dt-lat="' + evento[i].latitude + '" dt-idLista="' + evento[i].fk_lista + '" dt-lng="' + evento[i].longitude + '" dt-pk_id="' + evento[i].pk_id + '" data-rel="popup" class="ui-btn" style="margin: unset;">' +
                         '<span>' + evento[i].nome + '</span><br>' +
@@ -1006,6 +1204,7 @@ var app = {
                         '</a>'
                     );
                     var mmId = 'evento'+evento[i].pk_id;
+                    document.getElementById(mmId).addEventListener('click', function(e){app.setItensMapParticipacao(this, evento);});
                     document.getElementById(mmId).addEventListener('click', function (e) {
                         $('#mapPopup2').popup("open");
                         app.loadMap2($(e.currentTarget).attr('dt-lat'), $(e.currentTarget).attr('dt-lng'));
